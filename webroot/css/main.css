@@ -1,0 +1,124 @@
+#d1{
+	width: 100%;
+	background:#F00;
+	top: 0;
+    left: 0;
+	
+}
+#menu  {	
+	width: 100%;
+	padding-left: 12%;
+    padding-right: 12%;	
+    background-color: #231F20;
+	text-align: justify;
+    z-index: 99999;
+}
+
+
+.gridContainer {
+	background-color: gainsboro;
+	min-height: 100%;
+	width: 100%;
+	padding-left: 0%;
+	padding-right: 0%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 60%);
+    background: #FFF url("../img/textura.png") repeat scroll;
+	
+}
+
+#header-principal{
+	width: 100%;
+	padding-left: 12%;
+    padding-right: 12%;	
+}
+
+#container {
+	padding: 20px;
+	background-color: white;
+	width: 70%;
+	margin-left: 15%;
+	box-shadow: 0px 0px 14px 8px rgba(50, 50, 50, 0.2);
+}
+
+#menu ul li a{
+	font-family: serif;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+	font-weight: 600;
+	text-decoration: none;
+	color: white;
+	margin: 0;
+    padding: 0;
+	transition: all .2s ease-in-out;
+	margin: 0 12px;
+}
+
+#menu ul li {
+	list-style-type: none;
+    display: inline-block;
+	text-align: justify;
+}
+
+#menu ul::after {
+	width: 100%;
+	display: inline-block;
+	content: ".";
+	visibility: hidden;
+}
+#menu ul {
+	margin-bottom: 0px;
+	text-align: justify;
+	width: 100%;
+	justify-content: space-between;
+}
+
+#menu ul li span{
+	font-family: serif;
+    letter-spacing: 0.5px;
+	font-weight: 600;
+	color: #00A54F;
+    text-decoration: none;
+	font-size: 24px;
+	margin: 0;
+    padding: 0; 
+	
+}
+
+
+
+#menu ul li a:hover,#menu ul li a:focus {
+    color: #00A54F;
+    text-decoration: none;
+	font-size: 24px;
+	margin: 0 0px;
+}
+
+#entrarDiv{
+	width: 100%;
+	padding-left: 12%;
+    padding-right: 12%;	
+	height: 30px;
+	text-align: right;
+	background-color: #231F20;
+}
+#entrarDiv img{
+	max-width:100%;
+	max-height:100%;
+}
+#entrarDiv a{
+	align-content: center;
+	vertical-align: top;
+	font-family: serif;
+    font-size: 24px;
+    letter-spacing: 1px;
+	font-weight: 550;
+	text-decoration: none;
+	color: white;
+	margin: 0;
+    padding: 0;
+	transition: all .2s ease-in-out; 
+}
+
+
