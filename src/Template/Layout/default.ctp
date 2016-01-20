@@ -13,7 +13,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'ENTEC: the rapid development php framework';
 ?>
 <!DOCTYPE html>
 <html>
@@ -65,7 +65,10 @@ $loguser = $this->request->session()->read('Auth.User');
 		<nav id="menu">
 			<ul>
 				
-				<li><a href="...">HOME</a></li>
+				<li><?php
+					if($this->fetch('title') === 'home') 
+						echo "<span>HOME</span>";
+					else echo $this->Html->link('HOME',array('controller' => 'PAGES','action' => 'display', 'home'));?></li>
 				<li><a href="...">SOBRE</a></li>
 				<li><?php
 					if($this->fetch('title') === 'Inscrições') 

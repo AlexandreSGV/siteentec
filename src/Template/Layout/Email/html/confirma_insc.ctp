@@ -19,7 +19,16 @@
     <title><?= $this->fetch('title') ?></title>
 </head>
 <body>
-    <?= $this->fetch('content') ?>
-    <p>Here is your name: <b><?= $nome ?></b></p>
+<p><?= $nome ?>,</p>
+
+<p>sua inscrição ainda não foi concluída.
+<br>Para finalizar sua inscrição no I Encontro de Tecnologia da Informação do IFPE - EnTec 2015, utilize o link abaixo para confirmar seu e-mail:</p>
+<p>Clique no link: <?= $activation_link ?></p>
+<br>
+<hr style="border:none;color:#909090;background-color:#b0b0b0;min-height:1px;width:99%">
+<p>I Encontro de Tecnologia da Informação do IFPE - EnTec 2016
+<br>Dias 25 e 26 de Fevereiro
+<br>Igarassu - PE
+<br>http://entec.ifpe.edu.br<p>
 </body>
 </html>

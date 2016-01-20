@@ -13,4 +13,14 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
-Olá este é o seu nome: <?= $nome ?>
+<?= $nome ?>,
+
+Sua inscrição como participante foi efetivada com sucesso.
+Consulte a nossa programação em http://entec.ifpe.edu.br
+
+Aproveite a conferência!
+
+I Encontro de Tecnologia da Informação do IFPE
+Dias 25 e 26 de Fevereiro
+Igarassu - PE
+http://entec.ifpe.edu.br
