@@ -37,8 +37,15 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
 <body>
 	<div id="d1">
 		<div id="entrarDiv">
-			
-			
+			<ul id="menuadmin">
+				<li><a href="#">Administrar</a>
+					<ul>
+						<li><a href="#">Gerenciar inscrições</a></li>
+						<li><a href="#">Gerenciar palestrantes</a></li>
+						<li><a href="#">Envio de e-mails</a></li>                    
+					</ul>
+				</li>
+			</ul>
 			<?php
 			
 			$loguser = $this->request->session()->read('Auth.User');

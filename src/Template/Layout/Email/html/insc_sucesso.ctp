@@ -21,9 +21,13 @@
 <body>
 <p><?= $nome ?>,</p>
 
-<p>sua inscrição ainda não foi concluída.
-<br>Para finalizar sua inscrição no I Encontro de Tecnologia da Informação do IFPE - EnTec 2016, utilize o link abaixo para confirmar seu e-mail:</p>
-<p>Clique no link: <?= $activation_link ?></p>
+<p>sua inscrição foi validada.
+<br>O seu número de inscrição é <b><?= $ninscricao ?></b>
+<br>No ato do credenciamento, apresente um documento com foto e o número da sua inscrição.</p>
+
+<p>Consulte a nossa programação em http://entec.ifpe.edu.br
+<br>Aproveite a conferência!</p>
+
 <br>
 <hr style="border:none;color:#909090;background-color:#b0b0b0;min-height:1px;width:99%">
 <p>I Encontro de Tecnologia da Informação do IFPE - EnTec 2016

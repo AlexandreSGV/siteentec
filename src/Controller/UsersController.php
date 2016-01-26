@@ -42,9 +42,9 @@ class UsersController extends AppController
 				$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
 				->emailFormat('html')
 				->to($user->email)
-				->template('confirma_insc','confirma_insc')
+				->template('default','confirma_insc')
 				->subject('[EnTec 2016] Inscrição pendente de validação')
-				->viewVars(['nome' => $user->nome,'ninscricao' => $user->id,'activation_link' => 'http://localhost/siteentec/users/activate/'.$user->id.'/'.$user->activation_code])
+				->viewVars(['nome' => $user->nome,'activation_link' => 'http://localhost/siteentec/users/activate/'.$user->id.'/'.$user->activation_code])
 				->send();
 				
 				return $this->redirect(['action' => 'add']);
@@ -65,30 +65,34 @@ class UsersController extends AppController
 			// Update the active flag in the database
 			$this->Users->updateAll(['ativo' => 1], ['id' => $user_id]);
 			
-			
-			$this->Flash->success(__('A sua inscrição foi confirmado com sucesso!'));
+			$email = new Email('default');
+			$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
+			->emailFormat('html')
+			->to($user->email)
+			->template('default','insc_sucesso')
+			->subject('[EnTec 2016] Inscrição confirmada')
+			->viewVars(['nome' => $user->nome,'ninscricao' => $user->id])
+			->send();			
+			$this->Flash->success(__('A sua inscrição foi confirmada com sucesso!'));
 			
 		}else {
 			$this->Flash->error(__('Ocorreu algum erro no ativação, por favor, comunique a organização.'));
 		}
-	
-		// Activation failed, render '/views/user/activate.ctp' which should tell the user.
-		$this->set(compact('user'));
+		return $this->redirect('/users/login');
 	}
 	
 	//função de teste de envio de emails....
 	public function mail()
 	{
 		$email = new Email('default');
-		$email->from(['entec.ifpe.igarassu@gmail.com' => 'ENTEC'])
+		$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
 		->emailFormat('html')
 		->to('strapacao@gmail.com')
-		->template('inscricao','inscricao')
-		->subject('[ENTEC 2016]Inscrição Realizada')
-		->viewVars(['nome' => "Alexandre",'ninscricao' => 123456,])		
+		->template('default','confirma_insc')
+		->subject('[EnTec 2016] Inscrição pendente de validação')
+		->viewVars(['nome' => 'Alexandre','ninscricao' => 123123,'activation_link' => 'http://localhost/siteentec/users/activate/'])
 		->send();
-		
-		return $this->redirect('/');
+		return $this->redirect($this->Auth->logout());
 	}
 	
 	public function login()
