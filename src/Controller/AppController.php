@@ -39,10 +39,11 @@ class AppController extends Controller {
 	 */
 	public function initialize() {
 		$this->loadComponent ( 'Flash' );
-		$this->loadComponent ( 'Auth', [ 
+		$this->loadComponent ( 'Auth', [
+				'authorize' => ['Controller'],
 				'loginRedirect' => [ 
 						'controller' => 'Users',
-						'action' => 'add' 
+						'action' => 'view' 
 				],
 				'logoutRedirect' => [ 
 						'controller' => 'Pages',
@@ -53,8 +54,6 @@ class AppController extends Controller {
 	}
 	public function beforeFilter(Event $event) {
 		$this->Auth->allow ( [ 
-				'index',
-				'view',
 				'display' 
 		] );
 	}
@@ -73,5 +72,15 @@ class AppController extends Controller {
 		] )) {
 			$this->set ( '_serialize', true );
 		}
+	}
+	
+	public function isAuthorized($user)
+	{
+		// Admin can access every action
+		if (isset($user['role']) && $user['role'] === 'admin') {
+			return true;
+		}
+		// Default deny
+		return false;
 	}
 }

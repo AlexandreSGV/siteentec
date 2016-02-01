@@ -1,6 +1,8 @@
 <!-- src/Template/Users/activate.ctp -->
-<?= $this->assign('title', 'Confirmar Inscrição'); ?>
- <h1>Usuário Ativado</h1>
+<?= $this->assign('title', 'Visualizar Inscrição'); ?>
+<h1><?= h($user->nome) ?></h1>
+
+<h1>Usuário Ativado</h1>
  
  <h1><?= h($user->id) ?></h1>
  

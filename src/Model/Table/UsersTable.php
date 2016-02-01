@@ -51,5 +51,6 @@ class UsersTable extends Table
 				'message' => 'Este CPF já está cadastrado.'
 			]);
 	}
+	
 
 }

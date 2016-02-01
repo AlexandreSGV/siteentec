@@ -9,4 +9,4 @@
 
 
 
-<?php echo $this->Html->link('Enviar e-mail de testes',array('controller' => 'users','action' => 'mail'));?>
+

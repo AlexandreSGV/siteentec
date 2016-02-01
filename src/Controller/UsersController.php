@@ -12,8 +12,8 @@ class UsersController extends AppController
 
 	public function beforeFilter(Event $event)
 	{
-		parent::beforeFilter($event);
-    $this->Auth->allow(['add', 'logout', 'mail', 'activate']);
+	parent::beforeFilter($event);
+    	$this->Auth->allow(['add', 'logout', 'activate']);
 	}
 
 	public function index()
@@ -21,10 +21,16 @@ class UsersController extends AppController
 		$this->set('users', $this->Users->find('all'));
 	}
 
-	public function view($id)
+	public function view($id = null)
 	{
-		$user = $this->Users->get($id);
-		$this->set(compact('user'));
+		//redirect do login sem id como parametro
+		if($id === null){
+			$user = $this->Users->get($this->Auth->user('id'));
+			$this->set(compact('user'));
+		}else{// redirect com id no get
+			$this->set(compact('user'));
+			$user = $this->Users->get($id);
+		}
 	}
 
 	public function add()
@@ -43,7 +49,7 @@ class UsersController extends AppController
 				->emailFormat('html')
 				->to($user->email)
 				->template('default','confirma_insc')
-				->subject('[EnTec 2016] Inscrição pendente de validação')
+				->subject('[EntTec 2016] Inscrição pendente de validação')
 				->viewVars(['nome' => $user->nome,'activation_link' => 'http://localhost/siteentec/users/activate/'.$user->id.'/'.$user->activation_code])
 				->send();
 				
@@ -81,19 +87,7 @@ class UsersController extends AppController
 		return $this->redirect('/users/login');
 	}
 	
-	//função de teste de envio de emails....
-	public function mail()
-	{
-		$email = new Email('default');
-		$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
-		->emailFormat('html')
-		->to('strapacao@gmail.com')
-		->template('default','confirma_insc')
-		->subject('[EnTec 2016] Inscrição pendente de validação')
-		->viewVars(['nome' => 'Alexandre','ninscricao' => 123123,'activation_link' => 'http://localhost/siteentec/users/activate/'])
-		->send();
-		return $this->redirect($this->Auth->logout());
-	}
+	
 	
 	public function login()
 	{
@@ -111,5 +105,31 @@ class UsersController extends AppController
 	{
 		return $this->redirect($this->Auth->logout());
 	}
+	
+	
+	public function isAuthorized($user)
+	{
+		// O próprio usuário pode ver os seus dados
+		if ($this->request->action === 'view') {
+			$userId = $this->Auth->user('id');
+			if ($userId === $user['id']) {
+				return true;
+			}
+		}
+		return parent::isAuthorized($user);
+	}
+	
+	public function delete($id)
+	{
+		$this->request->allowMethod(['post', 'delete']);
+	
+		$usr = $this->Users->get($id);
+		if ($this->Users->delete($usr)) {
+			$this->Flash->success(__('O usuário de nº: {0} foi removido.', h($id)));
+			return $this->redirect(['action' => 'index']);
+		}
+	}
+	
+	
 
 }

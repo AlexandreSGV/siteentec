@@ -12,101 +12,134 @@
  * @since         0.10.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
 $cakeDescription = 'ENTEC: the rapid development php framework';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
+    <?= $this->Html->charset()?>
+    <meta name="viewport"
+	content="width=device-width, initial-scale=1.0">
+<title>
         <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
+        <?= $this->fetch('title')?>
     </title>
-    <?= $this->Html->meta('icon') ?>
+    <?= $this->Html->meta('icon')?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
-    <?= $this->Html->css('main.css') ?>
+    <?= $this->Html->css('base.css')?>
+    <?= $this->Html->css('cake.css')?>
+    <?= $this->Html->css('main.css')?>
+    <?= $this->Html->script('main.js'); ?> 
 
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
+
+    <?= $this->fetch('meta')?>
+    <?= $this->fetch('css')?>
+    <?= $this->fetch('script')?>
 </head>
 <body>
 	<div id="d1">
 		<div id="entrarDiv">
+			
+			<?php
+			
+			$loguser = $this->request->session ()->read ( 'Auth.User' );
+			
+			if ($loguser['role'] === 'admin'){
+			?>
 			<ul id="menuadmin">
 				<li><a href="#">Administrar</a>
 					<ul>
-						<li><a href="#">Gerenciar inscrições</a></li>
-						<li><a href="#">Gerenciar palestrantes</a></li>
-						<li><a href="#">Envio de e-mails</a></li>                    
-					</ul>
-				</li>
+						<li><?php echo $this->Html->link ( "Gerenciar inscrições", array ( 'controller' => 'users', 'action' => 'index' ) );?></li>
+						<li><?php echo $this->Html->link ( "Gerenciar palestrantes", array ( 'controller' => 'users', 'action' => 'index' ) );?></li>
+						<li><?php echo $this->Html->link ( "Cadastrar palestrantes", array ( 'controller' => 'palestrantes', 'action' => 'add' ) );?></li>
+						<li><?php echo $this->Html->link ( "Envio de e-mails", array ( 'controller' => 'email', 'action' => 'index' ) );?></li>
+					</ul></li>
 			</ul>
-			<?php
+			<?php 
+			}
 			
-			$loguser = $this->request->session()->read('Auth.User');
-if(!$loguser) {
-    
-}
-$loguser = $this->request->session()->read('Auth.User');
-			if ($loguser)
-			{
+			if ($loguser) {
+				$user = $loguser ['nome'] . ' (' . $loguser ['username'] . ') ';
 				
-				
-				$user = $loguser['nome'].' ('.$loguser['username'].') ';
-				
-				echo $this->Html->image('user_icon.png', ['alt' => 'Icone Usuario']);
-				echo $this->Html->link($user,array('controller' => 'users','action' => 'view'));
-				echo $this->Html->image('logout_64.png', ['alt' => 'Icone Logout']);
-				echo $this->Html->link('Sair',array('controller' => 'users','action' => 'logout'));
-			}else{
-				echo $this->Html->image('login_64.png', ['alt' => 'Icone login']);
-				echo $this->Html->link('Entrar',array('controller' => 'users','action' => 'login'));
+				echo $this->Html->image ( 'user_icon.png', [ 
+						'alt' => 'Icone Usuario' 
+				] );
+				echo $this->Html->link ( $user, array (
+						'controller' => 'users',
+						'action' => 'view',
+						$loguser ['id'] 
+				) );
+				echo $this->Html->image ( 'logout_64.png', [ 
+						'alt' => 'Icone Logout' 
+				] );
+				echo $this->Html->link ( 'Sair', array (
+						'controller' => 'users',
+						'action' => 'logout' 
+				) );
+			} else {
+				echo $this->Html->image ( 'login_64.png', [ 
+						'alt' => 'Icone login' 
+				] );
+				echo $this->Html->link ( 'Entrar', array (
+						'controller' => 'users',
+						'action' => 'login' 
+				) );
 			}
 			?>
 			 </div>
 		<nav id="menu">
 			<ul>
-				
+
 				<li><?php
-					if($this->fetch('title') === 'home') 
-						echo "<span>HOME</span>";
-					else echo $this->Html->link('HOME',array('controller' => 'PAGES','action' => 'display', 'home'));?></li>
+				if ($this->fetch ( 'title' ) === 'home')
+					echo "<span>HOME</span>";
+				else
+					echo $this->Html->link ( 'HOME', array (
+							'controller' => 'PAGES',
+							'action' => 'display',
+							'home' 
+					) );
+				?></li>
 				<li><a href="...">SOBRE</a></li>
 				<li><?php
-					if($this->fetch('title') === 'Inscrições') 
-						echo "<span>INSCRIÇÕES</span>";
-					else echo $this->Html->link('INSCRIÇÕES',array('controller' => 'users','action' => 'add'));?></li>
+				if ($this->fetch ( 'title' ) === 'Inscrições')
+					echo "<span>INSCRIÇÕES</span>";
+				else
+					echo $this->Html->link ( 'INSCRIÇÕES', array (
+							'controller' => 'users',
+							'action' => 'add' 
+					) );
+				?></li>
 				<li><a href="...">PROGRAMAÇÃO</a></li>
 				<li><a href="...">PALESTRANTES</a></li>
 				<li>
-				<?php 
-					if($this->fetch('title') === 'local') echo "<span>LOCAL</span>";
-					else echo $this->Html->link('LOCAL', array('controller' => 'pages','local'));
+				<?php
+				if ($this->fetch ( 'title' ) === 'local')
+					echo "<span>LOCAL</span>";
+				else
+					echo $this->Html->link ( 'LOCAL', array (
+							'controller' => 'pages',
+							'local' 
+					) );
 				?>
 				</li>
 				<li><a href="...">COORDENAÇÃO</a></li>
-				<li><a href="...">CONTATO</a></li>		
-			</ul>		
+				<li><a href="...">CONTATO</a></li>
+			</ul>
 		</nav>
 	</div>
 	<div class="gridContainer">
-		
+
 		<div id="container">
 
 			<div id="content">
-				<?= $this->Flash->render() ?>
+				<?= $this->Flash->render()?>
 
 				<div class="row">
-					<?= $this->fetch('content') ?>
+					<?= $this->fetch('content')?>
 				</div>
 			</div>
-			<footer>
-			</footer>
+			<footer> </footer>
 		</div>
 	</div>
 </body>
