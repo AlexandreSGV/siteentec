@@ -5,7 +5,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
-use Cake\Mailer\Email;
+use Cake\Datasource\ConnectionManager;
+
 
 class PalestrantesController extends AppController
 {
@@ -13,18 +14,31 @@ class PalestrantesController extends AppController
 	public function beforeFilter(Event $event)
 	{
 	parent::beforeFilter($event);
-    	$this->Auth->allow(['add']);
+    	$this->Auth->allow(['add', 'view']);
 	}
 
 	public function index()
 	{
 		$this->set('palestrantes', $this->Palestrantes->find('all'));
 	}
+	
+	public function manage()
+	{
+		$connection = ConnectionManager::get('default');
+		$result = $connection->execute('SELECT users.nome, palestrantes.id, palestrantes.ocupacao FROM palestrantes INNER JOIN users on palestrantes.user_id = users.id')->fetchAll('assoc');
+		$this->set('palestrantes', $result);
+	}
+	
 
 	public function view($id = null)
 	{
-		$this->set(compact('palestrante'));
+		
 		$palestrante = $this->Palestrantes->get($id);
+		$connection = ConnectionManager::get('default');
+		$user = $connection->execute('SELECT nome FROM users WHERE id='.$id)->fetch('assoc');
+		
+		$this->set('user', $user);
+		$this->set('palestrante', $palestrante);
 	}
 
 	public function add()
@@ -39,12 +53,12 @@ class PalestrantesController extends AppController
 				$ext = pathinfo($filename, PATHINFO_EXTENSION);
 				while (true) {
 					$filename = uniqid(rand(), true) .'.'. $ext;
-					if (!'../imagestore/'. $filename) break;
+					if (!'imagestore/'. $filename) break;
 				}
 				
 				move_uploaded_file(
 						$this->request->data['foto']['tmp_name'],
-						'../imagestore/' . $filename
+						'imagestore/' . $filename
 						);
 				
 				
@@ -57,10 +71,19 @@ class PalestrantesController extends AppController
 			
 			if ($this->Palestrantes->save($palestrante)) {
 				$this->Flash->default(__('Palestrante adicionado com sucesso'));
-				return $this->redirect(['action' => 'add']);
+				return $this->redirect(['action' => 'view', $palestrante->id]);
 			}
 			$this->Flash->error(__('Incrição não realizada, verifique se preencheu o formulário corretamente!'));
 		}
+		
+		$connection = ConnectionManager::get('default');
+		$result = $connection->execute('SELECT id, nome FROM users')->fetchAll('assoc');
+		$usersList =array();
+		$usersList[null]  = 'Selecione';
+		foreach ($result as $row) {			
+			$usersList[$row['id']]  = $row['nome'] ;
+		}
+		$this->set('usersList', $usersList);
 		$this->set('palestrante', $palestrante);
 	}
 	public function isAuthorized($palestrante)
@@ -82,7 +105,7 @@ class PalestrantesController extends AppController
 		$usr = $this->Palestrantes->get($id);
 // 		if ($this->Palestrantes->delete($usr)) {
 			$this->Flash->success(__('O palestrante de nº: {0} foi removido.', h($id)));
-			return $this->redirect(['action' => 'index']);
+			return $this->redirect(['action' => 'manage']);
 // 		}
 	}
 	

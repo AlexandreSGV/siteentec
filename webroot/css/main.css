@@ -15,6 +15,8 @@
 }
 
 
+
+
 #menu ul {
 	margin-bottom: 0px;
 	text-align: justify;
@@ -182,3 +184,9 @@
 	width: 150px;
 }
 
+
+
+.imagemPerfil{
+	max-width: 120px;
+	max-height: 120px 
+}

@@ -50,10 +50,13 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
 				<li><a href="#">Administrar</a>
 					<ul>
 						<li><?php echo $this->Html->link ( "Gerenciar inscrições", array ( 'controller' => 'users', 'action' => 'index' ) );?></li>
-						<li><?php echo $this->Html->link ( "Gerenciar palestrantes", array ( 'controller' => 'users', 'action' => 'index' ) );?></li>
+						<li><?php echo $this->Html->link ( "Gerenciar Atividades", array ( 'controller' => 'atividades', 'action' => 'manage' ) );?></li>
+						<li><?php echo $this->Html->link ( "Cadastrar Atividades", array ( 'controller' => 'atividades', 'action' => 'add' ) );?></li>
+						<li><?php echo $this->Html->link ( "Gerenciar palestrantes", array ( 'controller' => 'palestrantes', 'action' => 'manage' ) );?></li>
 						<li><?php echo $this->Html->link ( "Cadastrar palestrantes", array ( 'controller' => 'palestrantes', 'action' => 'add' ) );?></li>
 						<li><?php echo $this->Html->link ( "Envio de e-mails", array ( 'controller' => 'email', 'action' => 'index' ) );?></li>
-					</ul></li>
+					</ul>
+				 </li>
 			</ul>
 			<?php 
 			}

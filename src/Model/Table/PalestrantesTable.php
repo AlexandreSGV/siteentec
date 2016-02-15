@@ -27,8 +27,10 @@ class PalestrantesTable extends Table
         $this->table('palestrantes');
         $this->displayField('id');
         $this->primaryKey('id');
-        $this->belongsTo('Users');
-
+        $this->belongsTo('Users', [
+        		'foreignKey' => 'user_id',
+        		'type' => 'INNER'
+        ]);
     }
 
     /**
@@ -54,6 +56,9 @@ class PalestrantesTable extends Table
         $validator
             ->requirePresence('ocupacao', 'create')
             ->notEmpty('ocupacao');
+        $validator
+            ->requirePresence('user_id', 'create')
+            ->notEmpty('user_id');
 
         return $validator;
     }
