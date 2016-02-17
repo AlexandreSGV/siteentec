@@ -1,128 +1,361 @@
-<html><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
-  </head><body>
-    <!--<div class="cover" style="opacity: 1;">-->
-    <div class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand"><img height="20" alt="Brand" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAA81BMVEX///9VPnxWPXxWPXxWPXxWPXxWPXxWPXz///9hSYT6+vuFc6BXPn37+vz8+/z9/f2LeqWMe6aOfqiTg6uXiK5bQ4BZQX9iS4VdRYFdRYJfSINuWI5vWY9xXJF0YJR3Y5Z4ZZd5ZZd6Z5h9apq0qcW1qsW1q8a6sMqpnLyrn76tocCvpMGwpMJoUoprVYxeRoJjS4abjLGilLemmbrDutDFvdLPx9nX0eDa1OLb1uPd1+Td2OXe2eXh3Ofj3+nk4Orl4evp5u7u7PLv7fPx7/T08vb08/f19Pf29Pj39vn6+fuEcZ9YP35aQn/8/P1ZQH5fR4PINAOdAAAAB3RSTlMAIWWOw/P002ipnAAAAPhJREFUeF6NldWOhEAUBRvtRsfdfd3d3e3/v2ZPmGSWZNPDqScqqaSBSy4CGJbtSi2ubRkiwXRkBo6ZdJIApeEwoWMIS1JYwuZCW7hc6ApJkgrr+T/eW1V9uKXS5I5GXAjW2VAV9KFfSfgJpk+w4yXhwoqwl5AIGwp4RPgdK3XNHD2ETYiwe6nUa18f5jYSxle4vulw7/EtoCdzvqkPv3bn7M0eYbc7xFPXzqCrRCgH0Hsm/IjgTSb04W0i7EGjz+xw+wR6oZ1MnJ9TWrtToEx+4QfcZJ5X6tnhw+nhvqebdVhZUJX/oFcKvaTotUcvUnY188ue/n38AunzPPE8yg7bAAAAAElFTkSuQmCC"></a>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/scrollTo/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="css/pingendo-bootstrap.css" rel="stylesheet" type="text/css">
+    </head>
+    <body data-spy="scroll" data-target=".navbar">
+        <!--<div class="cover" style="opacity: 1;">-->
+        <div class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"><img height="20" alt="Brand" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAA81BMVEX///9VPnxWPXxWPXxWPXxWPXxWPXxWPXz///9hSYT6+vuFc6BXPn37+vz8+/z9/f2LeqWMe6aOfqiTg6uXiK5bQ4BZQX9iS4VdRYFdRYJfSINuWI5vWY9xXJF0YJR3Y5Z4ZZd5ZZd6Z5h9apq0qcW1qsW1q8a6sMqpnLyrn76tocCvpMGwpMJoUoprVYxeRoJjS4abjLGilLemmbrDutDFvdLPx9nX0eDa1OLb1uPd1+Td2OXe2eXh3Ofj3+nk4Orl4evp5u7u7PLv7fPx7/T08vb08/f19Pf29Pj39vn6+fuEcZ9YP35aQn/8/P1ZQH5fR4PINAOdAAAAB3RSTlMAIWWOw/P002ipnAAAAPhJREFUeF6NldWOhEAUBRvtRsfdfd3d3e3/v2ZPmGSWZNPDqScqqaSBSy4CGJbtSi2ubRkiwXRkBo6ZdJIApeEwoWMIS1JYwuZCW7hc6ApJkgrr+T/eW1V9uKXS5I5GXAjW2VAV9KFfSfgJpk+w4yXhwoqwl5AIGwp4RPgdK3XNHD2ETYiwe6nUa18f5jYSxle4vulw7/EtoCdzvqkPv3bn7M0eYbc7xFPXzqCrRCgH0Hsm/IjgTSb04W0i7EGjz+xw+wR6oZ1MnJ9TWrtToEx+4QfcZJ5X6tnhw+nhvqebdVhZUJX/oFcKvaTotUcvUnY188ue/n38AunzPPE8yg7bAAAAAElFTkSuQmCC"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="#home" id="home-link"><i class="fa fa-home fa-lg"></i> Home</a>
+                        </li>
+                        <li>
+                            <a href="#program" id="program-link" ><i class="fa fa-lg fa-list-alt"></i> Programa</a>
+                        </li>
+                        <li>
+                            <a href="#academic" id="academic-link"><i class="fa fa-book fa-lg"></i> Mostra acadêmica</a>
+                        </li>
+                        <li>
+                            <a href="#where" id="where-link"><i class="fa fa-lg fa-map-marker"></i> Local</a>
+                        </li>
+                        <li>
+                            <a href="#people" id="people-link"><i class="fa fa-group fa-lg"></i> Organização</a>
+                        </li>
+                        <li>
+                            <a href="#insc" id="insc-link"><i class="fa fa-lg fa-pencil"></i> Inscrições</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active">
-              <a href="#"><i class="fa fa-home fa-lg"></i> Home</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-lg fa-list-alt"></i> Programa</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-book fa-lg"></i> Mostra acadêmica</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-lg fa-map-marker"></i> Local</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-group fa-lg"></i> Organização</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-lg fa-pencil"></i> Inscrições</a>
-            </li>
-          </ul>
+        <div class="cover" style="opacity: 1;" id="home">
+            <div class="cover-image" style="background-image : url('images/background.jpg')"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="text-inverse shadowed">I ENTEC</h1>
+                        <p class="text-inverse">I Encontro de Tecnologia da Informação e Comunicação do IFPE</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="cover" style="opacity: 1;">
-      <div class="cover-image" style="background-image : url('http://pingendo.github.io/pingendo-bootstrap/assets/blurry/800x600/12.jpg')"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h1 class="text-inverse shadowed">I ENTEC</h1>
-            <p class="text-inverse">I Evento de Tecnologia da Informação do IFPE / Igarassu</p>
-            <br>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
-          </div>
-          <div class="col-md-6">
-            <h1 class="text-primary">A title</h1>
-            <h3>A subtitle</h3>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-              nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-              Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-              enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-              felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-              elementum semper nisi.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h1 class="text-primary">A title</h1>
-            <h3>A subtitle</h3>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-              nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-              Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-              enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-              felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-              elementum semper nisi.</p>
-          </div>
-          <div class="col-md-6">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="text-center text-primary">Team</h1>
-            <p class="text-center">We are a group of skilled individuals.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
-            <h3 class="text-center">John Doe</h3>
-            <p class="text-center">Developer</p>
-          </div>
-          <div class="col-md-4">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
-            <h3 class="text-center">John Doe</h3>
-            <p class="text-center">Developer</p>
-          </div>
-          <div class="col-md-4">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
-            <h3 class="text-center">John Doe</h3>
-            <p class="text-center">Developer</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  
+        <div class="section" id="program">
+          <h1 class="text-center text-primary">Programa</h1>
+          <div class="container">
 
-</body></html>
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="text-success">06 de Abril de 2016</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <hr>
+                <h3>8h às 9h</h3>
+              </div>
+              <div class="col-md-12">
+                <h4>Cadastramento</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <hr>
+                <h3>9h às 10h</h3>
+              </div>
+              <div class="col-md-12">
+                <h4>Abertura oficial</h4>
+                <p>
+                  Pronunciamento da Diretora do campus, professora Ana Regina, e da [?] reitora do IFPE, professora [?]
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <hr>
+                <h3>10h às 11h</h3>
+              </div>
+              <div class="col-md-12">
+                <h4>Palestra de abertura</h4>
+                <div class="row">
+                  <div class="col-md-1">
+                    <img src="images/user_placeholder.png" alt="" class="img-circle img-responsive">
+                  </div>
+                  <div class="col-md-11">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                    ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                    dis parturient montes, nascetur ridiculus mus.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <hr>
+                <h3>11h às 12h</h3>
+              </div>
+              <div class="col-md-12">
+                <h4>Palestra 2</h4>
+                <div class="row">
+                  <div class="col-md-1">
+                    <img src="images/user_placeholder.png" alt="" class="img-circle img-responsive">
+                  </div>
+                  <div class="col-md-11">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                    ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                    dis parturient montes, nascetur ridiculus mus.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <hr>
+                <h3>12h às 13h</h3>
+                <p>Coffee Break</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <hr>
+                <h3>13h às 16h</h3>
+              </div>
+              <div class="col-md-4">
+                <h4>Minicurso 1</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                  dis parturient montes, nascetur ridiculus mus.
+                </p>
+              </div>
+              <div class="col-md-4">
+                <h4>Apresentações de trabalhos</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                  dis parturient montes, nascetur ridiculus mus.
+                </p>
+              </div>
+              <div class="col-md-4">
+                <h4>Olimpíada de Informática de Igarassu</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                  dis parturient montes, nascetur ridiculus mus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="text-success">07 de Abril de 2016</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <hr>
+                <h3>9h às 10h</h3>
+              </div>
+              <div class="col-md-12">
+                <h4>Palestra 3</h4>
+                <div class="row">
+                  <div class="col-md-1">
+                    <img src="images/user_placeholder.png" alt="" class="img-circle img-responsive">
+                  </div>
+                  <div class="col-md-11">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                    ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                    dis parturient montes, nascetur ridiculus mus.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <hr>
+                <h3>10h às 11h</h3>
+              </div>
+              <div class="col-md-12">
+                <h4>Palestra 4</h4>
+                <div class="row">
+                  <div class="col-md-1">
+                    <img src="images/user_placeholder.png" alt="" class="img-circle img-responsive">
+                  </div>
+                  <div class="col-md-11">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                    ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                    dis parturient montes, nascetur ridiculus mus.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <hr>
+                <h3>11h às 12h</h3>
+              </div>
+              <div class="col-md-12">
+                <h4>Palestra 5</h4>
+                <div class="row">
+                  <div class="col-md-1">
+                    <img src="images/user_placeholder.png" alt="" class="img-circle img-responsive">
+                  </div>
+                  <div class="col-md-11">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                    ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                    dis parturient montes, nascetur ridiculus mus.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <hr>
+                <h3>12h às 13h</h3>
+                <p>Coffee Break</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <hr>
+                <h3>13h às 16h</h3>
+              </div>
+              <div class="col-md-4">
+                <h4>Minicurso 2</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                  dis parturient montes, nascetur ridiculus mus.
+                </p>
+              </div>
+              <div class="col-md-4">
+                <h4>Apresentações de trabalhos</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                  dis parturient montes, nascetur ridiculus mus.
+                </p>
+              </div>
+              <div class="col-md-4">
+                <h4>Oficina Ardurec</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                  dis parturient montes, nascetur ridiculus mus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" id="where">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <!-- <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2715.191062021682!2d-34.911013006151535!3d-7.855608940417701!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x77802d54bdb66e80!2sFACIG!5e0!3m2!1spt-BR!2sbr!4v1454417639340" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+              </div>
+              <div class="col-md-6">
+                <h1 class="text-primary">Local</h1>
+                <h3>Instituto Federal de Pernambuco</h3>
+                <h4>Campus Igarassu</h4>
+                <p>
+                  <br>Sede Provisória Faculdade de Igarassu (Facig) – Avenida Alfredo Bandeira de Melo S/N, BR-101 Norte, Km 44, Igarassu-PE
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" id="people">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="text-center text-primary">Organização</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <img src="images/user_placeholder.png" class="center-block img-circle img-responsive">
+              </div>
+              <div class="col-md-4">
+                <h3 class="text-left">John Doe</h3>
+                <p class="text-left">Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="bg-success">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <h1>I ENTEC</h1>
+                <p>
+                  Instituto Federal de Pernambuco
+                  <br>Campus Igarassu
+                  <br>Sede Provisória Faculdade de Igarassu (Facig) – Avenida Alfredo Bandeira de Melo S/N, BR-101 Norte, Km 44, Igarassu-PE
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <p class="text-info text-right">
+                  <br><br>
+                </p>
+                <div class="row">
+                  <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                    <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                    <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                    <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                    <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 hidden-xs text-right">
+                    <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                    <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                    <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                    <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      function registerScroll(trigger, target, time) {
+        $(trigger).on("click", function(event) {
+          $('body').scrollTo(target, time, "easeInOutExpo");
+          event.preventDefault();
+          $(this).blur();
+        });
+      }
+
+      registerScroll("#home-link",     "#home",     400);
+      registerScroll("#program-link",  "#program",  400);
+      registerScroll("#academic-link", "#academic", 400);
+      registerScroll("#where-link",    "#where",    400);
+      registerScroll("#people-link",   "#people",   400);
+      registerScroll("#insc-link",     "#insc",     400);
+
+    });
+  </script>
+  </body>
+</html>
