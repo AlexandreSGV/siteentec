@@ -39,7 +39,7 @@ class AtividadesController extends AppController
 		if ($this->request->is('post')) {			
 			$atividade = $this->Atividades->patchEntity($atividade, $this->request->data);
 			
-			$this->Flash->error(__($atividade['tipo']));
+			$this->Flash->error(__($atividade['id_palestrante'].' '.$atividade['tipo'].' '.$atividade['titulo'].' '.$atividade['descricao']));
 			if ($this->Atividades->save($atividade)) {
 				$this->Flash->default(__('Atividade adicionado com sucesso'));
 				return $this->redirect(['action' => 'view', $atividade->id]);

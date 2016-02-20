@@ -61,6 +61,29 @@ class UsersController extends AppController
 	}
 	
 	
+	public function edit($id = null) {
+		$user = $this->Users->get ( $id );
+		if ($this->request->is ( [
+				'post',
+				'put'
+		] )) {
+			$this->Users->patchEntity ( $user, $this->request->data );
+			$this->Users->validator()->remove('password');
+			$this->Users->validator()->remove('confirm_password');
+			if ($this->Users->save ( $user )) {
+				$this->Flash->success ( __ ( 'Inscrição atualizada.' ) );
+				return $this->redirect ( [
+						'action' => 'index'
+				] );
+			}
+			$this->Flash->error ( __ ( 'Não foi possivel atualizar a inscrição.' ) );
+		}
+	
+		$this->set ( 'user', $user );
+	}
+	
+	
+	
 	function activate($user_id = null, $in_hash = null) {
 		$user = $this->Users->get($user_id);
 		
@@ -110,7 +133,14 @@ class UsersController extends AppController
 	public function isAuthorized($user)
 	{
 		// O próprio usuário pode ver os seus dados
-		if ($this->request->action === 'view') {
+		if ($this->request->action === 'edit' ) {
+			$userId = $this->Auth->user('id');
+			if ($userId === $user['id']) {
+				return true;
+			}
+		}
+		
+		if ($this->request->action === 'view' ) {
 			$userId = $this->Auth->user('id');
 			if ($userId === $user['id']) {
 				return true;

@@ -44,3 +44,5 @@
 <?= h($user->instrucao)?>
 </fieldset>
 </form>
+<?= $this->Html->link('Editar', ['controller' => 'Users', 'action' => 'edit', $user->id]) ?>
+<?=$this->Html->image ( 'view_icon_24.png', [ 'alt' => 'Visualizar' , 'url' => ['controller' => 'Users', 'action' => 'edit', $user->id]]);?>

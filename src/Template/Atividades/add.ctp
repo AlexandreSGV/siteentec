@@ -7,7 +7,7 @@
 		<legend>Dados da Atividade: </legend>
 		<div class="input text required">
         <?= $this->Form->label('palestrante_id', 'Palestrante')?>
-        <?= $this->Form->select('palestrante_id', $palestrantesList, array())?>
+        <?= $this->Form->select('id_palestrante', $palestrantesList, array())?>
         </div>
         <div class="input text required">
         <?= $this->Form->label('tipo', 'Tipo')?>
