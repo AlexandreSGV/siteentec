@@ -29,12 +29,7 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
     <?= $this->Html->css('base.css')?>
     <?= $this->Html->css('cake.css')?>
     <?= $this->Html->css('main.css')?>
-    <?= $this->Html->css('pingendo-bootstrap.css')?>
-    <?= $this->Html->css('font-awesome.min.css')?>
-    <?= $this->Html->script('main.js'); ?> 
-    <?= $this->Html->script('jquery.min.js'); ?> 
-    <?= $this->Html->script('scrollTo/jquery.scrollTo.min.js'); ?> 
-    <?= $this->Html->script('bootstrap.min.js'); ?> 
+    <?= $this->Html->script('main.js'); ?>  
 
 
     <?= $this->fetch('meta')?>

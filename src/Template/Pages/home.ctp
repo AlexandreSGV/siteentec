@@ -1,7 +1,7 @@
 <?= $this->assign('title', 'home'); ?>
 
 
-<div class="cover" style="opacity: 1;" id="home">
+		<div class="cover" style="opacity: 1;" id="home">
             <div class="cover-image" style="background-image : url('img/background.jpg')"></div>
             <div class="container">
                 <div class="row">

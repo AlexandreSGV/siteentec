@@ -11,16 +11,16 @@ class UsersTable extends Table
 	public function validationDefault(Validator $validator)
 	{
 		return $validator
-			->notEmpty('nome', 'Campo nome é obrigatório. ')
-			->notEmpty('cpf', 'Campo CPF é obrigatório. ')
-			->notEmpty('email', 'Campo E-mail é obrigatório. ')
-			->notEmpty('sexo', 'Campo Sexo é obrigatório. ')
-			->notEmpty('cep', 'Campo CEP é obrigatório. ')
-			->notEmpty('estado', 'Campo Estado é obrigatório. ')
-			->notEmpty('cidade', 'Campo Cidade é obrigatório. ')
-			->notEmpty('bairro', 'Campo Bairro é obrigatório. ')
-            ->notEmpty('password', 'Campo Senha é obrigatório. ')
-            ->notEmpty('confirm_password', 'Campo Confirma Senha é obrigatório. ')
+			->notEmpty('nome', 'Campo nome ï¿½ obrigatï¿½rio. ')
+			->notEmpty('cpf', 'Campo CPF ï¿½ obrigatï¿½rio. ')
+			->notEmpty('email', 'Campo E-mail ï¿½ obrigatï¿½rio. ')
+			->notEmpty('sexo', 'Campo Sexo ï¿½ obrigatï¿½rio. ')
+			->notEmpty('cep', 'Campo CEP ï¿½ obrigatï¿½rio. ')
+			->notEmpty('estado', 'Campo Estado ï¿½ obrigatï¿½rio. ')
+			->notEmpty('cidade', 'Campo Cidade ï¿½ obrigatï¿½rio. ')
+			->notEmpty('bairro', 'Campo Bairro ï¿½ obrigatï¿½rio. ')
+            ->notEmpty('password', 'Campo Senha ï¿½ obrigatï¿½rio. ')
+            ->notEmpty('confirm_password', 'Campo Confirma Senha ï¿½ obrigatï¿½rio. ')
             ->add('password',[
             		'match'=>[
             				'rule'=> ['compareWith','confirm_password'],
@@ -33,7 +33,7 @@ class UsersTable extends Table
             				'message'=>'The passwords does not match!',
             		]
             ])
-            ->notEmpty('instrucao', 'Grau de InstruÃ§Ã£o é obrigatório. ')
+            ->notEmpty('instrucao', 'Grau de InstruÃ§Ã£o ï¿½ obrigatï¿½rio. ')
             ->add('instrucao', 'inList', [
                 'rule' => ['inList', ['medio', 'tecnico', 'superior']],
                 'message' => 'Selecione um grau de instrucao. '
@@ -44,11 +44,11 @@ class UsersTable extends Table
             ])
 			->add('email', 'unique', [
 				'rule' => 'validateUnique', 'provider' => 'table',
-				'message' => 'Este e-mail já está cadastrado.'
+				'message' => 'Este e-mail jï¿½ estï¿½ cadastrado.'
 			])
 			->add('cpf', 'unique', [
 				'rule' => 'validateUnique', 'provider' => 'table',
-				'message' => 'Este CPF já está cadastrado.'
+				'message' => 'Este CPF jï¿½ estï¿½ cadastrado.'
 			]);
 	}
 	
