@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Fev-2016 às 22:08
+-- Generation Time: 23-Fev-2016 às 05:50
 -- Versão do servidor: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -32,17 +32,22 @@ CREATE TABLE IF NOT EXISTS `atividades` (
   `titulo` varchar(100) NOT NULL,
   `descricao` varchar(5000) NOT NULL,
   `id_palestrante` int(10) NOT NULL,
+  `horario` datetime NOT NULL,
+  `local` varchar(45) NOT NULL,
+  `horariofim` time NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_atividade_palestrante_id_idx` (`id_palestrante`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Extraindo dados da tabela `atividades`
 --
 
-INSERT INTO `atividades` (`id`, `tipo`, `titulo`, `descricao`, `id_palestrante`) VALUES
-(2, 'Palestra', 'zdsadas', 'asdasdads', 0),
-(3, 'Minicurso', 'dsadasdsa', 'adsasdas', 33);
+INSERT INTO `atividades` (`id`, `tipo`, `titulo`, `descricao`, `id_palestrante`, `horario`, `local`, `horariofim`) VALUES
+(2, 'Palestra', 'zdsadas', 'asdasdads', 0, '0000-00-00 00:00:00', '', '00:00:00'),
+(3, 'Minicurso', 'dsadasdsa', 'adsasdas', 33, '0000-00-00 00:00:00', '', '00:00:00'),
+(4, 'Palestra', 'CSS + HTML5', 'Palestra muito interessante', 34, '0000-00-00 00:00:00', '', '00:00:00'),
+(5, 'Oficina', 'JavaScript', 'java script para leigos', 34, '2016-02-23 04:18:00', 'Auditório', '00:00:00');
 
 -- --------------------------------------------------------
 
@@ -58,14 +63,15 @@ CREATE TABLE IF NOT EXISTS `palestrantes` (
   `user_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_palestrantes_user_id_idx` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=35 ;
 
 --
 -- Extraindo dados da tabela `palestrantes`
 --
 
 INSERT INTO `palestrantes` (`id`, `perfil`, `foto`, `ocupacao`, `user_id`) VALUES
-(33, 'asdasd', 'dasdas', 'adsad', 31);
+(33, 'asdasd', 'dasdas', 'adsad', 31),
+(34, 'Alexandre é um professor teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste ....', '2212256cb993799cfe6.60771999.png', 'Professor do IFPE', 36);
 
 -- --------------------------------------------------------
 
