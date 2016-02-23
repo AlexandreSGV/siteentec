@@ -6,7 +6,7 @@
 
 <?php 
 echo $this->Html->link ( '<i class="fa fa-2x fa-fw fa-pencil-square-o"></i>'.' Editar',
-		array ('controller' => 'Users', 'action' => 'edit', $user->id, 'class' => 'form-control'), 
+		array ('controller' => 'Users', 'action' => 'edit', $user->id), 
 		array ('escape' => false) );
 ?>
 

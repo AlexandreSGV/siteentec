@@ -39,10 +39,6 @@ class UsersTable extends Table
             		]
             ])
             ->notEmpty('instrucao', 'Grau de Instrução � obrigat�rio. ')
-			->add('sexo', 'inList', [
-                'rule' => ['inList', ['F', 'M']],
-                'message' => 'Selecion um sexo. '
-            ])
 			->add('email', 'unique', [
 				'rule' => 'validateUnique', 'provider' => 'table',
 				'message' => 'Este e-mail j� est� cadastrado.'

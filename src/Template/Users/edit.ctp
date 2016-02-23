@@ -10,7 +10,7 @@
         
         <div class="my-form-inline">
 				<div style="min-width: 210px; width: 30%;">
-        <?=$this->Form->input ( 'sexo', [ 'options' => [ '' => ' - - - ','F' => 'Feminino','M' => 'Masculino' ],'class' => 'form-control' ] )?>
+        <?=$this->Form->input ( 'sexo', array ('options' => [ 'empty' => 'Selecione','Feminino' => 'Feminino' , 'Masculino' => 'Masculino'] ))?>
         </div>
 				<div style="min-width: 280px; width: 40%;">
 		
@@ -67,7 +67,7 @@
 				</div>
 			</div>
 		</fieldset>
-<?= $this->Form->button(__('ENVIAR'), ['class'=>'form-control']); ?>
+<?= $this->Form->button(__('<i class="fa fa-paper-plane-o"></i> ENVIAR'), ['class'=>'form-control', 'escape' => false]); ?>
 <?= $this->Form->end()?> 
 </div>
 </div>

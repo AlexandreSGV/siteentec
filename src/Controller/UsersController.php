@@ -6,6 +6,7 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\Event\Event;
 use Cake\Mailer\Email;
+use Cake\I18n\Time;
 
 class UsersController extends AppController
 {
@@ -43,7 +44,8 @@ class UsersController extends AppController
 			$user->role = "participante";
 			$user->activation_code = md5(time());
 			$user->ativo = 0;
-			
+			$user->created = Time::now()->format('Y-m-d H:i:s');
+			$user->modified = Time::now()->format('Y-m-d H:i:s');
 			if ($this->Users->save($user)) {
 				$this->Flash->default(__($user->nome.', a sua inscrição está pendente de validação. Em instantes você receberá um e-mail com instruções para a validação.'));
 				$email = new Email('default');
@@ -57,7 +59,7 @@ class UsersController extends AppController
 				
 				return $this->redirect(['action' => 'add']);
 			}
-			$this->Flash->error(__('Incrição não realizada, verifique se preencheu o formulário corretamente!'));
+			$this->Flash->error(__('Incrição não realizada, verifique os campos destacados em vermelho.'));
 		}
 		$this->set('user', $user);
 	}
@@ -72,6 +74,7 @@ class UsersController extends AppController
 			$this->Users->patchEntity ( $user, $this->request->data );
 			$this->Users->validator()->remove('password');
 			$this->Users->validator()->remove('confirm_password');
+			$user->modified = Time::now()->format('Y-m-d H:i:s');
 			if ($this->Users->save ( $user )) {
 				$this->Flash->success ( __ ( 'Inscrição atualizada com sucesso.' ) );
 				return $this->redirect ( [
