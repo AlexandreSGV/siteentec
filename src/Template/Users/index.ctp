@@ -8,9 +8,9 @@
 	<tr>
 		<th width="10%">Nº</th>
 		<th width="45%">Nome</th>
-		<th width="18%">Data Inscrição</th>
-		<th width="18%">Ações</th>
-		<th width="9%">Status</th>
+		<th width="15%">Data Inscrição</th>
+		<th width="15%">Ações</th>
+		<th width="15%">Status</th>
 	</tr>
 
     <?php foreach ($users as $user): ?>
@@ -20,23 +20,20 @@
             <?= $this->Html->link($user->nome, ['action' => 'view', $user->id])?>
         </td>
 		<td>
-           <?= date('d/m/Y H:i:s', strtotime($user->created))?>
+           <?= $user->created?>
         </td>
 		<td>
-			<?=$this->Form->postLink ( $this->Html->image ( 'delete_icon_24.png', array ('alt' => __ ( 'Deletar' ) ) ), array ('action' => 'delete',$user->id ), array ('escape' => false,'confirm' => __ ( 'Você tem certeza que deseja remover permanentemente a inscrição Nº' . $user->id . ' ?' ) ) );?>		
-			<?=$this->Html->image ( 'view_icon_24.png', [ 'alt' => 'Visualizar' , 'url' => ['controller' => 'Users', 'action' => 'view', $user->id]]);?>
+			<?=$this->Form->postLink ('<i class="fa fa-lg fa-fw fa-trash"></i>' , array ('action' => 'delete',$user->id ), array ('escape' => false,'confirm' => __ ( 'Você tem certeza que deseja remover permanentemente a inscrição Nº' . $user->id . ' ?' ) ) );?>		
+			<?= $this->Html->link('<i class="fa fa-lg fa-fw fa-search"></i>', ['action' => 'view', $user->id], array ('escape' => false))?>
+			<?= $this->Html->link('<i class="fa fa-lg fa-fw fa-pencil-square-o"></i>', ['action' => 'edit', $user->id], array ('escape' => false))?>
         </td>
 		<td>
             <?php
 					
 					if ($user->ativo) {
-						echo $this->Html->image ( 'verify_true_24.png', [ 
-								'alt' => 'Verificado' 
-						] );
+						echo '<i class="fa fa-lg fa-fw  fa-check">Verificado</i>';
 					} else {
-						echo $this->Html->image ( 'verify_false_24.png', [ 
-								'alt' => 'Não Verificado' 
-						] );
+						echo '<i class="fa fa-lg fa-fw  fa-times">Pendente</i>';
 					}
 					?>
         </td>
