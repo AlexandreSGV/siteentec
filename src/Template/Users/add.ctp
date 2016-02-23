@@ -1,6 +1,6 @@
 <!-- src/Template/Users/add.ctp -->
 <?= $this->assign('title', 'Inscrições'); ?>
-<div class="container" style="width:60%;padding-top: 89px ">
+<div class="container" style="width:60%;padding-top: 89px; margin-bottom: 10px; ">
 	<?= $this->Flash->render()?>
 	<h2>Inscrição:</h2>
 	<div class="users form" >
@@ -12,7 +12,7 @@
         <?= $this->Form->input('telefone', array('class' => 'form-control'))?>
         <?=$this->Form->input ( 'sexo', [ 'options' => [ '' => ' - - - ','F' => 'Feminino','M' => 'Masculino' ],'class' => 'form-control' ] )?>
 		
-		<?=$this->Form->input ( 'nascimento', array ('label' => 'Date de Nascimento: ','dateFormat' => 'DMY','minYear' => date ( 'Y' ) - 90,'maxYear' => date ( 'Y' ) - 12,'class' => 'form-control' ) )?>
+		<?=$this->Form->input ( 'nascimento', array ('label' => 'Date de Nascimento: ','dateFormat' => 'DMY','minYear' => date ( 'Y' ) - 90,'maxYear' => date ( 'Y' ) - 12 ) )?>
         <?=$this->Form->input ( 'email', array ('class' => 'form-control','id' => 'email' ) )?>
         <?= $this->Form->input('password', array('class' => 'form-control'))?>
         <?= $this->Form->input('confirm_password',array('type'  =>  'password','class' => 'form-control'))?>

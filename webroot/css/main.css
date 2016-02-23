@@ -159,13 +159,13 @@
 #menuadmin li a:hover {
 	background: #231F20;
 	color: #fff;
-	
 	text-shadow: 0px 0px 5px #fff;
 	font-size: 12px;
 }
 
 #menuadmin li ul {
 	position: absolute;
+	bottom: 100%; /* abre para cima o menu */
 	background-color: #fff;
 	display: none;
 	margin: 0;

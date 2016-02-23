@@ -1,6 +1,7 @@
 <!-- src/Template/Users/activate.ctp -->
 <?= $this->assign('title', 'Confirmar Inscri��o'); ?>
-
+<div class="container" style="width:80%;padding-top: 89px; margin-bottom: 10px; ">
+<?= $this->Flash->render()?>
 <form>
 <fieldset>
 	<legend>Dados da Inscrição: </legend>
@@ -44,5 +45,11 @@
 <?= h($user->instrucao)?>
 </fieldset>
 </form>
-<?= $this->Html->link('Editar', ['controller' => 'Users', 'action' => 'edit', $user->id]) ?>
-<?=$this->Html->image ( 'view_icon_24.png', [ 'alt' => 'Visualizar' , 'url' => ['controller' => 'Users', 'action' => 'edit', $user->id]]);?>
+
+<?php 
+echo $this->Html->link ( '<i class="fa fa-2x fa-fw fa-pencil-square-o"></i>' . ' Editar',
+		array ('controller' => 'Users', 'action' => 'edit', $user->id), 
+		array ('escape' => false) );
+?>
+
+</div>

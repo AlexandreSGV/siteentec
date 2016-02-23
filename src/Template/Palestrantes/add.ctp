@@ -1,5 +1,7 @@
 <!-- src/Template/Palestantes/add.ctp -->
 <?= $this->assign('title', 'Inserir Palestrante'); ?>
+<div class="container" style="width:80%;padding-top: 89px; margin-bottom: 10px; ">
+<?= $this->Flash->render()?>
 <div class="palestrantes form">
 <?= $this->Form->create($palestrante,array('type' => 'file')) ?>
 
@@ -16,4 +18,5 @@
 	</fieldset>
 <?= $this->Form->button(__('ENVIAR')); ?>
 <?= $this->Form->end() ?>
+</div>
 </div>

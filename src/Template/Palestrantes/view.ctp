@@ -1,6 +1,7 @@
 <!-- src/Template/Palestrantes/view.ctp -->
 <?= $this->assign('title', 'Visualizar Palestrantes'); ?>
-
+<div class="container" style="width:80%;padding-top: 89px; margin-bottom: 10px; ">
+<?= $this->Flash->render()?>
 <form>
 	<fieldset>
 		<legend>Dados do palestrante: </legend>
@@ -11,3 +12,4 @@
 		  
 	</fieldset>
 </form>
+</div>

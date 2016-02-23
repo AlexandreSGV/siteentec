@@ -1,8 +1,8 @@
 <!-- src/Template/Users/index.ctp -->
 <?= $this->assign('title', 'Confirmar Inscrição'); ?>
 
-
-
+<div class="container" style="width:80%;padding-top: 89px; margin-bottom: 10px; ">
+<?= $this->Flash->render()?>
 <h1>Inscritos</h1>
 <table>
 	<tr>
@@ -44,3 +44,4 @@
     <?php endforeach; ?>
 
 </table>
+</div>

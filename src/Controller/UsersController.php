@@ -28,8 +28,9 @@ class UsersController extends AppController
 			$user = $this->Users->get($this->Auth->user('id'));
 			$this->set(compact('user'));
 		}else{// redirect com id no get
-			$this->set(compact('user'));
+			
 			$user = $this->Users->get($id);
+			$this->set(compact('user'));
 		}
 	}
 

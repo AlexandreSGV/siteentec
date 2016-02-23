@@ -188,6 +188,9 @@ if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
 
+ini_set('intl.default_locale', 'pt_BR');
+
+
 /**
  * Connect middleware/dispatcher filters.
  */
