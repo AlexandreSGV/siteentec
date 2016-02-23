@@ -21,17 +21,17 @@
 <body>
 <p><?= $nome ?>,</p>
 
-<p>sua inscrição foi validada.
-<br>O seu número de inscrição é <b><?= $ninscricao ?></b>
-<br>No ato do credenciamento, apresente um documento com foto e o número da sua inscrição.</p>
+<p>sua inscriÃ§Ã£o foi validada.
+<br>O seu nÃºmero de inscriÃ§Ã£o Ã© <b><?= $ninscricao ?></b>
+<br>No ato do credenciamento, apresente o seu nome ou nÃºmero da sua inscriÃ§Ã£o.</p>
 
-<p>Consulte a nossa programação em http://entec.ifpe.edu.br
-<br>Aproveite a conferência!</p>
+<p>Consulte a nossa programaÃ§Ã£o em http://entec.ifpe.edu.br
+<br>Aproveite o evento!</p>
 
 <br>
 <hr style="border:none;color:#909090;background-color:#b0b0b0;min-height:1px;width:99%">
-<p>I Encontro de Tecnologia da Informação do IFPE - EnTec 2016
-<br>Dias 25 e 26 de Fevereiro
+<p>I Encontro de Tecnologia da InformaÃ§Ã£o do IFPE - EnTec 2016
+<br>Dias 6 e 7 de Abril de 2016
 <br>Igarassu - PE
 <br>http://entec.ifpe.edu.br<p>
 </body>

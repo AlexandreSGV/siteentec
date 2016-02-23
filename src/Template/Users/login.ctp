@@ -5,11 +5,11 @@
 <?= $this->Flash->render('auth') ?>
 <?= $this->Form->create() ?>
     <fieldset>
-        <legend><?= __('Please enter your username and password') ?></legend>
-        <?= $this->Form->input('username') ?>
-        <?= $this->Form->input('password') ?>
+        <legend><?= __('Por favor, entre com seu e-mail e senha: ') ?></legend>
+        <?= $this->Form->input('username',['label' => 'E-mail']) ?>
+        <?= $this->Form->input('password',['label' => 'Senha']) ?>
     </fieldset>
-<?= $this->Form->button(__('Login')); ?>
+<?= $this->Form->button(__('Entrar')); ?>
 <?= $this->Form->end() ?>
 </div>
 </div>

@@ -21,13 +21,13 @@
 <body>
 <p><?= $nome ?>,</p>
 
-<p>sua inscriÁ„o ainda n„o foi concluÌda.
-<br>Para finalizar sua inscriÁ„o no I Encontro de Tecnologia da InformaÁ„o do IFPE - EnTec 2016, utilize o link abaixo para confirmar seu e-mail:</p>
+<p>sua inscri√ß√£o ainda n√£o foi conclu√≠da.
+<br>Para finalizar sua inscri√ß√£o no I Encontro de Tecnologia da Informa√ß√£o do IFPE - EnTec 2016, utilize o link abaixo para confirmar seu e-mail:</p>
 <p>Clique no link: <?= $activation_link ?></p>
 <br>
 <hr style="border:none;color:#909090;background-color:#b0b0b0;min-height:1px;width:99%">
-<p>I Encontro de Tecnologia da InformaÁ„o do IFPE - EnTec 2016
-<br>Dias 25 e 26 de Fevereiro
+<p>I Encontro de Tecnologia da Informa√ß√£o do IFPE - EnTec 2016
+<br>Dias 6 e 7 de Abril de 2016
 <br>Igarassu - PE
 <br>http://entec.ifpe.edu.br<p>
 </body>

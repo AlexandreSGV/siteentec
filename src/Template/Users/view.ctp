@@ -3,6 +3,13 @@
 <div class="container" style="width:80%;padding-top: 89px; margin-bottom: 10px; ">
 <?= $this->Flash->render()?>
 <form>
+
+<?php 
+echo $this->Html->link ( '<i class="fa fa-2x fa-fw fa-pencil-square-o"></i>'.' Editar',
+		array ('controller' => 'Users', 'action' => 'edit', $user->id, 'class' => 'form-control'), 
+		array ('escape' => false) );
+?>
+
 <fieldset>
 	<legend>Dados da Inscrição: </legend>
 <b>Nº Inscrição : </b> <?= h($user->id)?>
@@ -14,7 +21,7 @@
 	<fieldset>
 		<legend>Dados pessoais: </legend>
 		<b>Nome : </b> <?= h($user->nome) ?> 
-<br> <b>CPF : </b> <?= h($user->cpf) ?> 
+ 
 <br> <b>Telefone : </b> <?= h($user->telefone) ?> 
 <br> <b>Sexo : </b> <?= h($user->sexo) ?> 
 <br> <b>Nascimento : </b> <?= h($user->nascimento) ?> 
@@ -46,10 +53,5 @@
 </fieldset>
 </form>
 
-<?php 
-echo $this->Html->link ( '<i class="fa fa-2x fa-fw fa-pencil-square-o"></i>' . ' Editar',
-		array ('controller' => 'Users', 'action' => 'edit', $user->id), 
-		array ('escape' => false) );
-?>
 
 </div>

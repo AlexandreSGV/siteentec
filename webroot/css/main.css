@@ -14,8 +14,22 @@
 	z-index: 99999;
 }
 
+.my-form-inline{
+       float: left;
+       width: 100%;
+       max-width: 100%;
+}
 
+.my-form-inline div{
+	padding-right: 10px;
+    float: left;
+	width: 100%;
+	max-width: 100%;
+}
 
+.my-form-inline div div input{
+	max-width: 100%;
+}
 
 #menu ul {
 	margin-bottom: 0px;
@@ -26,6 +40,7 @@
 }
 
 #menu ul::after {
+	
 	width: 100%;
 	display: inline-block;
 	content: ".";

@@ -72,9 +72,9 @@ class UsersController extends AppController
 			$this->Users->validator()->remove('password');
 			$this->Users->validator()->remove('confirm_password');
 			if ($this->Users->save ( $user )) {
-				$this->Flash->success ( __ ( 'Inscrição atualizada.' ) );
+				$this->Flash->success ( __ ( 'Inscrição atualizada com sucesso.' ) );
 				return $this->redirect ( [
-						'action' => 'index'
+						'action' => 'view'
 				] );
 			}
 			$this->Flash->error ( __ ( 'Não foi possivel atualizar a inscrição.' ) );
@@ -103,7 +103,7 @@ class UsersController extends AppController
 			->subject('[EnTec 2016] Inscrição confirmada')
 			->viewVars(['nome' => $user->nome,'ninscricao' => $user->id])
 			->send();			
-			$this->Flash->success(__('A sua inscrição foi confirmada com sucesso!'));
+			$this->Flash->success(__('A sua inscrição foi confirmada com sucesso, para alterar os seus dados realize login!'));
 			
 		}else {
 			$this->Flash->error(__('Ocorreu algum erro no ativação, por favor, comunique a organização.'));

@@ -31,7 +31,7 @@ class Security
      *
      * @var string
      */
-    public static $hashType = 'sha1';
+    public static $hashType = 'blowfish';
 
     /**
      * The HMAC salt to use for encryption and decryption routines

@@ -12,11 +12,11 @@ class UsersTable extends Table
 	{
 		return $validator
 			->notEmpty('nome', 'Campo nome � obrigat�rio. ')
-			->notEmpty('cpf', 'Campo CPF � obrigat�rio. ')
 			->notEmpty('email', 'Campo E-mail � obrigat�rio. ')
 			->notEmpty('sexo', 'Campo Sexo � obrigat�rio. ')
 			->notEmpty('cep', 'Campo CEP � obrigat�rio. ')
 			->notEmpty('estado', 'Campo Estado � obrigat�rio. ')
+			->notEmpty('nascimento', 'Campo Data de Nascimento. ')
 			->notEmpty('cidade', 'Campo Cidade � obrigat�rio. ')
 			->notEmpty('bairro', 'Campo Bairro � obrigat�rio. ')
             ->notEmpty('password', 'Campo Senha � obrigat�rio. ')
@@ -24,20 +24,21 @@ class UsersTable extends Table
             ->add('password',[
             		'match'=>[
             				'rule'=> ['compareWith','confirm_password'],
-            				'message'=>'The passwords does not match!',
-            		]
+            				'message'=>'As senhas não conferem!',
+            		],
+            		'minLength' => [
+			            'rule' => ['minLength', 6],
+			            'last' => true,
+			            'message' => 'A senha deve ter no mínimo 6 caracteres'
+			        ]
             ])
             ->add('confirm_password',[
             		'match'=>[
             				'rule'=> ['compareWith','password'],
-            				'message'=>'The passwords does not match!',
+            				'message'=>'As senhas não conferem!',
             		]
             ])
             ->notEmpty('instrucao', 'Grau de Instrução � obrigat�rio. ')
-            ->add('instrucao', 'inList', [
-                'rule' => ['inList', ['medio', 'tecnico', 'superior']],
-                'message' => 'Selecione um grau de instrucao. '
-            ])
 			->add('sexo', 'inList', [
                 'rule' => ['inList', ['F', 'M']],
                 'message' => 'Selecion um sexo. '
@@ -45,10 +46,6 @@ class UsersTable extends Table
 			->add('email', 'unique', [
 				'rule' => 'validateUnique', 'provider' => 'table',
 				'message' => 'Este e-mail j� est� cadastrado.'
-			])
-			->add('cpf', 'unique', [
-				'rule' => 'validateUnique', 'provider' => 'table',
-				'message' => 'Este CPF j� est� cadastrado.'
 			]);
 	}
 	
