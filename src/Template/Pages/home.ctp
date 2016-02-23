@@ -2,14 +2,14 @@
 
 
 		<div class="cover" style="opacity: 1;" id="home">
-            <div class="cover-image" style="background-image : url('img/background.jpg')"></div>
+            <div class="cover-image" style="background-image : url('img/faixa.png')"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 text-center">
+                    <!-- <div class="col-md-12 text-center">
                         <h1 class="text-inverse shadowed">I ENTEC</h1>
                         <p class="text-inverse">I Encontro de Tecnologia da Informação e Comunicação do IFPE</p>
                         <br>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
