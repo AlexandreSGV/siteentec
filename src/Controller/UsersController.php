@@ -43,6 +43,7 @@ class UsersController extends AppController
 			$user->role = "participante";
 			$user->activation_code = md5(time());
 			$user->ativo = 0;
+			
 			if ($this->Users->save($user)) {
 				$this->Flash->default(__($user->nome.', a sua inscrição está pendente de validação. Em instantes você receberá um e-mail com instruções para a validação.'));
 				$email = new Email('default');
