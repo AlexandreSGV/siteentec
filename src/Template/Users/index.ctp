@@ -57,4 +57,7 @@
     <?php endforeach; ?>
 
 </table>
+
+
+<?php echo $this->Html->link('Export',array('controller'=>'users','action'=>'export'), array('target'=>'_blank'));?>
 </div>

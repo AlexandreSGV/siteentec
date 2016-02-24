@@ -10,7 +10,8 @@ use Cake\I18n\Time;
 
 class UsersController extends AppController
 {
-
+	
+	
 	public function beforeFilter(Event $event)
 	{
 		parent::beforeFilter($event);
@@ -22,6 +23,20 @@ class UsersController extends AppController
 	{
 		$this->set('users', $this->Users->find()->select(['id', 'nome', 'created', 'ativo','role']));
 	}
+	public function export()
+	{
+		$users = $this->Users->find()->select(['id', 'nome', 'created', 'ativo','role']);
+		
+	    $_serialize = 'users';
+	    $_csvEncoding = 'UTF-8';
+	    $_dataEncoding = 'UTF-8';
+	    $_header = ['ID', 'NOME', 'DATA CRIAÇÃO','ATIVO','PAPEL'];
+	    $this->response->download('my_file.csv'); // <= setting the file name
+	    $this->viewBuilder()->className('CsvView.Csv');
+	    $this->set(compact('users', '_serialize','_header','_csvEncoding','_dataEncoding'));
+	}
+	
+	
 
 	public function view($id = null)
 	{
