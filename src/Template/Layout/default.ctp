@@ -168,18 +168,19 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
 			<?php
 			
 			$loguser = $this->request->session ()->read ( 'Auth.User' );
-			
-			if ($loguser ['role'] === 'admin') {
+			if (strpos('admin supervisor', $loguser ['role']) !== false) {
 				?>
 			<ul id="menuadmin">
 			<li><a href="#"><i class="fa fa-arrow-up"></i> Administrar</a>
 				<ul>
 					<li><?php echo $this->Html->link ( "Gerenciar inscrições", array ( 'controller' => 'users', 'action' => 'index' ) );?></li>
+					<?php if (strpos('admin', $loguser ['role']) !== false) {?>
 					<li><?php echo $this->Html->link ( "Gerenciar Atividades", array ( 'controller' => 'atividades', 'action' => 'manage' ) );?></li>
 					<li><?php echo $this->Html->link ( "Cadastrar Atividades", array ( 'controller' => 'atividades', 'action' => 'add' ) );?></li>
 					<li><?php echo $this->Html->link ( "Gerenciar palestrantes", array ( 'controller' => 'palestrantes', 'action' => 'manage' ) );?></li>
 					<li><?php echo $this->Html->link ( "Cadastrar palestrantes", array ( 'controller' => 'palestrantes', 'action' => 'add' ) );?></li>
 					<li><?php echo $this->Html->link ( "Envio de e-mails", array ( 'controller' => 'email', 'action' => 'index' ) );?></li>
+					<?php }?>
 				</ul></li>
 		</ul>
 			<?php

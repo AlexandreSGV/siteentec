@@ -2,6 +2,7 @@
 <?= $this->assign('title', 'Confirmar Inscri��o'); ?>
 <div class="container" style="width:80%;padding-top: 89px; margin-bottom: 10px; ">
 <?= $this->Flash->render()?>
+<?= $this->Flash->render('auth') ?>
 <form>
 
 <?php 
@@ -14,7 +15,8 @@ echo $this->Html->link ( '<i class="fa fa-2x fa-fw fa-pencil-square-o"></i>'.' E
 	<legend>Dados da Inscrição: </legend>
 <b>Nº Inscrição : </b> <?= h($user->id)?>
 <br> <b>Login : </b> <?= h($user->username) ?>
-<br> <b>Data Inscrição : </b> <?= h(date('d/m/Y H:i:s', strtotime($user->created))) ?>  
+<br> <b>Data Inscrição : </b> <?= $user->created ?>
+<br> <b>Modificado em : </b> <?= $user->modified ?>    
 </fieldset>
 	
 	

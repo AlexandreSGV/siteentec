@@ -1,16 +1,18 @@
 <!-- src/Template/Users/index.ctp -->
 <?= $this->assign('title', 'Confirmar Inscrição'); ?>
 
-<div class="container" style="width:80%;padding-top: 89px; margin-bottom: 10px; ">
+<div class="container" style="width:90%;padding-top: 89px; margin-bottom: 10px; ">
 <?= $this->Flash->render()?>
+<?= $this->Flash->render('auth') ?>
 <h1>Inscritos</h1>
 <table>
 	<tr>
-		<th width="10%">Nº</th>
-		<th width="45%">Nome</th>
-		<th width="15%">Data Inscrição</th>
-		<th width="15%">Ações</th>
-		<th width="15%">Status</th>
+		<th width="5%">Nº</th>
+		<th width="40%">Nome</th>
+		<th width="11%">Data Inscrição</th>
+		<th width="15%" >Ações</th>
+		<th width="8%">Status</th>
+		<th width="13%">Papel</th>
 	</tr>
 
     <?php foreach ($users as $user): ?>
@@ -31,11 +33,25 @@
             <?php
 					
 					if ($user->ativo) {
-						echo '<i class="fa fa-lg fa-fw  fa-check">Verificado</i>';
+						echo '<i class="fa fa-lg fa-fw  fa-check"></i>';
 					} else {
-						echo '<i class="fa fa-lg fa-fw  fa-times">Pendente</i>';
+						echo '<i class="fa fa-lg fa-fw  fa-times"></i>';
 					}
 					?>
+        </td>
+        <td>
+        	<?php 
+        	if ($user->role === 'admin') {
+        		echo '<i class="fa fa-lg fa-fw fa-cogs"></i>';
+        	}else if ($user->role === 'participante') {
+        		echo '<i class="fa fa-lg fa-fw fa-user"></i>';
+        	}else if ($user->role === 'palestrante') {
+        		echo '<i class="fa fa-lg fa-graduation-cap"></i>';
+        	} else if ($user->role === 'supervisor') {
+        		echo '<i class="fa fa-lg fa-fw fa-cog"></i>';
+        	}
+        	echo $user->role;
+        	?>
         </td>
 	</tr>
     <?php endforeach; ?>

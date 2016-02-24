@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 24-Fev-2016 às 00:23
+-- Generation Time: 24-Fev-2016 às 02:44
 -- Versão do servidor: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -97,15 +97,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
 
 --
 -- Extraindo dados da tabela `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`, `created`, `modified`, `nome`, `email`, `telefone`, `nascimento`, `sexo`, `cep`, `estado`, `cidade`, `bairro`, `logradouro`, `numero`, `complemento`, `instituicao`, `instrucao`, `activation_code`, `ativo`) VALUES
-(38, 'strapacao@gmail.com', '$2y$10$GTLvTtF.t0O4Lxf6cgIaIORqiw7LTHwlh8mm8CuwMZX8Gug5UR/QC', 'participante', '2016-02-23 19:34:08', '2016-02-23 20:03:07', 'Alexandre Strapação Guedes Vianna', 'strapacao@gmail.com', '88999999999', '1986-12-28', 'Masculino', '58045550', 'Paraíba', 'JOÃO PESSOA', 'Ponta do Seixas', 'AVENIDA DA FALESIA', '261', '', 'IFPE', 'Mestrado Completo', 'f8172ca17ec192d260f68234681e3a11', 1),
-(39, 'entec.ifpe.igarassu@gmail.com', '$2y$10$wAwL3za3jlMKvPYYlvX8LO8wyKZg8ZZ4mLnQDxb1eeCKc3esfE8mm', 'admin', '2016-02-23 21:27:16', '2016-02-23 21:27:16', 'admin', 'entec.ifpe.igarassu@gmail.com', '', '2006-02-23', 'Feminino', '58045550', 'Pernambuco', 'Igarassu', 'Centro', '', '', '', 'IFPE', 'Técnico Completo', 'ddc56937c7ba1e8abbc7b435f5bdf7bd', 1);
+(39, 'entec.ifpe.igarassu@gmail.com', '$2y$10$wAwL3za3jlMKvPYYlvX8LO8wyKZg8ZZ4mLnQDxb1eeCKc3esfE8mm', 'admin', '2016-02-23 21:27:16', '2016-02-24 00:50:25', 'admin', 'entec.ifpe.igarassu@gmail.com', '', '2006-02-23', 'Feminino', '58045550', 'Pernambuco', 'Igarassu', 'Centro', '', '', '', 'IFPE2', 'Técnico Completo', 'ddc56937c7ba1e8abbc7b435f5bdf7bd', 1);
 
 --
 -- Constraints for dumped tables

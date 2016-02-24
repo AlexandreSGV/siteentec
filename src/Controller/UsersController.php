@@ -13,13 +13,14 @@ class UsersController extends AppController
 
 	public function beforeFilter(Event $event)
 	{
-	parent::beforeFilter($event);
-    	$this->Auth->allow(['add', 'logout', 'activate']);
+		parent::beforeFilter($event);
+    	$this->Auth->allow(['add', 'logout', 'activate', 'login']);
+    	$this->Auth->deny(['edit', 'index','view','delete']);
 	}
 
 	public function index()
 	{
-		$this->set('users', $this->Users->find()->select(['id', 'nome', 'created', 'ativo']));
+		$this->set('users', $this->Users->find()->select(['id', 'nome', 'created', 'ativo','role']));
 	}
 
 	public function view($id = null)
@@ -78,7 +79,7 @@ class UsersController extends AppController
 			if ($this->Users->save ( $user )) {
 				$this->Flash->success ( __ ( 'Inscrição atualizada com sucesso.' ) );
 				return $this->redirect ( [
-						'action' => 'view'
+						'action' => 'view', $user->id
 				] );
 			}
 			$this->Flash->error ( __ ( 'Não foi possivel atualizar a inscrição.' ) );
@@ -125,7 +126,7 @@ class UsersController extends AppController
 				$this->Auth->setUser($user);
 				return $this->redirect($this->Auth->redirectUrl());
 			}
-			$this->Flash->error(__('Invalid username or password, try again'));
+			$this->Flash->error(__('E-mail ou senha invalidos, tente novamente.'));
 		}
 	}
 	
@@ -139,15 +140,31 @@ class UsersController extends AppController
 	{
 		// O próprio usuário pode ver os seus dados
 		if ($this->request->action === 'edit' ) {
-			$userId = $this->Auth->user('id');
+			$userId = (int)$this->request->params['pass'][0];
 			if ($userId === $user['id']) {
 				return true;
 			}
+			if($user['role'] === 'admin'){
+				return true;
+			}
+			
 		}
 		
 		if ($this->request->action === 'view' ) {
-			$userId = $this->Auth->user('id');
-			if ($userId === $user['id']) {
+			if(isset($this->request->params['pass'][0])){
+				$userId = (int)$this->request->params['pass'][0];
+				if ($userId === $user['id']) {
+					return true;
+				}
+				if (strpos('admin supervisor', $user['role']) !== false){
+					return true;
+				}
+			}else{
+				return true;
+			}
+		}
+		if ($this->request->action === 'index' ) {
+			if (strpos('admin supervisor', $user['role']) !== false){
 				return true;
 			}
 		}

@@ -67,6 +67,25 @@
 				</div>
 			</div>
 		</fieldset>
+		<?php 
+		$loguser = $this->request->session ()->read ( 'Auth.User' );
+			
+		if (strpos('admin', $loguser ['role']) !== false) {
+			?>	
+		<fieldset>
+			<legend>Dados Administrativos: </legend>
+			<div class="my-form-inline">
+				<div style="min-width: 240px; width: 30%;">
+					<?=$this->Form->input ( 'role', array ('options' => ['label' => 'Papel', 'participante' => 'participante' ,'admin' => 'admin' , 'palestrante' => 'palestrante','supervisor' => 'supervisor'] ))?>
+				</div>
+				<div style="min-width: 240px; width: 30%;">
+					<?= $this->Form->input('ativo',['type' => 'checkbox', 'label' => 'Usuário verificado']); ?>
+				</div>
+			</div>
+		</fieldset>
+		
+		<?php }?>
+		
 <?= $this->Form->button(__('<i class="fa fa-paper-plane-o"></i> ENVIAR'), ['class'=>'form-control', 'escape' => false]); ?>
 <?= $this->Form->end()?> 
 </div>
