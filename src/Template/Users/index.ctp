@@ -6,6 +6,8 @@
 <?= $this->Flash->render('auth') ?>
 <h1>Inscritos</h1>
 <table>
+	
+	
 	<tr>
 		<td width="100%" colspan="6" style="border: 1px solid #ddd;">
 		<div style="width: 100%; text-align: center;">
@@ -17,16 +19,24 @@
 		</div>
 		</td>
 	</tr>
+	
+			<col style="width: 5% ;"/>
+			<col style="width: 40% ;"/>
+			<col style="width: 11% ;"/>
+			<col style="width: 15% ;"/>
+			<col style="width: 8% ;"/>
+			<col style="width: 13% ;"/>
 	<tr>
-		<th width="5%">Nº</th>
-		<th width="40%">Nome</th>
-		<th width="11%">Data Inscrição</th>
-		<th width="15%" >Ações</th>
-		<th width="8%">Status</th>
-		<th width="13%">Papel</th>
+			<th width="5%">Nº</th>
+			<th width="40%">Nome</th>
+			<th width="11%">Data Inscrição</th>
+			<th width="15%" >Ações</th>
+			<th width="8%">Status</th>
+			<th width="13%">Papel</th>
 	</tr>
 
     <?php foreach ($users as $user): ?>
+    <tbody>
     <tr>
 		<td><?= $user->id ?></td>
 		<td>
@@ -66,8 +76,15 @@
         </td>
 	</tr>
     <?php endforeach; ?>
-
+    </tbody>
+	<tr>
+		<td width="100%" colspan="6" style="border: 1px solid #ddd; text-align: center; background-color: #ddd;">
+		
+			<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-lg"> Exportar para planilha (CSV)</i>',array('controller'=>'users','action'=>'export'), array('target'=>'_blank','escape' => false));?>
+		
+		</td>
+	</tr>
 </table>
 
-<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-lg"> Exportar para planilha (CSV)</i>',array('controller'=>'users','action'=>'export'), array('target'=>'_blank','escape' => false));?>
+
 </div>
