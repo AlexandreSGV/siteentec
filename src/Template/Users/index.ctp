@@ -7,6 +7,17 @@
 <h1>Inscritos</h1>
 <table>
 	<tr>
+		<td width="100%" colspan="6" style="border: 1px solid #ddd;">
+		<div style="width: 100%; text-align: center;">
+			<div style="width: 19%;float: left;"><i class="fa fa-fw fa-trash"> Remover</i> </div>
+			<div style="width: 19%;float: left;"><i class="fa fa-fw fa-search"> Visualizar</i> </div>
+			<div style="width: 19%;float: left;"><i class="fa fa-fw fa-pencil-square-o"> Editar</i> </div>
+			<div style="width: 19%;float: left;"><i class="fa fa-fw fa-check"> Validado</i> </div>
+			<div style="width: 19%;float: left;"><i class="fa fa-fw fa-times"> Pendente</i> </div>
+		</div>
+		</td>
+	</tr>
+	<tr>
 		<th width="5%">Nº</th>
 		<th width="40%">Nome</th>
 		<th width="11%">Data Inscrição</th>
@@ -58,6 +69,5 @@
 
 </table>
 
-
-<?php echo $this->Html->link('Export',array('controller'=>'users','action'=>'export'), array('target'=>'_blank'));?>
+<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-lg"> Exportar para planilha (CSV)</i>',array('controller'=>'users','action'=>'export'), array('target'=>'_blank','escape' => false));?>
 </div>
