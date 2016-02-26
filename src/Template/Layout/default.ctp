@@ -32,9 +32,9 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
     <?= $this->Html->css('base.css')?>
     <?= $this->Html->css('cake.css')?>
     <?= $this->Html->css('main.css')?>
-    <?= $this->Html->script('jquery.min.js'); ?> 
-    <?= $this->Html->script('scrollTo/jquery.scrollTo.min.js'); ?> 
-    <?= $this->Html->script('bootstrap.min.js'); ?> 
+    <?= $this->Html->script('jquery.min.js'); ?>
+    <?= $this->Html->script('scrollTo/jquery.scrollTo.min.js'); ?>
+    <?= $this->Html->script('bootstrap.min.js'); ?>
 
 
     <?= $this->fetch('meta')?>
@@ -66,7 +66,7 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
 					<?php
 					echo $this->Html->link ( '<i class="fa fa-home fa-lg"></i>' . ' Home', ($this->fetch ( 'title' ) === 'home') ? '#home' : '/#home', array (
 							'escape' => false,
-							'id' => 'home-link' 
+							'id' => 'home-link'
 					) );
 					?>
 					</li>
@@ -74,7 +74,7 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
 					<?php
 					echo $this->Html->link ( '<i class="fa fa-lg fa-list-alt"></i>' . ' Programa', ($this->fetch ( 'title' ) === 'home') ? '#program' : '/#program', array (
 							'escape' => false,
-							'id' => 'program-link' 
+							'id' => 'program-link'
 					) );
 					?>
 					</li>
@@ -82,7 +82,7 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
 					<?php
 // 					echo $this->Html->link ( '<i class="fa fa-book fa-lg"></i>' . ' Mostra Acadêmica', ($this->fetch ( 'title' ) === 'home') ? '#academic' : '/#academic', array (
 // 							'escape' => false,
-// 							'id' => 'academic-link' 
+// 							'id' => 'academic-link'
 // 					) );
 // 					?>
 <!-- 					</li> -->
@@ -91,7 +91,7 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
 					<?php
 					echo $this->Html->link ( '<i class="fa fa-lg fa-map-marker"></i>' . ' Local', ($this->fetch ( 'title' ) === 'home') ? '#where' : '/#where', array (
 							'escape' => false,
-							'id' => 'where-link' 
+							'id' => 'where-link'
 					) );
 					?>
 					</li>
@@ -99,7 +99,7 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
 					<?php
 					echo $this->Html->link ( '<i class="fa fa-group fa-lg"></i>' . ' Organização', ($this->fetch ( 'title' ) === 'home') ? '#people' : '/#people', array (
 							'escape' => false,
-							'id' => 'people-link' 
+							'id' => 'people-link'
 					) );
 					?>
 					</li>
@@ -108,12 +108,12 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
 					<!-- 							Inscrições</a></li> -->
 					<!-- $this->Html->italic('',['class' => 'fa fa-lg fa-pencil']) -->
 					<li><?php
-					echo $this->Html->link ( '<i class="fa fa-lg fa-pencil"></i>' . 'Inscrições', [ 
+					echo $this->Html->link ( '<i class="fa fa-lg fa-pencil"></i>' . 'Inscrições', [
 							'controller' => 'users',
-							'action' => 'add' 
+							'action' => 'add'
 					], array (
 							'escape' => false,
-							'id' => 'insc-link' 
+							'id' => 'insc-link'
 					) );
 					?></li>
 
@@ -122,9 +122,9 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
 			</div>
 		</div>
 	</div>
-				
-	
-					
+
+
+
 
 					<?= $this->fetch('content')?>
 			<footer class="bg-success">
@@ -164,9 +164,9 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
 	</footer>
 
 	<div id="entrarDiv">
-			
+
 			<?php
-			
+
 			$loguser = $this->request->session ()->read ( 'Auth.User' );
 			if (strpos('admin supervisor', $loguser ['role']) !== false) {
 				?>
@@ -185,27 +185,27 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
 		</ul>
 			<?php
 			}
-			
+
 			if ($loguser) {
 				$user = $loguser ['nome'] . ' (' . $loguser ['username'] . ') ';
-				
+
 				echo $this->Html->link ( '<i class="fa fa-user fa-lg"></i> ' .$user, array (
 						'controller' => 'users',
 						'action' => 'view',
-						$loguser ['id'] 
+						$loguser ['id']
 				), array('escape' => false) );
-				
+
 				echo $this->Html->link ( '<i class="fa fa-sign-out fa-lg"></i>' . 'Sair', array (
 						'controller' => 'users',
-						'action' => 'logout' 
+						'action' => 'logout'
 				), array ('escape' => false ) );
 			} else {
-				
+
 				echo $this->Html->link ( '<i class="fa fa-sign-in fa-lg"></i>' . ' Entrar', array (
 						'controller' => 'users',
-						'action' => 'login' 
+						'action' => 'login'
 				), array (
-						'escape' => false 
+						'escape' => false
 				) );
 			}
 			?>
@@ -222,11 +222,17 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
         });
       }
 
-      registerScroll("#home-link",     "/#home",     400);
-      registerScroll("#program-link",  "/#program",  400);
-      registerScroll("#academic-link", "/#academic", 400);
-      registerScroll("#where-link",    "/#where",    1000);
-      registerScroll("#people-link",   "/#people",   400);
+      <?php
+      if ($this->fetch('title') === 'home') {
+      ?>
+	      registerScroll("#home-link",     "#home",     400);
+	      registerScroll("#program-link",  "#program",  400);
+	      registerScroll("#academic-link", "#academic", 400);
+	      registerScroll("#where-link",    "#where",    1000);
+	      registerScroll("#people-link",   "#people",   400);
+	  <?php
+		}
+	  ?>
 
     });
   </script>
