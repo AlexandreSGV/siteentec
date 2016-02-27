@@ -12,7 +12,7 @@
  * @since         0.10.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-$cakeDescription = 'ENTEC: the rapid development php framework';
+$cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,8 +21,8 @@ $cakeDescription = 'ENTEC: the rapid development php framework';
     <meta name="viewport"
 	content="width=device-width, initial-scale=1.0">
 <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title')?>
+        <?= $cakeDescription ?>
+        [<?= $this->fetch('title')?>]
     </title>
     <?= $this->Html->meta('icon')?>
 
