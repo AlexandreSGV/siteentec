@@ -29,9 +29,9 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 
     <?= $this->Html->css('pingendo-bootstrap.css')?>
     <?= $this->Html->css('font-awesome.min.css')?>
-    <!-- <?= $this->Html->css('base.css')?> -->
-    <!-- <?= $this->Html->css('cake.css')?> -->
-    <!-- <?= $this->Html->css('main.css')?> -->
+    <?= $this->Html->css('base.css')?>
+    <?= $this->Html->css('cake.css')?>
+    <?= $this->Html->css('main.css')?>
     <?= $this->Html->script('jquery.min.js'); ?>
     <?= $this->Html->script('scrollTo/jquery.scrollTo.min.js'); ?>
     <?= $this->Html->script('bootstrap.min.js'); ?>
@@ -107,7 +107,7 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 					<!-- 					<li><a href="#insc" id="insc-link"><i class="fa fa-lg fa-pencil"></i> -->
 					<!-- 							Inscrições</a></li> -->
 					<!-- $this->Html->italic('',['class' => 'fa fa-lg fa-pencil']) -->
-					<!-- <li><?php
+					<li><?php
 					echo $this->Html->link ( '<i class="fa fa-lg fa-pencil"></i>' . 'Inscrições', [
 							'controller' => 'users',
 							'action' => 'add'
@@ -115,7 +115,7 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 							'escape' => false,
 							'id' => 'insc-link'
 					) );
-					?></li> -->
+					?></li>
 
 
 				</ul>
@@ -230,11 +230,11 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
       <?php
       if ($this->fetch('title') === 'home') {
       ?>
-	      registerScroll("#home-link",     "#home",     400);
-	      registerScroll("#program-link",  "#program",  400);
-	      registerScroll("#academic-link", "#academic", 400);
-	      registerScroll("#where-link",    "#where",    1000);
-	      registerScroll("#people-link",   "#people",   400);
+	      registerScroll("#home-link",     "/#home",     400);
+	      registerScroll("#program-link",  "/#program",  400);
+	      registerScroll("#academic-link", "/#academic", 400);
+	      registerScroll("#where-link",    "/#where",    1000);
+	      registerScroll("#people-link",   "/#people",   400);
 	  <?php
 		}
 	  ?>
