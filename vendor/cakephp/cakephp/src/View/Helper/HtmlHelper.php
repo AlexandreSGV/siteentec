@@ -239,7 +239,7 @@ class HtmlHelper extends Helper
             ];
 
             if ($type === 'icon' && $content === null) {
-                $types['icon']['link'] = 'favicon.ico';
+                $types['icon']['link'] = '/img/icone_64.gif';
             }
 
             if (isset($types[$type])) {
