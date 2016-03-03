@@ -2,7 +2,7 @@
 
 		<div style="padding-top: 50px;"></div>
 		<div class="cover" style="opacity: 1; " id="home">
-        <div class="cover-image" style="background-image : url('img/faixa.png')"></div>
+        <div class="cover-image" style="background-image : url('img/faixa4.gif')"></div>
         <div class="container">
             <div class="row">
                 <!-- <div class="col-md-12 text-center">
