@@ -50,7 +50,7 @@ echo $this->Html->link ( '<i class="fa fa-2x fa-fw fa-pencil-square-o"></i>'.' E
 		<legend>Dados pessoais: </legend>
 		<b>Instituição : </b>
 <?= h($user->instituicao)?>
-<br> <b>Instruão : </b>
+<br> <b>Grau de Instrução : </b>
 <?= h($user->instrucao)?>
 </fieldset>
 </form>
