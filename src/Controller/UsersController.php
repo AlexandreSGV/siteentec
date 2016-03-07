@@ -71,7 +71,7 @@ class UsersController extends AppController
 				->emailFormat('html')
 				->to($user->email)
 				->template('default','confirma_insc')
-				->subject('[EntTec 2016] Inscrição pendente de validação')
+				->subject('[EnTec 2016] Inscrição pendente de validação')
 				->viewVars(['nome' => $user->nome,'activation_link' => 'http://entec.ifpe.edu.br/users/activate/'.$user->id.'/'.$user->activation_code])
 				->send();
 				
