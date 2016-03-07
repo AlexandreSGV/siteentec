@@ -108,14 +108,57 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 					<!-- 							Inscrições</a></li> -->
 					<!-- $this->Html->italic('',['class' => 'fa fa-lg fa-pencil']) -->
 					<li><?php
-					echo $this->Html->link ( '<i class="fa fa-lg fa-pencil"></i>' . 'Inscrições', [
-							'controller' => 'users',
-							'action' => 'add'
-					], array (
-							'escape' => false,
-							'id' => 'insc-link'
-					) );
+					$loguser = $this->request->session ()->read ( 'Auth.User' );
+					if ($loguser) {
+						echo $this->Html->link ( '<i class="fa fa-lg fa-pencil"></i> '.' Minha Inscrição', array (
+								'controller' => 'users',
+								'action' => 'view',
+								$loguser ['id']
+						), array('escape' => false) );
+					}else{
+						echo $this->Html->link ( '<i class="fa fa-lg fa-pencil"></i>' . ' Inscrições', [
+								'controller' => 'users',
+								'action' => 'add'
+						], array (
+								'escape' => false,
+								'id' => 'insc-link'
+						) );
+					}
 					?></li>
+					
+					<li><?php
+					if (strpos('admin supervisor', $loguser ['role']) !== false) {
+						echo $this->Html->link ( '<i class="fa fa-lg fa-fw fa-cog"></i> '.' Gerenciar', array (
+								'controller' => 'users',
+								'action' => 'index'
+						), array('escape' => false) );
+					}
+					?></li>
+					
+					<li>
+					<?php
+					
+
+			if ($loguser) {
+				$user = $loguser ['nome'] . ' (' . $loguser ['username'] . ') ';
+			
+				echo $this->Html->link ( '<i class="fa fa-sign-out fa-lg"></i>' . ' Sair', array (
+						'controller' => 'users',
+						'action' => 'logout'
+				), array ('escape' => false ) );
+			} else {
+
+				echo $this->Html->link ( '<i class="fa fa-sign-in fa-lg"></i>' . ' Entrar', array (
+						'controller' => 'users',
+						'action' => 'login'
+				), array (
+						'escape' => false
+				) );
+			}
+			?>
+					
+					
+					</li>
 
 
 				</ul>
@@ -127,7 +170,7 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 
 
 					<?= $this->fetch('content')?>
-			<footer class="bg-success">
+	<footer class="bg-success">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
@@ -163,58 +206,7 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 		</div>
 	</footer>
 
-	<div id="entrarDiv" class="container">
-		<div class="row">
-			<div class="col-md-12 text-right">
-
-			<?php
-
-			$loguser = $this->request->session ()->read ( 'Auth.User' );
-			if (strpos('admin supervisor', $loguser ['role']) !== false) {
-				?>
-		<ul id="menuadmin">
-			<li><a href="#"><i class="fa fa-arrow-up"></i> Administrar</a>
-				<ul>
-					<li><?php echo $this->Html->link ( "Gerenciar inscrições", array ( 'controller' => 'users', 'action' => 'index' ) );?></li>
-					<?php if (strpos('admin', $loguser ['role']) !== false) {?>
-					<li><?php echo $this->Html->link ( "Gerenciar Atividades", array ( 'controller' => 'atividades', 'action' => 'manage' ) );?></li>
-					<li><?php echo $this->Html->link ( "Cadastrar Atividades", array ( 'controller' => 'atividades', 'action' => 'add' ) );?></li>
-					<li><?php echo $this->Html->link ( "Gerenciar palestrantes", array ( 'controller' => 'palestrantes', 'action' => 'manage' ) );?></li>
-					<li><?php echo $this->Html->link ( "Cadastrar palestrantes", array ( 'controller' => 'palestrantes', 'action' => 'add' ) );?></li>
-					<li><?php echo $this->Html->link ( "Envio de e-mails", array ( 'controller' => 'email', 'action' => 'index' ) );?></li>
-					<?php }?>
-				</ul></li>
-		</ul>
-
-			<?php
-			}
-
-			if ($loguser) {
-				$user = $loguser ['nome'] . ' (' . $loguser ['username'] . ') ';
-
-				echo $this->Html->link ( '<i class="fa fa-user fa-lg"></i> ' .$user, array (
-						'controller' => 'users',
-						'action' => 'view',
-						$loguser ['id']
-				), array('escape' => false) );
-
-				echo $this->Html->link ( '<i class="fa fa-sign-out fa-lg"></i>' . 'Sair', array (
-						'controller' => 'users',
-						'action' => 'logout'
-				), array ('escape' => false ) );
-			} else {
-
-				echo $this->Html->link ( '<i class="fa fa-sign-in fa-lg"></i>' . ' Entrar', array (
-						'controller' => 'users',
-						'action' => 'login'
-				), array (
-						'escape' => false
-				) );
-			}
-			?>
-			 </div>
-		</div>
-	</div>
+	
 
 	<script type="text/javascript">
     $(document).ready(function() {

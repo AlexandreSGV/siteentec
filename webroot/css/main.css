@@ -46,34 +46,7 @@
 }
 
 
-#entrarDiv {
-	width: 100%;
-	padding-left: 5%;
-	padding-right: 5%;
-	height: 38px;
-	text-align: right;
-	background-color: #231F20;
-}
 
-#entrarDiv img {
-	max-width: 55%;
-	max-height: 55%;
-}
-
-#entrarDiv a {
-	align-content: center;
-	vertical-align: top;
-	font-family: serif;
-	font-size: 12px;
-	letter-spacing: 0.8px;
-	font-weight: 550;
-	text-decoration: none;
-	color: white;
-	margin: 0;
-	padding: 0;
-	transition: all .2s ease-in-out;
-	vertical-align: sub;
-}
 
 #menuadmin {
 	list-style: none;
@@ -133,3 +106,5 @@
 	max-width: 120px;
 	max-height: 120px 
 }
+
+
