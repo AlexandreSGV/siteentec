@@ -218,7 +218,7 @@ return [
             'password' => 'A3de$_Aegypti',
             'database' => 'etiigarassu',
             'encoding' => 'utf8',
-            'timezone' => 'UTC',
+            'timezone' => 'BRT',
             'cacheMetadata' => true,
             'log' => false,
 
@@ -255,7 +255,7 @@ return [
             'password' => 'secret',
             'database' => 'test_myapp',
             'encoding' => 'utf8',
-            'timezone' => 'UTC',
+            'timezone' => 'BRT',
             'cacheMetadata' => true,
             'quoteIdentifiers' => false,
             'log' => false,
