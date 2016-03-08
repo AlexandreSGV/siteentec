@@ -1,8 +1,8 @@
 <?= $this->assign('title', 'home'); ?>
 
 		<div style="padding-top: 50px;"></div>
-		<div class="cover" style="opacity: 1; " id="home">
-        <div class="cover-image" style="background-image : url('img/faixa4.gif')"></div>
+		<div style="opacity: 1; " id="home">
+        <img src="img/faixa4.gif" alt="">
         <div class="container">
             <div class="row">
                 <!-- <div class="col-md-12 text-center">
