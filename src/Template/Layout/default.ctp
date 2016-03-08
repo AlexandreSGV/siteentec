@@ -222,11 +222,11 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
       <?php
       if ($this->fetch('title') === 'home') {
       ?>
-	      registerScroll("#home-link",     "/#home",     400);
-	      registerScroll("#program-link",  "/#program",  400);
-	      registerScroll("#academic-link", "/#academic", 400);
-	      registerScroll("#where-link",    "/#where",    1000);
-	      registerScroll("#people-link",   "/#people",   400);
+	      registerScroll("#home-link",     "#home",     400);
+	      registerScroll("#program-link",  "#program",  400);
+	      registerScroll("#academic-link", "#academic", 400);
+	      registerScroll("#where-link",    "#where",    1000);
+	      registerScroll("#people-link",   "#people",   400);
 	  <?php
 		}
 	  ?>
