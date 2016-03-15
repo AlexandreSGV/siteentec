@@ -22,40 +22,45 @@
             <hr>
             <div class="row">
               <div class="col-md-3 col-md-offset-2">
-                <h3 class="text-left">Pablo Pinheiro</h3>
+                <h3 class="text-left">Pablo Pinheiro <small>Liferay</small></h3>
               </div>
             </div>
             <div class="row">
               <div class="col-md-2 col-md-offset-2">
                 <img src="img/pablo-0.jpg" alt="" class="img-circle img-responsive">
               </div>
-              <div class="col-md-5 text-justify">
-                <strong>Vida nas multinacionais: antes, durante e depois</strong>
-                <p>Formado em Engenharia da Computação pela UFPE, bicampeão brasileiro da Maratona de Programação e ex-funcionário da Google, hoje trabalha na Liferay, empresa multinacional responsável pela criação de um dos maiores sistemas de gerenciamento de conteúdo corporativo.</p>
+              <div class="col-md-5 text-left">
+                <strong>Vida nas multinacionais: antes, durante e depois</strong> (Palestra)
+                <p>
+                  Formado em Engenharia da Computação pela UFPE, bicampeão brasileiro da Maratona de Programação e ex-funcionário da Google, hoje trabalha na Liferay, empresa multinacional responsável pela criação de um dos maiores sistemas de gerenciamento de conteúdo corporativo.
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <!-- <div class="row">
+        <div class="row">
           <div class="col-md-12">
             <hr>
             <div class="row">
-              <div class="col-md-2 col-md-offset-8">
-                <h3 class="text-center">Estuário TI</h3>
+              <div class="col-md-4 col-md-offset-6">
+                <h3 class="text-right"><small>Makerama</small> Gustavo Ribeiro</h3>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-5 col-md-offset-3 text-justify">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-                dis parturient montes, nascetur ridiculus mus.
+              <div class="col-md-5 col-md-offset-3 text-right">
+                <strong>Robótica com Arduino</strong> (Workshop)
+                <p>
+                  Engenheiro Eletrônico e Mestre em Engenharia de Sistemas pela UPE, doutorando em Engenharia Eletônica pela UFPE. Participa de competições de robótica desde 2007.
+                  <br>
+                  <a href="makerama.com.br">http://makerama.com.br</a>
+                </p>
               </div>
               <div class="col-md-2">
-                <img src="img/user_placeholder.png" alt="" class="img-circle img-responsive">
+                <img src="http://makerama.com.br/wp-content/uploads/2016/03/makerama_simbolo.png" alt="" class="img-responsive">
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
 
