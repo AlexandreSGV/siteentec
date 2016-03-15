@@ -80,6 +80,14 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 					</li> -->
 					<li>
 					<?php
+					echo $this->Html->link ( '<i class="fa fa-lg fa-list-alt"></i>' . ' Participações', ($this->fetch ( 'title' ) === 'home') ? '#attractions' : '/#attractions', array (
+							'escape' => false,
+							'id' => 'attractions-link'
+					) );
+					?>
+					</li>
+					<li>
+					<?php
 					echo $this->Html->link ( '<i class="fa fa-book fa-lg"></i>' . ' Mostra Acadêmica', ($this->fetch ( 'title' ) === 'home') ? '#academic' : '/#academic', array (
 							'escape' => false,
 							'id' => 'academic-link'
@@ -222,11 +230,12 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
       <?php
       if ($this->fetch('title') === 'home') {
       ?>
-	      registerScroll("#home-link",     "#home",     400);
-	      registerScroll("#program-link",  "#program",  400);
-	      registerScroll("#academic-link", "#academic", 400);
-	      registerScroll("#where-link",    "#where",    1000);
-	      registerScroll("#people-link",   "#people",   400);
+	      registerScroll("#home-link",         "#home",     400);
+	      registerScroll("#program-link",      "#program",  400);
+	      registerScroll("#attractions-link",  "#attractions",  400);
+	      registerScroll("#academic-link",     "#academic", 400);
+	      registerScroll("#where-link",        "#where",    1000);
+	      registerScroll("#people-link",       "#people",   400);
 	  <?php
 		}
 	  ?>

@@ -13,6 +13,52 @@
             </div>
         </div>
     </div>
+
+    <div id="attractions" class="section">
+      <h1 class="text-center">Participações</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <hr>
+            <div class="row">
+              <div class="col-md-3 col-md-offset-2">
+                <h3 class="text-left">Pablo Pinheiro</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 col-md-offset-2">
+                <img src="img/pablo-0.jpg" alt="" class="img-circle img-responsive">
+              </div>
+              <div class="col-md-5 text-justify">
+                <strong>Vida nas multinacionais: antes, durante e depois</strong>
+                <p>Formado em Engenharia da Computação pela UFPE, bicampeão brasileiro da Maratona de Programação e ex-funcionário da Google, hoje trabalha na Liferay, empresa multinacional responsável pela criação de um dos maiores sistemas de gerenciamento de conteúdo corporativo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col-md-12">
+            <hr>
+            <div class="row">
+              <div class="col-md-2 col-md-offset-8">
+                <h3 class="text-center">Estuário TI</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5 col-md-offset-3 text-justify">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                dis parturient montes, nascetur ridiculus mus.
+              </div>
+              <div class="col-md-2">
+                <img src="img/user_placeholder.png" alt="" class="img-circle img-responsive">
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
     <!-- <div class="section" id="program">
       <h1 class="text-center text-primary">Programa</h1>
       <div class="container">
