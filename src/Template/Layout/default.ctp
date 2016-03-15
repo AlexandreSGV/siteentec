@@ -78,14 +78,14 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 					) );
 					?>
 					</li> -->
-<!-- 					<li> -->
+					<li>
 					<?php
-// 					echo $this->Html->link ( '<i class="fa fa-book fa-lg"></i>' . ' Mostra Acadêmica', ($this->fetch ( 'title' ) === 'home') ? '#academic' : '/#academic', array (
-// 							'escape' => false,
-// 							'id' => 'academic-link'
-// 					) );
-// 					?>
-<!-- 					</li> -->
+					echo $this->Html->link ( '<i class="fa fa-book fa-lg"></i>' . ' Mostra Acadêmica', ($this->fetch ( 'title' ) === 'home') ? '#academic' : '/#academic', array (
+							'escape' => false,
+							'id' => 'academic-link'
+					) );
+ 					?>
+					</li>
 
 					<li>
 					<?php
@@ -125,7 +125,7 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 						) );
 					}
 					?></li>
-					
+
 					<li><?php
 					if (strpos('admin supervisor', $loguser ['role']) !== false) {
 						echo $this->Html->link ( '<i class="fa fa-lg fa-fw fa-cog"></i> '.' Gerenciar', array (
@@ -134,14 +134,14 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 						), array('escape' => false) );
 					}
 					?></li>
-					
+
 					<li>
 					<?php
-					
+
 
 			if ($loguser) {
 				$user = $loguser ['nome'] . ' (' . $loguser ['username'] . ') ';
-			
+
 				echo $this->Html->link ( '<i class="fa fa-sign-out fa-lg"></i>' . ' Sair', array (
 						'controller' => 'users',
 						'action' => 'logout'
@@ -156,8 +156,8 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 				) );
 			}
 			?>
-					
-					
+
+
 					</li>
 
 
@@ -206,7 +206,7 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 		</div>
 	</footer>
 
-	
+
 
 	<script type="text/javascript">
     $(document).ready(function() {

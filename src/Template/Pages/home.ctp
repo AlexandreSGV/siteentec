@@ -222,6 +222,40 @@
         </div>
       </div>
     </div> -->
+    <div id="academic" class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-justify">
+            <h2 class="text-center">Mostra de Trabalho de Pesquisa e Extensão em Tecnologia</h2>
+            <p>
+              A <strong>Mostra de Trabalho de Pesquisa e Extensão em Tecnologia</strong> no ENTEC oferece aos professores, técnicos e alunos da área de TI a oportunidade de divulgar os seus projetos, receber feedback e realizar networking entre pesquisadores e extensionistas da área de TI.
+            </p>
+
+            <p>
+              A submissão de trabalhos deve ser feita através de um resumo contendo uma página sobre o projeto. Os projetos selecionados pela comissão acadêmica farão uma apresentação oral sobre o projeto com <strong>10 minutos</strong> de duração e <strong>5 minutos</strong> para perguntas.
+            </p>
+
+            <p>
+              Os resumos devem ser enviados para o e-mail <strong>contatoentec@igarassu.ifpe.edu.br</strong> com o título “[Mostra de Pesquisa e Extensão] TÍTULO_DO_TRABALHO” até o dia <strong>01 de Abril de 2016</strong>.
+            </p>
+
+            <ul>
+              <li><a href="docs/modelo-resumo.doc">Modelo de Resumo</a></li>
+              <li>Modelo de Apresentação (em breve)</li>
+            </ul>
+
+            <p>
+              Datas Importantes
+              <ul>
+                <li><strong>01 de Abril de 2016</strong> - Prazo Final para a Submissão</li>
+                <li><strong>04 de Abril de 2016</strong> - Divulgação dos Projetos Aprovados</li>
+                <li><strong>06 e 07 de Abril de 2016</strong> - Mostra de Pesquisa e Extensão</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="section" id="where">
       <div class="container">
         <div class="row">
