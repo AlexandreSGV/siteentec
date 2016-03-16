@@ -45,8 +45,6 @@ class PalestrantesController extends AppController
 	{
 		$palestrante = $this->Palestrantes->newEntity();
 		if ($this->request->is('post')) {
-			
-			
 			if (is_uploaded_file($this->request->data['foto']['tmp_name']))
 			{
 				$filename = $this->request->data['foto']['name'];
@@ -57,12 +55,7 @@ class PalestrantesController extends AppController
 				}
 				
 				move_uploaded_file(
-						$this->request->data['foto']['tmp_name'],
-						'imagestore/' . $filename
-						);
-				
-				
-				
+						$this->request->data['foto']['tmp_name'],'imagestore/' . $filename);
 				// store the filename in the array to be saved to the db
 				$this->request->data['foto'] = $filename;
 			}
