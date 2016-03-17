@@ -52,11 +52,57 @@
                 <p>
                   Engenheiro Eletrônico e Mestre em Engenharia de Sistemas pela UPE, doutorando em Engenharia Eletônica pela UFPE. Participa de competições de robótica desde 2007.
                   <br>
-                  <a href="makerama.com.br">http://makerama.com.br</a>
+                  <a href="http://makerama.com.br">http://makerama.com.br</a>
                 </p>
               </div>
               <div class="col-md-2">
                 <img src="http://makerama.com.br/wp-content/uploads/2016/03/makerama_simbolo.png" alt="" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <hr>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-2">
+                <h3 class="text-left">Helder da Rocha <small>Diretor e Consultor - Argo Navis Informática</small></h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 col-md-offset-2">
+                <img src="img/helder_220x300.jpg" alt="foto perfil Helder da Rocha" class="img-circle img-responsive">
+              </div>
+              <div class="col-md-7 text-left">
+                <strong></strong> 
+                <p>
+                  Helder da Rocha é mestre em informática pela UFCG e especialista em tecnologias Web. Desde 1995 pesquisa, escreve, ministra cursos e palestras sobre Java, tecnologias Web e XML, a maioria disponível online no seu site argonavis.com.br. É também autor de livros, tutoriais e apostilas sobre tecnologias Java, HTML, CSS, JavaScript, tecnologias XML, metodologias ágeis e arquitetura de sistemas. Ministrou treinamentos em quase todos os estados do país em mais de 8000 horas de aula. Algumas das empresas treinadas por Helder incluem: Banco do Brasil, Petrobras, Rede Nacional de Pesquisa, Marinha do Brasil, PNUD, Grupo Vicunha, Michelin, CPqD e Editora Abril. Além de trabalhar com TI, é também ator de teatro, ilustrador e paleoartista.
+                  <br>
+                  <a href="http://helderdarocha.com.br">http://helderdarocha.com.br</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+         <div class="row">
+          <div class="col-md-12">
+            <hr>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-5">
+                <h3 class="text-right"><small>CEO - Mangue Tecnologia</small> Maria Josilene de Santana</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-md-offset-1 text-right">
+                <strong> </strong> 
+                <p>
+                  Graduada gestão em ti, cursando mba em Gestão Empreendedora e Inovação, empreendedora nata, atua na área de ti e há mais de 6 anos, é CEO da Mangue Tecnologia uma empresa inovadora de base tecnológica que gera soluções inteligentes para diversos segmentos do mercado. Apaixonada por tecnologia, educação e empreendedorismo, é fundadora do Women Who Code – Recife, uma organização global dedicada a educar e inspirar mulheres a buscarem e se destacarem em carreiras tecnológicas, conta com mais de 6000 membros em 9 países. É Consultora nas áreas de TI . Além disso, é uma das organizadoras do Startup Weekend Petrolina 2015 e da primeira Startup Weekend Women do Brasil João Pessoa 2014. Tenho me dedicado a ampliar minha linha de conhecimento na área de inovação, startups,  negócio em TI.
+                  <br>
+                  <a href="http://manguetecnologia.com.br">http://manguetecnologia.com.br</a>
+                </p>
+              </div>
+              <div class="col-md-2">
+                <img src="img/maria_josilene.jpg" alt="perfil Maria Joseline de Santana" class="img-circle img-responsive">
               </div>
             </div>
           </div>
