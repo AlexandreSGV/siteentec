@@ -337,7 +337,7 @@
             </p>
 
             <ul>
-              <li><a href="docs/modelo-resumo.doc">Modelo de Resumo</a></li>
+              <li><a href="docs/modelo-resumo.pdf">Modelo de Resumo</a></li>
               <li>Modelo de Apresentação (em breve)</li>
             </ul>
 
