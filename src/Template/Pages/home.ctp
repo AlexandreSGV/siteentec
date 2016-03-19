@@ -209,6 +209,46 @@
               </div>
             </div>
           </div>
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="thumbnail attraction">
+                  <img src="img/felipe_maciel_250_250.jpg" alt="" class="img-rounded img-responsive">
+                  <div class="caption">
+                    <h4>
+                      Felipe Maciel<br>
+                      <small>Estuário Serviços em Tecnologia da Informação Ltda</small>
+                    </h4>
+                    <h5 class="text-center">
+                      <a href="#" data-toggle="modal" data-target="#modal_felipe"><span class="fa fa-plus-square"></span> Saiba mais</a>
+                    </h5>
+                    <div class="modal fade" id="modal_felipe" tabindex="-1" role="dialog" aria-labelledby="felipe_title">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="felipe_title">Felipe Maciel</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>
+                              Felipe é graduado em Administração de Empresas e MBA em Gestão de Negócios pela UPE, é CEO e Co-Fundador da Estuário TI, empresa que atua no mercado de segurança da informação há 5 anos, com clientes no Brasil, EUA e Europa. <br>
+                              <a href="http://www.estuarioti.com.br">http://www.estuarioti.com.br</a>
+                            </p>
+                            <p>
+                              Palestra: <strong>Segurança da Informação</strong>
+                            </p>
+                            <p>
+                              O Foco da Estuário é Análise de Aplicações Web, Pentest e Gestão de Vulnerabilidades. Além dos produtos desenvolvidos em casa relacionados também a segurança.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
