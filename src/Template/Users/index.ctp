@@ -4,7 +4,8 @@
 <div class="container" style="width:90%;padding-top: 89px; margin-bottom: 10px; ">
 <?= $this->Flash->render()?>
 <?= $this->Flash->render('auth') ?>
-<h1>Inscritos</h1>
+
+<h2>Inscritos <small> Total válidas: <?= $count ?></small></h2> 
 <table>
 	
 	

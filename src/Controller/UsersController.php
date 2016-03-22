@@ -21,7 +21,15 @@ class UsersController extends AppController
 
 	public function index()
 	{
-		$this->set('users', $this->Users->find()->select(['id', 'nome', 'created', 'ativo','role']));
+		$results = $this->Users->find()->select(['id', 'nome', 'created', 'ativo','role']);
+		$this->set('users', $results);
+		$counter = 0;
+		foreach($results as $user)
+		{
+			if($user->ativo && $user->role !== 'admin')
+				$counter++;
+		}
+		$this->set('count', $counter);
 	}
 	
 	public function export()
