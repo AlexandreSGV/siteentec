@@ -480,7 +480,7 @@
             </p>
 
             <ul>
-              <li><a href="docs/modelo-resumo.pdf">Modelo de Resumo</a></li>
+              <li>Modelo de Resumo:  <a href="docs/modelo-resumo.doc">.doc</a>  <a href="docs/modelo-resumo.docx">.docx</a>  <a href="docs/modelo-resumo.pdf">.pdf</a></li>
               <li>Modelo de Apresentação (em breve)</li>
             </ul>
 
