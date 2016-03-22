@@ -480,7 +480,11 @@
             </p>
 
             <ul>
-              <li>Modelo de Resumo:  <a href="docs/modelo-resumo.doc">.doc</a>  <a href="docs/modelo-resumo.docx">.docx</a>  <a href="docs/modelo-resumo.pdf">.pdf</a></li>
+              <li>Modelo de Resumo:  
+	              <a target="blank" href="https://drive.google.com/file/d/0B7jr_kAKet92aEctdXJON0ExLVk">.doc</a>
+	              <a target="blank" href="https://drive.google.com/file/d/0B7jr_kAKet92Z1pGc0lybzZneTA">.docx</a>
+	              <a target="blank" href="https://drive.google.com/file/d/0B7jr_kAKet92Y0NScFRzNnczZ2M">.pdf</a>
+              </li>
               <li>Modelo de Apresentação (em breve)</li>
             </ul>
 
