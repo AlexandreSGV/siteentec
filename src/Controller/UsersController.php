@@ -46,6 +46,20 @@ class UsersController extends AppController
 	    $this->set(compact('users', '_serialize','_header','_csvEncoding','_delimiter'));
 	}
 	
+	public function exportTotal()
+	{
+		$users = $this->Users->find()->select(['id', 'nome', 'created', 'role','estado','cidade','instituicao','instrucao']);
+	
+		$_serialize = 'users';
+		$_csvEncoding = 'Windows-1252';
+		$_delimiter = ';';
+		// 	    $_dataEncoding = 'UTF-8';
+		$_header = ['Nº Inscrição', 'NOME','DATA INSCRIÇÃO','PAPEL','ESTADO','CIDADE','INSTITUIÇÃO','INSTRUÇÃO'];
+		$this->response->download('lista_inscritos_completa.csv'); // <= setting the file name
+		$this->viewBuilder()->className('CsvView.Csv');
+		$this->set(compact('users', '_serialize','_header','_csvEncoding','_delimiter'));
+	}
+	
 	
 
 	public function view($id = null)

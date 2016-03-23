@@ -85,6 +85,13 @@
 		
 		</td>
 	</tr>
+	<tr>
+		<td width="100%" colspan="6" style="border: 1px solid #ddd; text-align: center; background-color: #ddd;">
+		
+			<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-lg"> Exportar para planilha (CSV) (Completo)</i>',array('controller'=>'users','action'=>'exportTotal'), array('target'=>'_blank','escape' => false));?>
+		
+		</td>
+	</tr>
 </table>
 
 
