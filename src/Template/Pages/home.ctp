@@ -58,7 +58,7 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="thumbnail attraction">
-                  <img src="http://makerama.com.br/wp-content/uploads/2016/03/makerama_simbolo.png" alt="" class="img-rounded img-responsive">
+                  <img src="img/makerama_simbolo_250_250.png" alt="" class="img-rounded img-responsive">
                   <div class="caption">
                     <h4>
                       Gustavo Ribeiro<br>
