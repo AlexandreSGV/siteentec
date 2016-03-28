@@ -2,14 +2,9 @@
 
 		<div style="padding-top: 50px;"></div>
 		<div style="opacity: 1; " id="home">
-        <img src="img/faixa4.gif" alt="">
+        <img src="img/faixa_1700x672.png" alt="">
         <div class="container">
             <div class="row">
-                <!-- <div class="col-md-12 text-center">
-                    <h1 class="text-inverse shadowed">I ENTEC</h1>
-                    <p class="text-inverse">I Encontro de Tecnologia da Informação e Comunicação do IFPE</p>
-                    <br>
-                </div> -->
             </div>
         </div>
     </div>
@@ -22,7 +17,7 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="thumbnail attraction">
-                  <img src="img/pablo-0.jpg" alt="" class="img-rounded img-responsive">
+                  <img src="img/pablo-210x210.jpg" alt="" class="img-rounded img-responsive">
                   <div class="caption">
                     <h4>
                       Pablo Pinheiro<br>
@@ -96,7 +91,7 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="thumbnail attraction">
-                  <img src="img/helder_220x220.jpg" alt="" class="img-rounded img-responsive">
+                  <img src="img/helder_210x210.jpg" alt="" class="img-rounded img-responsive">
                   <div class="caption">
                     <h4>
                       Helder da Rocha<br>
@@ -135,7 +130,7 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="thumbnail attraction">
-                  <img src="img/maria_josilene_sq.jpg" alt="" class="img-rounded img-responsive">
+                  <img src="img/maria_josilene_210x210.jpg" alt="" class="img-rounded img-responsive">
                   <div class="caption">
                     <h4>
                       Maria Josilene de Santana<br>
@@ -173,7 +168,7 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="thumbnail attraction">
-                  <img src="https://media.licdn.com/media/p/2/000/251/332/2cf59e3.jpg" alt="" class="img-rounded img-responsive">
+                  <img src="img/daniel_araujo_210x210.jpg" alt="" class="img-rounded img-responsive">
                   <div class="caption">
                     <h4>
                       Daniel Araújo Melo<br>
@@ -213,7 +208,7 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="thumbnail attraction">
-                  <img src="img/felipe_maciel_250_250.jpg" alt="" class="img-rounded img-responsive">
+                  <img src="img/felipe_maciel_210_210.jpg" alt="" class="img-rounded img-responsive">
                   <div class="caption">
                     <h4>
                       Felipe Maciel<br>
@@ -253,7 +248,7 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="thumbnail attraction">
-                  <img src="img/ridardo_dantas_250x250.jpg" alt="" class="img-rounded img-responsive">
+                  <img src="img/ricardo_dantas_210x210.jpg" alt="" class="img-rounded img-responsive">
                   <div class="caption">
                     <h4>
                       Ricardo Dantas<br>
