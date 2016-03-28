@@ -78,7 +78,7 @@
                             <p>
                               Engenheiro Eletrônico e Mestre em Engenharia de Sistemas pela UPE, doutorando em Engenharia Eletônica pela UFPE. Participa de competições de robótica desde 2007.
                               <br>
-                              <a href="http://makerama.com.br">http://makerama.com.br</a>
+                              <a target="blank" href="http://makerama.com.br">http://makerama.com.br</a>
                             </p>
                             <p>
                               Workshop: <strong>Robótica com Arduino</strong>
@@ -116,7 +116,7 @@
                             <p>
                               Helder da Rocha é mestre em informática pela UFCG e especialista em tecnologias Web. Desde 1995 pesquisa, escreve, ministra cursos e palestras sobre Java, tecnologias Web e XML, a maioria disponível online no seu site argonavis.com.br. É também autor de livros, tutoriais e apostilas sobre tecnologias Java, HTML, CSS, JavaScript, tecnologias XML, metodologias ágeis e arquitetura de sistemas. Ministrou treinamentos em quase todos os estados do país em mais de 8000 horas de aula. Algumas das empresas treinadas por Helder incluem: Banco do Brasil, Petrobras, Rede Nacional de Pesquisa, Marinha do Brasil, PNUD, Grupo Vicunha, Michelin, CPqD e Editora Abril. Além de trabalhar com TI, é também ator de teatro, ilustrador e paleoartista.
                               <br>
-                              <a href="http://helderdarocha.com.br">http://helderdarocha.com.br</a>
+                              <a target="blank" href="http://helderdarocha.com.br">http://helderdarocha.com.br</a>
                             </p>
                             <!-- <p>
                               Palestra: <strong></strong>
@@ -155,7 +155,7 @@
                             <p>
                               Graduada gestão em ti, cursando mba em Gestão Empreendedora e Inovação, empreendedora nata, atua na área de ti e há mais de 6 anos, é CEO da Mangue Tecnologia uma empresa inovadora de base tecnológica que gera soluções inteligentes para diversos segmentos do mercado. Apaixonada por tecnologia, educação e empreendedorismo, é fundadora do Women Who Code – Recife, uma organização global dedicada a educar e inspirar mulheres a buscarem e se destacarem em carreiras tecnológicas, conta com mais de 6000 membros em 9 países. É Consultora nas áreas de TI . Além disso, é uma das organizadoras do Startup Weekend Petrolina 2015 e da primeira Startup Weekend Women do Brasil João Pessoa 2014. Tenho me dedicado a ampliar minha linha de conhecimento na área de inovação, startups,  negócio em TI.
                               <br>
-                              <a href="http://manguetecnologia.com.br">http://manguetecnologia.com.br</a>
+                              <a target="blank" href="http://manguetecnologia.com.br">http://manguetecnologia.com.br</a>
                             </p>
                             <!-- <p>
                               Palestra: <strong></strong>
@@ -195,7 +195,7 @@
                             </p>
                             <p>
                               Daniel é mestre em Ciência da Computação pela UFPE, com certificação CISSP (Certified Information Systems Security Professional); Analista de Redes do SERPRO (Serviço Federal de Processamento de Dados) desde 2004, fez parte do Grupo de Resposta a Ataques até 2014, onde administrou sistemas de detecção de intrusão e realizou análises forenses computacionais, atualmente pesquisa a utilização de ferramentas opensource voltadas para forense computacional e testes de segurança em aplicações web; Desde 2005 é professor de cursos de graduação e especialização. <br>
-                              <a href="https://br.linkedin.com/in/damelo">https://br.linkedin.com/in/damelo</a>
+                              <a target="blank" href="https://br.linkedin.com/in/damelo">https://br.linkedin.com/in/damelo</a>
                             </p>
                             <p>
                               Palestra: <strong>Segurança em Aplicações Web</strong>
@@ -232,7 +232,7 @@
                           <div class="modal-body">
                             <p>
                               Felipe é graduado em Administração de Empresas e MBA em Gestão de Negócios pela UPE, é CEO e Co-Fundador da Estuário TI, empresa que atua no mercado de segurança da informação há 5 anos, com clientes no Brasil, EUA e Europa. <br>
-                              <a href="http://www.estuarioti.com.br">http://www.estuarioti.com.br</a>
+                              <a target="blank" href="http://www.estuarioti.com.br">http://www.estuarioti.com.br</a>
                             </p>
                             <p>
                               Palestra: <strong>Segurança da Informação</strong>
@@ -272,7 +272,7 @@
                           <div class="modal-body">
                             <p>
                               Ricardo é coordenador de desenvolvimento de sistemas do IFPE, também é um ativista do Software Livre e membro do Archlinux Brasil. <br>
-                              <br><a href="https://github.com/licensed">github.com/licensed</a>
+                              <br><a target="blank" href="https://github.com/licensed">github.com/licensed</a>
                             </p>
                             <p>
                               Minicurso: <strong>cuPYdo</strong>
