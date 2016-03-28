@@ -272,6 +272,7 @@
                           <div class="modal-body">
                             <p>
                               Ricardo é coordenador de desenvolvimento de sistemas do IFPE, também é um ativista do Software Livre e membro do Archlinux Brasil. <br>
+                              <br><a href="https://github.com/licensed">github.com/licensed</a>
                             </p>
                             <p>
                               Minicurso: <strong>cuPYdo</strong>
