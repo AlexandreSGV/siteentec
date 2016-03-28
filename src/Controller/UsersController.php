@@ -87,7 +87,7 @@ class UsersController extends AppController
 			$user->created = Time::now()->format('Y-m-d H:i:s');
 			$user->modified = Time::now()->format('Y-m-d H:i:s');
 			if ($this->Users->save($user)) {
-				$this->Flash->default(__($user->nome.', a sua inscrição está pendente de validação. Em instantes você receberá um e-mail com instruções para a validação.'));
+				$this->Flash->default(__($user->nome.', a sua inscrição está pendente de validação. Em instantes será enviado um e-mail para '.$user->email.' com instruções para a validação. '));
 				$email = new Email('default');
 				$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
 				->emailFormat('html')
