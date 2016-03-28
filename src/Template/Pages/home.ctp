@@ -249,6 +249,46 @@
               </div>
             </div>
           </div>
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="thumbnail attraction">
+                  <img src="img/ridardo_dantas_250x250.jpg" alt="" class="img-rounded img-responsive">
+                  <div class="caption">
+                    <h4>
+                      Ricardo Dantas<br>
+                      <small>Coordenador de desenvolvimento de sistemas do IFPE</small>
+                    </h4>
+                    <h5 class="text-center">
+                      <a href="#" data-toggle="modal" data-target="#modal_ricardo"><span class="fa fa-plus-square"></span> Saiba mais</a>
+                    </h5>
+                    <div class="modal fade" id="modal_ricardo" tabindex="-1" role="dialog" aria-labelledby="ricardo_title">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="ricardo_title">Ricardo Dantas</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>
+                              Ricardo é coordenador de desenvolvimento de sistemas do IFPE, também é um ativista do Software Livre e membro do Archlinux Brasil. <br>
+                            </p>
+                            <p>
+                              Minicurso: <strong>cuPYdo</strong>
+                            </p>
+                            <p>
+                              Se apaixone por Python você também!
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
