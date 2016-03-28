@@ -5,6 +5,7 @@ return [
         'Bake' => $baseDir . '/vendor/cakephp/bake/',
         'CsvView' => $baseDir . '/vendor/friendsofcake/cakephp-csvview/',
         'DebugKit' => $baseDir . '/vendor/cakephp/debug_kit/',
-        'Migrations' => $baseDir . '/vendor/cakephp/migrations/'
+        'Migrations' => $baseDir . '/vendor/cakephp/migrations/',
+        'WyriHaximus/MinifyHtml' => $baseDir . '/vendor/wyrihaximus/minify-html/'
     ]
 ];
