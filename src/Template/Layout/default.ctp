@@ -195,9 +195,10 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 				<div class="col-sm-6">
 					<h1>I ENTEC</h1>
 					<p>
-						Instituto Federal de Pernambuco <br>Campus Igarassu <br>Sede
-						Provisória Faculdade de Igarassu (Facig) – Avenida Alfredo
+						Instituto Federal de Pernambuco <br>Campus Igarassu 
+						<br><i class="fa fa-location-arrow"></i> Sede Provisória Faculdade de Igarassu (Facig) – Avenida Alfredo
 						Bandeira de Melo S/N, BR-101 Norte, Km 44, Igarassu-PE
+						<br><i class="fa fa-envelope-o"> </i> contatoentec@igarassu.ifpe.edu.br
 					</p>
 				</div>
 				<div class="col-sm-6">
