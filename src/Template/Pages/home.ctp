@@ -485,7 +485,10 @@
 	              <a target="blank" href="https://drive.google.com/file/d/0B7jr_kAKet92Z1pGc0lybzZneTA">.docx</a>
 	              <a target="blank" href="https://drive.google.com/file/d/0B7jr_kAKet92Y0NScFRzNnczZ2M">.pdf</a>
               </li>
-              <li>Modelo de Apresentação (em breve)</li>
+              <li>Modelo de Apresentação: 
+              		<a target="blank" href="https://drive.google.com/open?id=0B7jr_kAKet92eTRzY0ctSGt5VGc">.ppt</a>             
+              		<a target="blank" href="https://drive.google.com/open?id=0B7jr_kAKet92NGJYVWR2OWI3am8">.pptx</a>             
+              </li>
             </ul>
 
             <p>
