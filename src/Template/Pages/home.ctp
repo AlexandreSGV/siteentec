@@ -289,51 +289,44 @@
       </div>
     </div>
 
-    <!-- <div class="section" id="program">
+    <div class="section" id="program">
       <h1 class="text-center text-primary">Programa</h1>
       <div class="container">
 
         <div class="row">
           <div class="col-md-12">
-            <h2 class="text-success">06 de Abril de 2016</h2>
+            <h2 class="text-success text-uppercase">Quarta, 6 de Abril</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
             <hr>
-            <h3>8h às 9h</h3>
-          </div>
-          <div class="col-md-12">
-            <h4>Cadastramento</h4>
+            <h3><b>8:30h às 9:30h</b> - Credenciamento  <small> Local: Hall </small></h3>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
             <hr>
-            <h3>9h às 10h</h3>
-          </div>
-          <div class="col-md-12">
-            <h4>Abertura oficial</h4>
+            <h3><b>9:30h às 10h</b> - Mesa de Abertura <small> Local: Auditório </small></h3>
             <p>
-              Pronunciamento da Diretora do campus, professora Ana Regina, e da [?] reitora do IFPE, professora [?]
+            	A reitora do IFPE, Prof.ª Analia Ribeiro Reitoria, a diretora geral do campus Igarassu, Prof.ª Ana Regina Ferraz Vieira, e o coordenador do curso de Informática para Internet, Prof.º Ramon Mota de Souza Farias, dão boas vindas aos participantes do ENTEC.
             </p>
           </div>
+          
         </div>
         <div class="row">
           <div class="col-md-12">
             <hr>
-            <h3>10h às 11h</h3>
+            <h3><b>10:10h às 10:35h</b> - Palestra: <small> Local: Auditório </small></h3>
           </div>
           <div class="col-md-12">
-            <h4>Palestra de abertura</h4>
+            <h4>Marcos Oliveira</h4>
             <div class="row">
               <div class="col-md-1">
                 <img src="img/user_placeholder.png" alt="" class="img-circle img-responsive">
               </div>
               <div class="col-md-11">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-                dis parturient montes, nascetur ridiculus mus.
+                
               </div>
             </div>
           </div>
@@ -341,18 +334,34 @@
         <div class="row">
           <div class="col-md-12">
             <hr>
-            <h3>11h às 12h</h3>
+            <h3 ><b>10:35h às 11h -</b> Palestra: Vida nas multinacionais: antes, durante e depois. <small> Local: Auditório </small></h3>
           </div>
           <div class="col-md-12">
-            <h4>Palestra 2</h4>
+            <h4>Pablo Pinheiro</h4>
             <div class="row">
               <div class="col-md-1">
                 <img src="img/user_placeholder.png" alt="" class="img-circle img-responsive">
               </div>
               <div class="col-md-11">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-                dis parturient montes, nascetur ridiculus mus.
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-12">
+            <hr>
+            <h3 ><b>11h às 11:20h -</b> Palestra: Título <small> Local: Auditório </small></h3>
+          </div>
+          <div class="col-md-12">
+            <h4>Washington Carvalho</h4>
+            <div class="row">
+              <div class="col-md-1">
+                <img src="img/user_placeholder.png" alt="" class="img-circle img-responsive">
+              </div>
+              <div class="col-md-11">
+                
               </div>
             </div>
           </div>
@@ -360,8 +369,27 @@
         <div class="row">
           <div class="col-md-12">
             <hr>
-            <h3>12h às 13h</h3>
-            <p>Coffee Break</p>
+            <h3 ><b>11:20h às 12h -</b> Debate Temática do Evento <small> Local: Auditório </small></h3>
+          </div>
+          <div class="col-md-12">
+            <h4>Marcos Oliveira, Pablo Pinheiro  e Washington Carvalho</h4>
+            <div class="row">
+              <div class="col-md-1">
+                <img src="img/user_placeholder.png" alt="" class="img-circle img-responsive">
+              </div>
+              <div class="col-md-11">
+                Os palestrantes debatem com o público assuntos relacionados às palestras dentro das temática do evento. Este é um momento de livre interação entre palestrantes e público. 
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="row">
+          <div class="col-md-12">
+            <hr>
+            <h3>12h às 13h - Coffee Break <small> Local: Hall </small></h3>
+            
           </div>
         </div>
         <div class="row">
@@ -497,7 +525,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <div id="academic" class="section">
       <div class="container">
         <div class="row">
