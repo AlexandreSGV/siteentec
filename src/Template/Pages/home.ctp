@@ -284,7 +284,104 @@
               </div>
             </div>
           </div>
-          
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="thumbnail attraction">
+                  <img src="http://placehold.it/210/210" alt="" class="img-rounded img-responsive">
+                  <div class="caption">
+                    <h4>
+                      Marcos Oliveira<br>
+                      <small></small>
+                    </h4>
+                    <h5 class="text-center">
+                      <a href="#" data-toggle="modal" data-target="#modal_marcos"><span class="fa fa-plus-square"></span> Saiba mais</a>
+                    </h5>
+                    <div class="modal fade" id="modal_marcos" tabindex="-1" role="dialog" aria-labelledby="ricardo_title">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="ricardo_title">Marcos Oliveira</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>
+                              Pós-Graduando em Sistemas e Estratégias de Inovação pelo CEDEPE Business School, é Graduado em Administração pela Universidade Federal de Pernambuco (UFPE), onde também foi Professor de Administração, Marketing e Empreendedorismo. Desde 2003 trabalha com suporte e assessoramento a negócios e entre 2011 e 2013 coordenou a Secretaria Técnica do Fórum Estadual das Microempresas de Pernambuco e a Gerência de Micro e Pequenas Empresas da Secretaria Estadual do Trabalho, Qualificação e Empreendedorismo. Entre 2013 e 2016 atuou como Coordenador de Incubação e Gerente de Fomento ao Empreendedorismo do Porto Digital
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="thumbnail attraction">
+                  <img src="http://placehold.it/210/210" alt="" class="img-rounded img-responsive">
+                  <div class="caption">
+                    <h4>
+                      Diógenes ?<br>
+                      <small>Fuctura Tecnologia</small>
+                    </h4>
+                    <h5 class="text-center">
+                      <a href="#" data-toggle="modal" data-target="#modal_diogenes"><span class="fa fa-plus-square"></span> Saiba mais</a>
+                    </h5>
+                    <div class="modal fade" id="modal_diogenes" tabindex="-1" role="dialog" aria-labelledby="ricardo_title">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="ricardo_title">Diógenes ?</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="thumbnail attraction">
+                  <img src="http://placehold.it/210/210" alt="" class="img-rounded img-responsive">
+                  <div class="caption">
+                    <h4>
+                      Washington Carvalho<br>
+                      <small>ThoughtWorks</small>
+                    </h4>
+                    <h5 class="text-center">
+                      <a href="#" data-toggle="modal" data-target="#modal_washington"><span class="fa fa-plus-square"></span> Saiba mais</a>
+                    </h5>
+                    <div class="modal fade" id="modal_washington" tabindex="-1" role="dialog" aria-labelledby="ricardo_title">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="ricardo_title">Washington Carvalho</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
