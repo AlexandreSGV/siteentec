@@ -386,243 +386,263 @@
       </div>
     </div>
 
-    <div class="section" id="program">
-      <h1 class="text-center text-primary">Programa</h1>
-      <div class="container">
 
+
+
+
+
+
+
+    <div class="section" id="program">
+      <h1 class="text-center">Programa</h1>
+      <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="text-success text-uppercase">Quarta, 6 de Abril</h2>
+            <h3 class="text-success text-uppercase">Quarta-feira, 6 de Abril</h3>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <h3><b>8:30h às 9:30h</b> - Credenciamento  <small> Local: Hall </small></h3>
+          <div class="col-md-2">
+            <h5><strong>08:30h às 09:30h</strong></h5>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <h3><b>9:30h às 10h</b> - Mesa de Abertura <small> Local: Auditório </small></h3>
+          <div class="col-md-10">
+            <h5>
+              Credenciamento
+              <span class="where"> (Hall)</span>
+            </h5>
+          </div>
+          <div class="col-md-12"><hr></div>
+          <div class="col-md-2">
+            <h5><strong>09:30h às 10:00h</strong></h5>
+          </div>
+          <div class="col-md-10">
+            <h5>
+              Mesa de Abertura <span class="where"> (Auditório) </span>
+            </h5>
             <p>
-            	A reitora do IFPE, Prof.ª Analia Ribeiro Reitoria, a diretora geral do campus Igarassu, Prof.ª Ana Regina Ferraz Vieira, e o coordenador do curso de Informática para Internet, Prof.º Ramon Mota de Souza Farias, dão boas vindas aos participantes do ENTEC.
+              A reitora do IFPE, Prof.ª Analia Ribeiro Reitoria, a diretora geral do campus Igarassu, Prof.ª Ana Regina Ferraz Vieira, e o coordenador do curso de Informática para Internet, Prof.º Ramon Mota de Souza Farias, dão boas vindas aos participantes do ENTEC.
             </p>
           </div>
-          
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <h3><b>10:10h às 10:35h</b> - Palestra: <small> Local: Auditório </small></h3>
+          <div class="col-md-12"><hr></div>
+          <div class="col-md-2">
+            <h5><strong>10:10h às 10:40h</strong></h5>
           </div>
-          <div class="col-md-12">
-            <h4>Marcos Oliveira</h4>
-            <div class="row">
-              <div class="col-md-1">
-                <img src="img/user_placeholder.png" alt="" class="img-circle img-responsive">
-              </div>
-              <div class="col-md-11">
-                
-              </div>
-            </div>
+          <div class="col-md-10">
+            <h5>
+              Palestra: <strong>Negócios na área de TI</strong> - <a href="#" data-toggle="modal" data-target="#modal_marcos">Marcos Oliveira</a> <span class="where"> (Auditório) </span>
+            </h5>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <h3 ><b>10:35h às 11h -</b> Palestra: Vida nas multinacionais: antes, durante e depois. <small> Local: Auditório </small></h3>
+          <div class="col-md-12"><hr></div>
+          <div class="col-md-2">
+            <h5><strong>10:40h às 11:10h</strong></h5>
           </div>
-          <div class="col-md-12">
-            <h4>Pablo Pinheiro</h4>
-            <div class="row">
-              <div class="col-md-1">
-                <img src="img/user_placeholder.png" alt="" class="img-circle img-responsive">
-              </div>
-              <div class="col-md-11">
-                
-              </div>
-            </div>
+          <div class="col-md-10">
+            <h5>
+              Palestra: <strong>Vida nas multinacionais: antes, durante e depois</strong> - <a href="#" data-toggle="modal" data-target="#modal_pablo">Pablo Pinheiro</a> <span class="where"> (Auditório) </span>
+            </h5>
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <h3 ><b>11h às 11:20h -</b> Palestra: Título <small> Local: Auditório </small></h3>
+          <div class="col-md-12"><hr></div>
+          <div class="col-md-2">
+            <h5><strong>11:10h às 11:40h</strong></h5>
           </div>
-          <div class="col-md-12">
-            <h4>Washington Carvalho</h4>
-            <div class="row">
-              <div class="col-md-1">
-                <img src="img/user_placeholder.png" alt="" class="img-circle img-responsive">
-              </div>
-              <div class="col-md-11">
-                
-              </div>
-            </div>
+          <div class="col-md-10">
+            <h5>
+              Palestra: <strong>Construindo uma Web inclusiva</strong> - <a href="#" data-toggle="modal" data-target="#modal_washington">Washington Carvalho</a> <span class="where"> (Auditório) </span>
+            </h5>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <h3 ><b>11:20h às 12h -</b> Debate Temática do Evento <small> Local: Auditório </small></h3>
+          <div class="col-md-12"><hr></div>
+          <div class="col-md-2">
+            <h5><strong>11:40h às 12:00h</strong></h5>
           </div>
-          <div class="col-md-12">
-            <h4>Marcos Oliveira, Pablo Pinheiro  e Washington Carvalho</h4>
-            <div class="row">
-              <div class="col-md-1">
-                <img src="img/user_placeholder.png" alt="" class="img-circle img-responsive">
-              </div>
-              <div class="col-md-11">
-                Os palestrantes debatem com o público assuntos relacionados às palestras dentro das temática do evento. Este é um momento de livre interação entre palestrantes e público. 
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        
-        <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <h3>12h às 13h - Coffee Break <small> Local: Hall </small></h3>
-            
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <h3>13h às 16h</h3>
-          </div>
-          <div class="col-md-4">
-            <h4>Minicurso 1</h4>
+          <div class="col-md-10">
+            <h5>
+              Debate Temático do Evento - Marcos Oliveira, Pablo Pinheiro  e Washington Carvalho <span class="where"> (Auditório) </span>
+            </h5>
             <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus.
+              Os palestrantes debatem com o público assuntos relacionados às palestras dentro das temática do evento. Este é um momento de livre interação entre palestrantes e público
             </p>
           </div>
-          <div class="col-md-4">
-            <h4>Apresentações de trabalhos</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus.
-            </p>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><hr></div>
+          <div class="col-md-2">
+            <h5><strong>12:00h às 13:00h</strong></h5>
           </div>
-          <div class="col-md-4">
-            <h4>Olimpíada de Informática de Igarassu</h4>
+          <div class="col-md-10">
+            <h5>
+              Coffee Break <span class="where"> (Hall) </span>
+            </h5>
+            <p></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><hr></div>
+          <div class="col-md-2">
+            <h5><strong>13:00h às 15:00h</strong></h5>
+          </div>
+          <div class="col-md-10">
+            <div class="row">
+              <div class="col-md-4">
+                <h5>
+                  Mostra de trabalhos <span class="where"> (Sala 9)</span>
+                </h5>
+              </div>
+              <div class="col-md-4">
+                <h5>
+                  Oficina: <strong>Robótica com Arduino</strong> - <a href="#" data-toggle="modal" data-target="#modal_gustavo">Gustavo Ribeiro</a>
+                  <span class="where"> (Lab FACIG)</span>
+                </h5>
+              </div>
+              <div class="col-md-4">
+                <h5>
+                  Oficina: <strong>Introdução ao Bootstrap</strong> - Ranieri Valença
+                  <span class="where"> (Lab IFPE)</span>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12"><hr></div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <h5><strong>12:00h às 17:00h</strong></h5>
+          </div>
+          <div class="col-md-10">
+            <h5>
+              Games <span class="where"> (Corredor, Sala 1, Lab IFPE)</span>
+            </h5>
             <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus.
+              Espaço Nerd, com consoles rodando emuladores e jogos modernos (Mortal Kombat X, FIFA 2016, Just Dance) e campeonato de <strong>Counter Strike: GO</strong> (15:00h às 17:00h)
             </p>
           </div>
         </div>
       </div>
-      <div class="container">
 
+
+
+
+
+
+
+
+
+
+
+      <div class="container">
+        <hr>
         <div class="row">
           <div class="col-md-12">
-            <h2 class="text-success">07 de Abril de 2016</h2>
+            <h3 class="text-success text-uppercase">Quinta-feira, 7 de Abril</h3>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <h3>9h às 10h</h3>
+          <div class="col-md-2">
+            <h5><strong>08:40h às 09:00h</strong></h5>
           </div>
-          <div class="col-md-12">
-            <h4>Palestra 3</h4>
+          <div class="col-md-10">
+            <h5>
+              Horário reservado para atividade de combate ao mosquito <em>Aedes aegypti</em>
+              <span class="where"> (Auditório)</span>
+            </h5>
+          </div>
+          <div class="col-md-12"><hr></div>
+          <div class="col-md-2">
+            <h5><strong>09:00h às 09:40h</strong></h5>
+          </div>
+          <div class="col-md-10">
+            <h5>
+              Palestra: <a href="#" data-toggle="modal" data-target="#modal_helder">Helder da Rocha</a> <span class="where"> (Auditório) </span>
+            </h5>
+          </div>
+          <div class="col-md-12"><hr></div>
+          <div class="col-md-2">
+            <h5><strong>09:45h às 10:25h</strong></h5>
+          </div>
+          <div class="col-md-10">
+            <h5>
+              Palestra: <strong>Software Livre e Projeto Bíblia 3D</strong> - <a href="#" data-toggle="modal" data-target="#modal_diogenes">Diógenes ?</a> <span class="where"> (Auditório) </span>
+            </h5>
+          </div>
+          <div class="col-md-12"><hr></div>
+          <div class="col-md-2">
+            <h5><strong>10:30h às 11:10h</strong></h5>
+          </div>
+          <div class="col-md-10">
+            <h5>
+              Palestra: <strong>Segurança em Aplicações Web</strong> - <a href="#" data-toggle="modal" data-target="#modal_daniel">Daniel Araújo</a> <span class="where"> (Auditório) </span>
+            </h5>
+          </div>
+          <div class="col-md-12"><hr></div>
+          <div class="col-md-2">
+            <h5><strong>11:15h às 12:00h</strong></h5>
+          </div>
+          <div class="col-md-10">
+            <h5>
+              <strong>Mesa redonda Empreendedorismo</strong> - <a href="#" data-toggle="modal" data-target="#modal_josilene">Maria Josilene</a> e <a href="#" data-toggle="modal" data-target="#modal_felipe">Felipe Maciel</a> <span class="where"> (Auditório) </span>
+            </h5>
+          </div>
+          <div class="col-md-12"><hr></div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <h5><strong>12:00h às 13:00h</strong></h5>
+          </div>
+          <div class="col-md-10">
+            <h5>
+              Coffee Break <span class="where"> (Hall) </span>
+            </h5>
+            <p></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><hr></div>
+          <div class="col-md-2">
+            <h5><strong>13:00h às 15:00h</strong></h5>
+          </div>
+          <div class="col-md-10">
             <div class="row">
-              <div class="col-md-1">
-                <img src="img/user_placeholder.png" alt="" class="img-circle img-responsive">
+              <div class="col-md-4">
+                <h5>
+                  Mostra de trabalhos <span class="where"> (Sala 9)</span>
+                </h5>
               </div>
-              <div class="col-md-11">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-                dis parturient montes, nascetur ridiculus mus.
+              <div class="col-md-4">
+                <h5>
+                  Oficina: <strong></strong> - <a href="#" data-toggle="modal" data-target="#modal_helder">Helder da Rocha</a>
+                  <span class="where"> (Lab FACIG)</span>
+                </h5>
+              </div>
+              <div class="col-md-4">
+                <h5>
+                  Oficina: <strong>CuPYdo</strong> - <a href="#" data-toggle="modal" data-target="#modal_ricardo">Ricardo Dantas</a>
+                  <span class="where"> (Lab IFPE)</span>
+                </h5>
               </div>
             </div>
           </div>
+          <div class="col-md-12"><hr></div>
         </div>
         <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <h3>10h às 11h</h3>
+          <div class="col-md-2">
+            <h5><strong>12:00h às 17:00h</strong></h5>
           </div>
-          <div class="col-md-12">
-            <h4>Palestra 4</h4>
-            <div class="row">
-              <div class="col-md-1">
-                <img src="img/user_placeholder.png" alt="" class="img-circle img-responsive">
-              </div>
-              <div class="col-md-11">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-                dis parturient montes, nascetur ridiculus mus.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <h3>11h às 12h</h3>
-          </div>
-          <div class="col-md-12">
-            <h4>Palestra 5</h4>
-            <div class="row">
-              <div class="col-md-1">
-                <img src="img/user_placeholder.png" alt="" class="img-circle img-responsive">
-              </div>
-              <div class="col-md-11">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-                dis parturient montes, nascetur ridiculus mus.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <h3>12h às 13h</h3>
-            <p>Coffee Break</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <h3>13h às 16h</h3>
-          </div>
-          <div class="col-md-4">
-            <h4>Minicurso 2</h4>
+          <div class="col-md-10">
+            <h5>
+              Games <span class="where"> (Corredor, Sala 1, Lab IFPE)</span>
+            </h5>
             <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus.
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h4>Apresentações de trabalhos</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus.
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h4>Oficina Ardurec</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus.
+              Espaço Nerd, com consoles rodando emuladores e jogos modernos (Pro Evolution Soccer 2016, Guitar Hero, Just Dance) e campeonato de <strong>League of Legends</strong> (15:00h às 17:00h)
             </p>
           </div>
         </div>
       </div>
     </div>
+
+
+
+
+
+
     <div id="academic" class="section">
       <div class="container">
         <div class="row">

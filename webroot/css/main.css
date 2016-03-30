@@ -53,3 +53,8 @@
 .attraction {
 	height: 380px;
 }
+
+h5 .where {
+	font-size: 0.85em;
+	color: #666;
+}
