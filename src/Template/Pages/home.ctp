@@ -105,7 +105,7 @@
                         <div class="modal-content">
                           <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="helder_title">Gustavo Ribeiro</h4>
+                            <h4 class="modal-title" id="helder_title">Helder da Rocha</h4>
                           </div>
                           <div class="modal-body">
                             <p>
