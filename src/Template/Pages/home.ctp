@@ -288,11 +288,11 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="thumbnail attraction">
-                  <img src="http://placehold.it/210/210" alt="" class="img-rounded img-responsive">
+                  <img src="img/marcos_230x230.jpg" alt="" class="img-rounded img-responsive">
                   <div class="caption">
                     <h4>
                       Marcos Oliveira<br>
-                      <small></small>
+                      <small>Porto Digital</small>
                     </h4>
                     <h5 class="text-center">
                       <a href="#" data-toggle="modal" data-target="#modal_marcos"><span class="fa fa-plus-square"></span> Saiba mais</a>
@@ -317,7 +317,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <!-- <div class="col-md-3">
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="thumbnail attraction">
@@ -380,7 +380,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -447,7 +447,7 @@
           </div>
           <div class="col-md-10">
             <h5>
-              Palestra: <strong>Construindo uma Web inclusiva</strong> - <a href="#" data-toggle="modal" data-target="#modal_washington">Washington Carvalho</a> <span class="where"> (Auditório) </span>
+              Palestra: <strong>Construindo uma Web inclusiva</strong> - <!-- <a href="#" data-toggle="modal" data-target="#modal_washington"> -->Washington Carvalho<!-- </a> --> <span class="where"> (Auditório) </span>
             </h5>
           </div>
           <div class="col-md-12"><hr></div>
@@ -512,7 +512,7 @@
               Games <span class="where"> (Corredor, Sala 1, Lab IFPE)</span>
             </h5>
             <p>
-              Espaço Nerd, com consoles rodando emuladores e jogos modernos (Mortal Kombat X, FIFA 2016, Just Dance) e campeonato de <strong>Counter Strike: GO</strong> (15:00h às 17:00h)
+              Espaço Nerd, com consoles rodando emuladores e jogos modernos (Mortal Kombat X, FIFA 2016, Just Dance) <!-- e campeonato de <strong>Counter Strike: GO</strong> (15:00h às 17:00h) -->
             </p>
           </div>
         </div>
@@ -551,7 +551,7 @@
           </div>
           <div class="col-md-10">
             <h5>
-              Palestra: <a href="#" data-toggle="modal" data-target="#modal_helder">Helder da Rocha</a> <span class="where"> (Auditório) </span>
+              Palestra: <strong><span class="soon">(em breve)</span></strong> - <a href="#" data-toggle="modal" data-target="#modal_helder">Helder da Rocha</a> <span class="where"> (Auditório) </span>
             </h5>
           </div>
           <div class="col-md-12"><hr></div>
@@ -560,7 +560,7 @@
           </div>
           <div class="col-md-10">
             <h5>
-              Palestra: <strong>Software Livre e Projeto Bíblia 3D</strong> - <a href="#" data-toggle="modal" data-target="#modal_diogenes">Diógenes ?</a> <span class="where"> (Auditório) </span>
+              Palestra: <strong>Software Livre e Projeto Bíblia 3D</strong> - <!-- <a href="#" data-toggle="modal" data-target="#modal_diogenes"> -->Diógenes (Fuctura Tecnologia)<!-- </a> --> <span class="where"> (Auditório) </span>
             </h5>
           </div>
           <div class="col-md-12"><hr></div>
@@ -608,7 +608,7 @@
               </div>
               <div class="col-md-4">
                 <h5>
-                  Oficina: <strong></strong> - <a href="#" data-toggle="modal" data-target="#modal_helder">Helder da Rocha</a>
+                  Oficina: <strong><span class="soon">(em breve)</span></strong> - <a href="#" data-toggle="modal" data-target="#modal_helder">Helder da Rocha</a>
                   <span class="where"> (Lab FACIG)</span>
                 </h5>
               </div>
