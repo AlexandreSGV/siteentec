@@ -79,14 +79,14 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 					) );
 					?>
 					</li>
-					<!-- <li>
+					<li>
 					<?php
 					echo $this->Html->link ( '<i class="fa fa-lg fa-list-alt"></i>' . ' Programa', ($this->fetch ( 'title' ) === 'home') ? '#program' : '/#program', array (
 							'escape' => false,
 							'id' => 'program-link'
 					) );
 					?>
-					</li> -->
+					</li>
 					<li>
 					<?php
 					echo $this->Html->link ( '<i class="fa fa-lg fa-list-alt"></i>' . ' Participações', ($this->fetch ( 'title' ) === 'home') ? '#attractions' : '/#attractions', array (
