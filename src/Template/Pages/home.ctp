@@ -113,9 +113,9 @@
                               <br>
                               <a target="blank" href="http://helderdarocha.com.br">http://helderdarocha.com.br</a>
                             </p>
-                            <!-- <p>
-                              Palestra: <strong></strong>
-                            </p> -->
+                            <p>
+                              Minicurso: <strong> SVG - Gráficos Vetoriais na Web:</strong>Este mini-curso explora a linguagem SVG, formato gráfico que pode ser gerado por ferramentas como Illustrator e Corel Draw, e transformado com CSS, manipulado com JavaScript, usado em animações e embutido em HTML5. Tem recursos similares a Flash e pode ser usado em aplicações Web no desktop ou em tablets. SVG é uma alternativa a HTML5 Canvas, mas pode também ser usado junto com Canvas. Tópicos opcionais incluem animação e programação (usando JavaScript, frameworks e componentes).
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -608,7 +608,7 @@
               </div>
               <div class="col-md-4">
                 <h5>
-                  Oficina: <strong><span class="soon">(em breve)</span></strong> - <a href="#" data-toggle="modal" data-target="#modal_helder">Helder da Rocha</a>
+                  Oficina: <strong>SVG - Gráficos Vetoriais na Web</strong> - <a href="#" data-toggle="modal" data-target="#modal_helder">Helder da Rocha</a>
                   <span class="where"> (Lab FACIG)</span>
                 </h5>
               </div>
