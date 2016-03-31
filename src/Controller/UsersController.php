@@ -26,7 +26,7 @@ class UsersController extends AppController
 		$counter = 0;
 		foreach($results as $user)
 		{
-			if($user->ativo && $user->role !== 'admin')
+			if($user->ativo && $user->role !== 'admin' && $user->role !== 'supervisor')
 				$counter++;
 		}
 		$this->set('count', $counter);
@@ -40,7 +40,7 @@ class UsersController extends AppController
 	    $_csvEncoding = 'Windows-1252';
 	    $_delimiter = ';';
 // 	    $_dataEncoding = 'UTF-8';
-	    $_header = ['Nº Inscrição', 'NOME','DATA INSCRIÇÃO','VALIDADO','PAPEL','ASSINATURA RECEBIDO'];
+	    $_header = ['Nº Inscrição', 'NOME','DATA INSCRIÇÃO','VALIDADO','PAPEL','ASSINATURA CREDENCIADO', 'RECEBEU CERTIFICADO'];
 	    $this->response->download('lista_inscritos.csv'); // <= setting the file name
 	    $this->viewBuilder()->className('CsvView.Csv');
 	    $this->set(compact('users', '_serialize','_header','_csvEncoding','_delimiter'));
@@ -48,13 +48,13 @@ class UsersController extends AppController
 	
 	public function exportTotal()
 	{
-		$users = $this->Users->find()->select(['id', 'nome', 'created', 'role','estado','cidade','instituicao','instrucao','email']);
+		$users = $this->Users->find()->select(['id', 'nome', 'created', 'role','estado','cidade','instituicao','instrucao','email','credenciado','imp_certificado']);
 	
 		$_serialize = 'users';
 		$_csvEncoding = 'Windows-1252';
 		$_delimiter = ';';
 		// 	    $_dataEncoding = 'UTF-8';
-		$_header = ['Nº Inscrição', 'NOME','DATA INSCRIÇÃO','PAPEL','ESTADO','CIDADE','INSTITUIÇÃO','INSTRUÇÃO','E-MAIL'];
+		$_header = ['Nº Inscrição', 'NOME','DATA INSCRIÇÃO','PAPEL','ESTADO','CIDADE','INSTITUIÇÃO','INSTRUÇÃO','E-MAIL','CREDENCIADO','VALIDADO'];
 		$this->response->download('lista_inscritos_completa.csv'); // <= setting the file name
 		$this->viewBuilder()->className('CsvView.Csv');
 		$this->set(compact('users', '_serialize','_header','_csvEncoding','_delimiter'));
