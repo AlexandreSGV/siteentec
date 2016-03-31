@@ -21,7 +21,7 @@ class UsersController extends AppController
 
 	public function index()
 	{
-		$results = $this->Users->find()->select(['id', 'nome', 'created', 'ativo','role']);
+		$results = $this->Users->find()->select(['id', 'nome', 'created', 'ativo','role','credenciado', 'imp_certificado']);
 		$this->set('users', $results);
 		$counter = 0;
 		foreach($results as $user)
@@ -202,7 +202,13 @@ class UsersController extends AppController
 				return true;
 			}
 		}
-		if ($this->request->action === 'index' ) {
+		
+		
+		if (	$this->request->action === 'credenciar' 
+			||	$this->request->action === 'certificadoImpresso' 
+			||	$this->request->action === 'validar'
+			||	$this->request->action === 'index'
+			||	$this->request->action === 'view') {
 			if (strpos('admin supervisor', $user['role']) !== false){
 				return true;
 			}
@@ -217,6 +223,51 @@ class UsersController extends AppController
 		$usr = $this->Users->get($id);
 		if ($this->Users->delete($usr)) {
 			$this->Flash->success(__('O usuário de nº: {0} foi removido.', h($id)));
+			return $this->redirect(['action' => 'index']);
+		}
+	}
+	
+	public function credenciar($id)
+	{
+		
+		if ($this->Users->exists($id)) {
+			$usr = $this->Users->get($id);
+			if($usr->credenciado){
+				$this->Users->updateAll(['credenciado' => 0], ['id' => $id]);
+			}else{
+				$this->Users->updateAll(['credenciado' => 1], ['id' => $id]);
+			}
+			
+			return $this->redirect(['action' => 'index']);
+		}
+	}
+	
+	public function certificadoImpresso($id)
+	{
+	
+		if ($this->Users->exists($id)) {
+			$usr = $this->Users->get($id);
+			if($usr->imp_certificado){
+				$this->Users->updateAll(['imp_certificado' => 0], ['id' => $id]);
+			}else{
+				$this->Users->updateAll(['imp_certificado' => 1], ['id' => $id]);
+			}
+				
+			return $this->redirect(['action' => 'index']);
+		}
+	}
+	
+	public function validar($id)
+	{
+	
+		if ($this->Users->exists($id)) {
+			$usr = $this->Users->get($id);
+			if($usr->ativo){
+				$this->Users->updateAll(['ativo' => 0], ['id' => $id]);
+			}else{
+				$this->Users->updateAll(['ativo' => 1], ['id' => $id]);
+			}
+	
 			return $this->redirect(['action' => 'index']);
 		}
 	}

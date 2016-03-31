@@ -6,9 +6,12 @@
 <form>
 
 <?php 
-echo $this->Html->link ( '<i class="fa fa-2x fa-fw fa-pencil-square-o"></i>'.' Editar',
+$loguser = $this->request->session ()->read ( 'Auth.User' );
+if (strpos('admin', $loguser ['role']) !== false || $loguser ['id'] === $user->id) {
+	echo $this->Html->link ( '<i class="fa fa-2x fa-fw fa-pencil-square-o"></i>'.' Editar',
 		array ('controller' => 'Users', 'action' => 'edit', $user->id), 
 		array ('escape' => false) );
+}
 ?>
 
 <fieldset>
