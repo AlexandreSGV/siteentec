@@ -30,7 +30,7 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
   ga('send', 'pageview');
 
 </script>
-	
+
 <title>
         <?= $cakeDescription ?>
         [<?= $this->fetch('title')?>]
@@ -84,17 +84,17 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 					</li>
 					<li>
 					<?php
-					echo $this->Html->link ( '<i class="fa fa-lg fa-list-alt"></i>' . ' Programa', ($this->fetch ( 'title' ) === 'home') ? '#program' : '/#program', array (
+					echo $this->Html->link ( '<i class="fa fa-lg fa-list-alt"></i>' . ' Participações', ($this->fetch ( 'title' ) === 'home') ? '#attractions' : '/#attractions', array (
 							'escape' => false,
-							'id' => 'program-link'
+							'id' => 'attractions-link'
 					) );
 					?>
 					</li>
 					<li>
 					<?php
-					echo $this->Html->link ( '<i class="fa fa-lg fa-list-alt"></i>' . ' Participações', ($this->fetch ( 'title' ) === 'home') ? '#attractions' : '/#attractions', array (
+					echo $this->Html->link ( '<i class="fa fa-lg fa-list-alt"></i>' . ' Programação', ($this->fetch ( 'title' ) === 'home') ? '#program' : '/#program', array (
 							'escape' => false,
-							'id' => 'attractions-link'
+							'id' => 'program-link'
 					) );
 					?>
 					</li>
@@ -205,7 +205,7 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 				<div class="col-sm-6">
 					<h1>I ENTEC</h1>
 					<p>
-						Instituto Federal de Pernambuco <br>Campus Igarassu 
+						Instituto Federal de Pernambuco <br>Campus Igarassu
 						<br><i class="fa fa-location-arrow"></i> Sede Provisória Faculdade de Igarassu (Facig) – Avenida Alfredo
 						Bandeira de Melo S/N, BR-101 Norte, Km 44, Igarassu-PE
 						<br><i class="fa fa-envelope-o"> </i> contatoentec@igarassu.ifpe.edu.br

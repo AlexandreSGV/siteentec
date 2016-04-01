@@ -394,7 +394,7 @@
 
 
     <div class="section" id="program">
-      <h1 class="text-center">Programa</h1>
+      <h1 class="text-center">Programação</h1>
       <div class="container">
         <div class="row">
           <div class="col-md-12">
