@@ -91,7 +91,7 @@ class UsersController extends AppController
 				$email = new Email('default');
 				$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
 				->emailFormat('html')
-				->to($user->email)
+				->to(strtolower($user->email))
 				->template('default','confirma_insc')
 				->subject('[EnTec 2016] Inscrição pendente de validação')
 				->viewVars(['nome' => $user->nome,'activation_link' => 'http://entec.ifpe.edu.br/users/activate/'.$user->id.'/'.$user->activation_code])
@@ -142,7 +142,7 @@ class UsersController extends AppController
 			$email = new Email('default');
 			$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
 			->emailFormat('html')
-			->to($user->email)
+			->to(strtolower($user->email))
 			->template('default','insc_sucesso')
 			->subject('[EnTec 2016] Inscrição confirmada')
 			->viewVars(['nome' => $user->nome,'ninscricao' => $user->id])
