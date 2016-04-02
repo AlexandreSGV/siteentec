@@ -156,6 +156,27 @@ class UsersController extends AppController
 	}
 	
 	
+	public function lembrarValidacaoEmail()
+	{
+		$usersLista = $this->Users->find()->select(['id', 'nome','email','activation_code'])
+										  ->where(['ativo' => 0]);
+		
+		foreach($usersLista as $user)
+		{
+			$email = new Email('default');
+			$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
+			->emailFormat('html')
+			->to(strtolower($user->email))
+			->template('default','lembrete_confirma_insc')
+			->subject('[EnTec 2016] Inscrição pendente de validação')
+			->viewVars(['nome' => $user->nome,'activation_link' => 'http://entec.ifpe.edu.br/users/activate/'.$user->id.'/'.$user->activation_code])
+			->send();
+		}
+		$this->Flash->default(__('Foi enviado um e-mail de validação para os usuários não validados!'));
+		return $this->redirect(['action' => 'index']);
+		
+	}
+	
 	
 	public function login()
 	{

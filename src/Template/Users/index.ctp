@@ -97,6 +97,13 @@
 		<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-lg"> Exportar para planilha (CSV)</i>',array('controller'=>'users','action'=>'export'), array('target'=>'_blank','escape' => false));?>
 		<br>
 		<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-lg"> Exportar para planilha (CSV) (Completo)</i>',array('controller'=>'users','action'=>'exportTotal'), array('target'=>'_blank','escape' => false));?>
+		<br>
+		
+		<?php 
+		if (strpos('admin', $loguser ['role']) !== false) {
+			echo $this->Html->link('<i class="fa fa-envelope fa-lg"> Enviar e-mail de validação para todos os usuários não validados</i>',array('controller'=>'users','action'=>'lembrarValidacaoEmail'), array('escape' => false, 'confirm' => __ ( 'Deseja enviar um e-mail para cada usuário não validado? (use com moderação!)' )));
+		}
+		?>
 		
 </div>
 </div>
