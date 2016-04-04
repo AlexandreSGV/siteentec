@@ -13,9 +13,9 @@
         <?=$this->Form->input ( 'sexo', array ('options' => [ 'empty' => 'Selecione','Feminino' => 'Feminino' , 'Masculino' => 'Masculino'] ))?>
         </div>
 				<div style="min-width: 280px; width: 40%;">
-		
 		<?=$this->Form->input ( 'nascimento', array ('label' => 'Date de Nascimento: (Dia/Mês/Ano) ','dateFormat' => 'DMY','minYear' => date ( 'Y' ) -90,'maxYear' => date ( 'Y' ) - 10,'class' => 'form-control','monthNames' => [ '01' => 'Janeiro','02' => 'Fevereiro','03' => 'Março','04' => 'Abril','05' => 'Maio','06' => 'Junho','07' => 'Julho','08' => 'Agosto','09' => 'Setembro','10' => 'Outubro','11' => 'Novembro','12' => 'Dezembro' ] ) )?>
 		</div>
+		<?=$this->Form->input ( 'email', array ('class' => 'form-control','id' => 'email' ) )?>
 				<div style="min-width: 210px; width: 30%;">
 		<?= $this->Form->input('telefone', array('class' => 'form-control'))?>
         </div>
