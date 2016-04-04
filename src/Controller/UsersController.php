@@ -115,6 +115,7 @@ class UsersController extends AppController
 		$user = $this->Users->newEntity();
 		if ($this->request->is('post')) {
 			$user = $this->Users->patchEntity($user, $this->request->data);
+			$user->email = strtolower($user->email);
 			$user->username = $user->email;
 			$user->role = "participante";
 			$user->nome = strtoupper($user->nome);
@@ -152,6 +153,8 @@ class UsersController extends AppController
 			$this->Users->validator()->remove('confirm_password');
 			$user->modified = Time::now()->format('Y-m-d H:i:s');
 			$user->nome = strtoupper($user->nome);
+			$user->email = strtolower($user->email);
+			$user->username = $user->email;
 			if ($this->Users->save ( $user )) {
 				$this->Flash->success ( __ ( 'Inscrição atualizada com sucesso.' ) );
 				return $this->redirect ( [
