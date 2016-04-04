@@ -539,13 +539,13 @@
               </div>
               <div class="col-md-4">
                 <h5>
-                  Oficina: <strong>Robótica com Arduino</strong> - <a href="#" data-toggle="modal" data-target="#modal_gustavo">Gustavo Ribeiro</a>
+                  Oficina: <strong>Introdução ao Bootstrap</strong> - <a href="#" data-toggle="modal" data-target="#modal_ranieri">Ranieri Valença</a>
                   <span class="where"> (Lab FACIG)</span>
                 </h5>
               </div>
               <div class="col-md-4">
                 <h5>
-                  Oficina: <strong>Introdução ao Bootstrap</strong> - Ranieri Valença
+                  Oficina: <strong>Robótica com Arduino</strong> - <a href="#" data-toggle="modal" data-target="#modal_gustavo">Gustavo Ribeiro</a>
                   <span class="where"> (Lab IFPE)</span>
                 </h5>
               </div>
