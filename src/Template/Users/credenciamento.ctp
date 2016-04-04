@@ -1,4 +1,4 @@
-<!-- src/Template/Users/index.ctp -->
+<!-- src/Template/Users/credenciamento.ctp -->
 <?= $this->assign('title', 'Credenciamento'); ?>
 <?= $this->Html->script('credenciamento.js'); ?>
 

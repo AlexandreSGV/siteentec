@@ -172,6 +172,15 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 						), array('escape' => false) );
 					}
 					?></li>
+					
+					<li><?php
+					if (strpos('admin supervisor', $loguser ['role']) !== false) {
+						echo $this->Html->link ( '<i class="fa fa-lg fa-fw fa-graduation-cap"></i> '.' Minicursos', array (
+								'controller' => 'minicursos',
+								'action' => 'index'
+						), array('escape' => false) );
+					}
+					?></li>
 
 					<li>
 					<?php

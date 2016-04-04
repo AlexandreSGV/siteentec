@@ -94,15 +94,18 @@
 </table>
 <div  style="width:100%;  text-align: center; background-color: #ddd;">
 	
-		<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-lg"> Exportar para planilha (CSV)</i>',array('controller'=>'users','action'=>'export'), array('target'=>'_blank','escape' => false));?>
-		<br>
-		<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-lg"> Exportar para planilha (CSV) (Completo)</i>',array('controller'=>'users','action'=>'exportTotal'), array('target'=>'_blank','escape' => false));?>
-		<br>
+	
 		
+		<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-2x"> Todos Inscritos</i>',array('controller'=>'users','action'=>'exportTotal'), array('class'=>'btn btn-default btn-sm col-xs-4', 'target'=>'_blank','escape' => false));?>
+		<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-2x"> Certificado Participante</i>',array('controller'=>'users','action'=>'exportImpCertificados'), array('class'=>'btn btn-default btn-sm col-xs-4', 'target'=>'_blank','escape' => false));?>
+		<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-2x"> Certificado Minicurso</i>',array('controller'=>'userminicursos','action'=>'exportMinicursosCertificado'), array('class'=>'btn btn-default btn-sm col-xs-4', 'target'=>'_blank','escape' => false));?>
+	
+	</div>	
+<div  style="width:100%;  text-align: center; background-color: #ddd;">
 		<?php 
-		if (strpos('admin', $loguser ['role']) !== false) {
-			echo $this->Html->link('<i class="fa fa-envelope fa-lg"> Enviar e-mail de validação para todos os usuários não validados</i>',array('controller'=>'users','action'=>'lembrarValidacaoEmail'), array('escape' => false, 'confirm' => __ ( 'Deseja enviar um e-mail para cada usuário não validado? (use com moderação!)' )));
-		}
+// 		if (strpos('admin', $loguser ['role']) !== false) {
+// 			echo $this->Html->link('<i class="fa fa-envelope fa-lg"> Enviar e-mail de validação para todos os usuários não validados</i>',array('controller'=>'users','action'=>'lembrarValidacaoEmail'), array('escape' => false, 'confirm' => __ ( 'Deseja enviar um e-mail para cada usuário não validado? (use com moderação!)' )));
+// 		}
 		?>
 		
 </div>

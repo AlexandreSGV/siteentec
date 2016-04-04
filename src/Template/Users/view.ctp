@@ -1,6 +1,6 @@
-<!-- src/Template/Users/activate.ctp -->
+<!-- src/Template/Users/view.ctp -->
 <?= $this->assign('title', 'Confirmar Inscri��o'); ?>
-<div class="container" style="width:80%;padding-top: 89px; margin-bottom: 10px; ">
+<div class="container" style="width:80%;padding-top: 115px; margin-bottom: 10px; ">
 <?= $this->Flash->render()?>
 <?= $this->Flash->render('auth') ?>
 <form>
