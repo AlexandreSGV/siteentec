@@ -10,14 +10,16 @@ use Cake\I18n\Time;
 
 class UsersController extends AppController
 {
-	
+
 	
 	public function beforeFilter(Event $event)
 	{
 		parent::beforeFilter($event);
     	$this->Auth->allow(['add', 'logout', 'activate', 'login']);
-    	$this->Auth->deny(['edit', 'index','view','delete']);
+    	$this->Auth->deny(['edit', 'index','view','delete','credenciamento']);
 	}
+	
+	
 
 	public function index()
 	{
@@ -26,11 +28,44 @@ class UsersController extends AppController
 		$counter = 0;
 		foreach($results as $user)
 		{
-			if($user->ativo && $user->role !== 'admin' && $user->role !== 'supervisor')
+			if($user->ativo && $user->role !== 'admin' && $user->role !== 'supervisor'){
 				$counter++;
+			}
 		}
 		$this->set('count', $counter);
+		
 	}
+	
+	
+	public function credenciamento()
+	{
+		$results = $this->Users->find()->select(['id', 'nome', 'ativo','credenciado', 'imp_certificado'])
+									   
+									   ;
+// 		$this->set('users', $results);
+		$this->paginate = array(
+				'limit' => 600,
+				'order' => array(
+						'nome' => 'asc'
+				)
+		);
+		$users = $this->paginate($results);		
+		$this->set(compact('users'));
+		$this->set('_serialize', ['users']);
+		$counter = 0;
+		$count_cred = 0;
+		foreach($results as $user)
+		{
+			if($user->ativo && $user->role !== 'admin' && $user->role !== 'supervisor'){
+				$counter++;
+				if($user->credenciado) $count_cred++;
+			}
+		}
+		$this->set('count', $counter);
+		$this->set('count_cred', $count_cred);
+	}
+	
+	
 	
 	public function export()
 	{
@@ -82,6 +117,7 @@ class UsersController extends AppController
 			$user = $this->Users->patchEntity($user, $this->request->data);
 			$user->username = $user->email;
 			$user->role = "participante";
+			$user->nome = strtoupper($user->nome);
 			$user->activation_code = md5(time());
 			$user->ativo = 0;
 			$user->created = Time::now()->format('Y-m-d H:i:s');
@@ -115,6 +151,7 @@ class UsersController extends AppController
 			$this->Users->validator()->remove('password');
 			$this->Users->validator()->remove('confirm_password');
 			$user->modified = Time::now()->format('Y-m-d H:i:s');
+			$user->nome = strtoupper($user->nome);
 			if ($this->Users->save ( $user )) {
 				$this->Flash->success ( __ ( 'Inscrição atualizada com sucesso.' ) );
 				return $this->redirect ( [
@@ -225,9 +262,9 @@ class UsersController extends AppController
 		}
 		
 		
-		if (	$this->request->action === 'credenciar' 
-			||	$this->request->action === 'certificadoImpresso' 
-			||	$this->request->action === 'validar'
+		if (	$this->request->action === 'credenciamento' 
+			||	$this->request->action === 'credenciarajax'
+			||	$this->request->action === 'imprimircertajax'
 			||	$this->request->action === 'index'
 			||	$this->request->action === 'view') {
 			if (strpos('admin supervisor', $user['role']) !== false){
@@ -259,7 +296,7 @@ class UsersController extends AppController
 				$this->Users->updateAll(['credenciado' => 1], ['id' => $id]);
 			}
 			
-			return $this->redirect(['action' => 'index']);
+			return $this->redirect($this->referer());
 		}
 	}
 	
@@ -274,7 +311,7 @@ class UsersController extends AppController
 				$this->Users->updateAll(['imp_certificado' => 1], ['id' => $id]);
 			}
 				
-			return $this->redirect(['action' => 'index']);
+			return $this->redirect($this->referer());
 		}
 	}
 	
@@ -289,7 +326,34 @@ class UsersController extends AppController
 				$this->Users->updateAll(['ativo' => 1], ['id' => $id]);
 			}
 	
-			return $this->redirect(['action' => 'index']);
 		}
 	}
+	
+	
+
+		
+		public function credenciarajax($id){
+			if ($this->Users->exists($id)) {
+				$usr = $this->Users->get($id);
+				if($usr->credenciado){
+					$this->Users->updateAll(['credenciado' => 0], ['id' => $id]);
+				}else{
+					$this->Users->updateAll(['credenciado' => 1], ['id' => $id]);
+				}
+			}
+		}
+		
+		public function imprimircertajax($id){
+			if ($this->Users->exists($id)) {
+				$usr = $this->Users->get($id);
+				if($usr->imp_certificado){
+					$this->Users->updateAll(['imp_certificado' => 0], ['id' => $id]);
+				}else{
+					$this->Users->updateAll(['imp_certificado' => 1], ['id' => $id]);
+				}
+			}
+		}
+		
+		
+		
 }

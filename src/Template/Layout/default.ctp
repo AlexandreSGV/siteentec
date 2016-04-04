@@ -46,6 +46,7 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
     <?= $this->Html->script('jquery.min.js'); ?>
     <?= $this->Html->script('scrollTo/jquery.scrollTo.min.js'); ?>
     <?= $this->Html->script('bootstrap.min.js'); ?>
+    <?= $this->Html->script('main.js'); ?>
 
 
     <?= $this->fetch('meta')?>
@@ -53,6 +54,8 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
     <?= $this->fetch('script')?>
 </head>
 <body data-spy="scroll" data-target=".navbar">
+
+
 	<!--<div class="cover" style="opacity: 1;">-->
 	<div class="navbar navbar-fixed-top navbar-inverse">
 
@@ -144,10 +147,19 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 					?></li>
 
 					<li><?php
-					if (strpos('admin supervisor', $loguser ['role']) !== false) {
+					if (strpos('admin', $loguser ['role']) !== false) {
 						echo $this->Html->link ( '<i class="fa fa-lg fa-fw fa-cog"></i> '.' Gerenciar', array (
 								'controller' => 'users',
 								'action' => 'index'
+						), array('escape' => false) );
+					}
+					?></li>
+					
+					<li><?php
+					if (strpos('admin supervisor', $loguser ['role']) !== false) {
+						echo $this->Html->link ( '<i class="fa fa-lg fa-fw fa-tags"></i> '.' Credenciamento', array (
+								'controller' => 'users',
+								'action' => 'credenciamento'
 						), array('escape' => false) );
 					}
 					?></li>
