@@ -317,6 +317,40 @@
               </div>
             </div>
           </div>
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="thumbnail attraction">
+                  <img src="img/ranieri_230x230.jpg" alt="" class="img-rounded img-responsive">
+                  <div class="caption">
+                    <h4>
+                      Ranieri Valença<br>
+                      <small>IFPE - Igarassu</small>
+                    </h4>
+                    <h5 class="text-center">
+                      <a href="#" data-toggle="modal" data-target="#modal_ranieri"><span class="fa fa-plus-square"></span> Saiba mais</a>
+                    </h5>
+                    <div class="modal fade" id="modal_ranieri" tabindex="-1" role="dialog" aria-labelledby="ranieri_title">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="ranieri_title">Ranieri Valença</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>
+                              Professor do Instituto Federal de Pernambuco (IFPE) e doutorando em Ciência da Computação no Centro de Informática da UFPE, possui mestrado em Ciência da Computação com foco em bioinformática e ministra disciplinas relacionadas a área de desenvolvimento web.<br><br>
+                              Possui experiência profissional no desenvolvimento de aplicações Web e acompanha o surgimento de novas tecnologias para Web desde 2007, tendo já trabalhado com PHP, CSS 2 e 3, JavaScript, Java, Python e outras linguagens.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- <div class="col-md-3">
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
@@ -348,12 +382,12 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="col-md-3">
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="thumbnail attraction">
-                  <img src="http://placehold.it/210/210" alt="" class="img-rounded img-responsive">
+                  <img src="img/tw-logo.png" alt="" class="img-rounded img-responsive">
                   <div class="caption">
                     <h4>
                       Washington Carvalho<br>
@@ -371,6 +405,13 @@
                           </div>
                           <div class="modal-body">
                             <p>
+                              Washington Carvalho é um consultor de desenvolvimento de software especializado em análise de qualidade, movido pela crença de que temos o poder de fazer do mundo um lugar melhor através da tecnologia e tem como seu principal objetivo, provar, com a geração de resultados, a veracidade daquilo que acredita.
+                              <br>
+                              <a href="http://facebook.com/washington.carvalhodasilva.3">http://facebook.com/washington.carvalhodasilva.3</a>
+
+                            </p>
+                            <p>
+                              Palestra: <strong>Construindo Uma Web Inclusiva - Aprenda a construir interfaces web em conformidade com o decreto 5296</strong>
                             </p>
                           </div>
                         </div>
@@ -380,7 +421,7 @@
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
 
         </div>
       </div>
