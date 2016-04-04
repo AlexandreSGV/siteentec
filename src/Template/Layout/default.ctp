@@ -115,6 +115,15 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 					) );
 					?>
 					</li>
+
+					<li>
+					<?php
+					echo $this->Html->link ( '<i class="fa fa-lg fa-heart"></i>' . ' Apoio', ($this->fetch ( 'title' ) === 'home') ? '#support' : '/#support', array (
+							'escape' => false,
+							'id' => 'support-link'
+					) );
+					?>
+					</li>
 					<!-- <li>
 					<?php
 					echo $this->Html->link ( '<i class="fa fa-group fa-lg"></i>' . ' Organização', ($this->fetch ( 'title' ) === 'home') ? '#people' : '/#people', array (
@@ -257,6 +266,7 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 	      registerScroll("#attractions-link",  "#attractions",  400);
 	      registerScroll("#academic-link",     "#academic", 400);
 	      registerScroll("#where-link",        "#where",    1000);
+	      registerScroll("#support-link",      "#support",  1200);
 	      registerScroll("#people-link",       "#people",   400);
 	  <?php
 		}

@@ -9,6 +9,15 @@
         </div>
     </div>
 
+
+
+
+
+
+
+
+
+
     <div id="attractions" class="section">
       <h1 class="text-center">Participações</h1>
       <div class="container">
@@ -765,3 +774,27 @@
 
 
 
+
+
+
+    <div id="support" class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">Apoio</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-md-offset-1">
+            <div class="">
+              <img src="img/campo-fertile.png" alt="" class="img-rounded img-responsive">
+            </div>
+          </div>
+          <div class="col-md-3 col-md-offset-4">
+            <div class="">
+              <img src="img/facig.jpg" alt="" class="img-rounded img-responsive">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
