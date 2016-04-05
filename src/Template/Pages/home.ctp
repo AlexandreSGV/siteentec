@@ -785,12 +785,6 @@
               <div class="col-md-5">ARAUJO, Bruna; SILVA, Vanessa; CARVALHO, Jefferson; LIMA, Allan</div>
               <div class="col-md-12"><hr></div>
             </div>
-            <div class="row">
-              <div class="col-md-1"><strong>15:30</strong></div>
-              <div class="col-md-6">Desenvolvimento de um Portal Web Colaborativo para Elaboração e Divulgação de Cordéis, Repentes e Poesias</div>
-              <div class="col-md-5">VALADARES, Dalton Cézane Gomes; SILVA, Lucas Cavalcante da; SANTOS, Magda Fernanda de Moura dos</div>
-              <div class="col-md-12"><hr></div>
-            </div>
           </div>
         </div>
         <div class="row">
@@ -842,6 +836,12 @@
               <div class="col-md-1"><strong>15:15</strong></div>
               <div class="col-md-6">Mapa interativo: olinda sob os pés e na palma das mãos</div>
               <div class="col-md-5">DINIZ, Paulo; SANTOS, Nelcy M. M.; VIEIRA, Elton</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>15:30</strong></div>
+              <div class="col-md-6">Desenvolvimento de um Portal Web Colaborativo para Elaboração e Divulgação de Cordéis, Repentes e Poesias</div>
+              <div class="col-md-5">VALADARES, Dalton Cézane Gomes; SILVA, Lucas Cavalcante da; SANTOS, Magda Fernanda de Moura dos</div>
             </div>
           </div>
         </div>
