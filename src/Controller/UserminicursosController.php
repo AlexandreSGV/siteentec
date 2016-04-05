@@ -122,7 +122,7 @@ class UserminicursosController extends AppController
     	$_csvEncoding = 'Windows-1252';
     	$_delimiter = ';';
     	$_header = ['Nº Inscrição', 'NOME','TÍTULO MINICURSO	'];
-    	$this->response->download('participantes_minicursos.csv'); // <= setting the file name
+    	$this->response->download('participantes_minicursos_'.Time::now()->format('Y-m-d H:i:s').'.csv'); // <= setting the file name
     	$this->viewBuilder()->className('CsvView.Csv');
     	$this->set(compact('userminicursos', '_serialize','_header','_csvEncoding','_delimiter'));
     }

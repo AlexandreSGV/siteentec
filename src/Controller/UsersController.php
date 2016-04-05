@@ -67,29 +67,16 @@ class UsersController extends AppController
 	
 	
 	
-	public function export()
-	{
-		$users = $this->Users->find()->select(['id', 'nome', 'created', 'ativo','role']);
-		
-	    $_serialize = 'users';
-	    $_csvEncoding = 'Windows-1252';
-	    $_delimiter = ';';
-// 	    $_dataEncoding = 'UTF-8';
-	    $_header = ['Nº Inscrição', 'NOME','DATA INSCRIÇÃO','VALIDADO','PAPEL','ASSINATURA CREDENCIADO', 'RECEBEU CERTIFICADO'];
-	    $this->response->download('lista_inscritos.csv'); // <= setting the file name
-	    $this->viewBuilder()->className('CsvView.Csv');
-	    $this->set(compact('users', '_serialize','_header','_csvEncoding','_delimiter'));
-	}
 	
 	public function exportTotal()
 	{
-		$users = $this->Users->find()->select(['id', 'nome', 'created', 'role','estado','cidade','instituicao','instrucao','email','credenciado','imp_certificado']);
+		$users = $this->Users->find()->select(['id', 'nome', 'sexo','created', 'role','cep','estado','cidade','instituicao','instrucao','email','credenciado','imp_certificado']);
 	
 		$_serialize = 'users';
 		$_csvEncoding = 'Windows-1252';
 		$_delimiter = ';';
-		$_header = ['Nº Inscrição', 'NOME','DATA INSCRIÇÃO','PAPEL','ESTADO','CIDADE','INSTITUIÇÃO','INSTRUÇÃO','E-MAIL','CREDENCIADO','VALIDADO'];
-		$this->response->download('lista_inscritos_completa.csv'); // <= setting the file name
+		$_header = ['Nº Inscrição', 'NOME','SEXO','DATA INSCRIÇÃO','PAPEL','CEP','ESTADO','CIDADE','INSTITUIÇÃO','INSTRUÇÃO','E-MAIL','CREDENCIADO','VALIDADO'];
+		$this->response->download('lista_inscritos_'.Time::now()->format('Y-m-d H:i:s').'.csv'); // <= setting the file name
 		$this->viewBuilder()->className('CsvView.Csv');
 		$this->set(compact('users', '_serialize','_header','_csvEncoding','_delimiter'));
 	}
