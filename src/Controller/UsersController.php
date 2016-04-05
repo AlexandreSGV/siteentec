@@ -70,12 +70,12 @@ class UsersController extends AppController
 	
 	public function exportTotal()
 	{
-		$users = $this->Users->find()->select(['id', 'nome', 'sexo','created', 'role','cep','estado','cidade','instituicao','instrucao','email','credenciado','imp_certificado']);
+		$users = $this->Users->find()->select(['id', 'nome', 'sexo','nascimento','created', 'role','cep','estado','cidade','instituicao','instrucao','email','credenciado','imp_certificado']);
 	
 		$_serialize = 'users';
 		$_csvEncoding = 'Windows-1252';
 		$_delimiter = ';';
-		$_header = ['Nº Inscrição', 'NOME','SEXO','DATA INSCRIÇÃO','PAPEL','CEP','ESTADO','CIDADE','INSTITUIÇÃO','INSTRUÇÃO','E-MAIL','CREDENCIADO','VALIDADO'];
+		$_header = ['Nº Inscrição', 'NOME','SEXO','DATA NASCIMENTO','DATA INSCRIÇÃO','PAPEL','CEP','ESTADO','CIDADE','INSTITUIÇÃO','INSTRUÇÃO','E-MAIL','CREDENCIADO','VALIDADO'];
 		$this->response->download('lista_inscritos_'.Time::now()->format('Y-m-d H:i:s').'.csv'); // <= setting the file name
 		$this->viewBuilder()->className('CsvView.Csv');
 		$this->set(compact('users', '_serialize','_header','_csvEncoding','_delimiter'));
