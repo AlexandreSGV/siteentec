@@ -471,7 +471,7 @@
               Mesa de Abertura <span class="where"> (Auditório) </span>
             </h5>
             <p>
-              A reitora do IFPE, Prof.ª Analia Ribeiro Reitoria, a diretora geral do campus Igarassu, Prof.ª Ana Regina Ferraz Vieira, e o coordenador do curso de Informática para Internet, Prof.º Ramon Mota de Souza Farias, dão boas vindas aos participantes do ENTEC.
+              A reitora do IFPE, Prof.ª Cláudia Sansil, a diretora geral do campus Igarassu, Prof.ª Ana Regina Ferraz Vieira, e o coordenador do curso de Informática para Internet, Prof.º Ramon Mota de Souza Farias, dão boas vindas aos participantes do ENTEC.
             </p>
           </div>
           <div class="col-md-12"><hr></div>
