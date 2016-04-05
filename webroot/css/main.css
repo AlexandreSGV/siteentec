@@ -63,3 +63,8 @@ h5 .where {
 	color: #777;
 	font-variant: small-caps;
 }
+
+#academic hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
