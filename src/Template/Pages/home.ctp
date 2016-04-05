@@ -739,8 +739,8 @@
             <h4 class="text-warning text-uppercase">Quarta-feira, 06 de Abril</h4>
             <div class="row">
               <div class="col-md-1"><strong>13:30</strong></div>
-              <div class="col-md-6">Utilizando o Lixo Eletrônico na Criação de Soluções de Baixo Custo, com a Plataforma Arduino</div>
-              <div class="col-md-5">SILVA, Allyson; TAVARES, Enok; FARIAS, Ramon</div>
+              <div class="col-md-6">Difusão do Patrimônio de Igarassu Através da Internet </div>
+              <div class="col-md-5">ARAUJO, Bruna; SILVA, Vanessa; CARVALHO, Jefferson; LIMA, Allan</div>
               <div class="col-md-12"><hr></div>
             </div>
             <div class="row">
@@ -781,8 +781,8 @@
             </div>
             <div class="row">
               <div class="col-md-1"><strong>15:15</strong></div>
-              <div class="col-md-6">Difusão do Patrimônio de Igarassu Através da Internet </div>
-              <div class="col-md-5">ARAUJO, Bruna; SILVA, Vanessa; CARVALHO, Jefferson; LIMA, Allan</div>
+              <div class="col-md-6">Utilizando o Lixo Eletrônico na Criação de Soluções de Baixo Custo, com a Plataforma Arduino</div>
+              <div class="col-md-5">SILVA, Allyson; TAVARES, Enok; FARIAS, Ramon</div>
               <div class="col-md-12"><hr></div>
             </div>
           </div>
