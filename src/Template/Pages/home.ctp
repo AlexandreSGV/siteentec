@@ -705,31 +705,144 @@
             <p>
               A submissão de trabalhos deve ser feita através de um resumo contendo uma página sobre o projeto. Os projetos selecionados pela comissão acadêmica farão uma apresentação oral sobre o projeto com <strong>10 minutos</strong> de duração e <strong>5 minutos</strong> para perguntas.
             </p>
+            <blockquote>
+              <p>
+                Os resumos devem ser enviados para o e-mail <strong>contatoentec@igarassu.ifpe.edu.br</strong> com o título “[Mostra de Pesquisa e Extensão] TÍTULO_DO_TRABALHO” até o dia <strong>01 de Abril de 2016</strong>.
+              </p>
 
-            <p>
-              Os resumos devem ser enviados para o e-mail <strong>contatoentec@igarassu.ifpe.edu.br</strong> com o título “[Mostra de Pesquisa e Extensão] TÍTULO_DO_TRABALHO” até o dia <strong>01 de Abril de 2016</strong>.
-            </p>
-
-            <ul>
-              <li>Modelo de Resumo:  
-	              <a target="blank" href="https://drive.google.com/file/d/0B7jr_kAKet92aEctdXJON0ExLVk">.doc</a>
-	              <a target="blank" href="https://drive.google.com/file/d/0B7jr_kAKet92Z1pGc0lybzZneTA">.docx</a>
-	              <a target="blank" href="https://drive.google.com/file/d/0B7jr_kAKet92Y0NScFRzNnczZ2M">.pdf</a>
-              </li>
-              <li>Modelo de Apresentação: 
-              		<a target="blank" href="https://drive.google.com/open?id=0B7jr_kAKet92eTRzY0ctSGt5VGc">.ppt</a>             
-              		<a target="blank" href="https://drive.google.com/open?id=0B7jr_kAKet92NGJYVWR2OWI3am8">.pptx</a>             
-              </li>
-            </ul>
-
-            <p>
-              Datas Importantes
               <ul>
-                <li><strong>01 de Abril de 2016</strong> - Prazo Final para a Submissão</li>
-                <li><strong>04 de Abril de 2016</strong> - Divulgação dos Projetos Aprovados</li>
-                <li><strong>06 e 07 de Abril de 2016</strong> - Mostra de Pesquisa e Extensão</li>
+                <li>Modelo de Resumo:
+                  <a target="blank" href="https://drive.google.com/file/d/0B7jr_kAKet92aEctdXJON0ExLVk">.doc</a>
+                  <a target="blank" href="https://drive.google.com/file/d/0B7jr_kAKet92Z1pGc0lybzZneTA">.docx</a>
+                  <a target="blank" href="https://drive.google.com/file/d/0B7jr_kAKet92Y0NScFRzNnczZ2M">.pdf</a>
+                </li>
+                <li>Modelo de Apresentação:
+                    <a target="blank" href="https://drive.google.com/open?id=0B7jr_kAKet92eTRzY0ctSGt5VGc">.ppt</a>
+                    <a target="blank" href="https://drive.google.com/open?id=0B7jr_kAKet92NGJYVWR2OWI3am8">.pptx</a>
+                </li>
               </ul>
-            </p>
+
+              <p>
+                Datas Importantes
+                <ul>
+                  <li><strong>01 de Abril de 2016</strong> - Prazo Final para a Submissão</li>
+                  <li><strong>04 de Abril de 2016</strong> - Divulgação dos Projetos Aprovados</li>
+                  <li><strong>06 e 07 de Abril de 2016</strong> - Mostra de Pesquisa e Extensão</li>
+                </ul>
+              </p>
+            </blockquote>
+          </div>
+        </div>
+        <h3 class="text-center">Horários das apresentações</h3>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="text-warning text-uppercase">Quarta-feira, 06 de Abril</h4>
+            <div class="row">
+              <div class="col-md-1"><strong>13:30</strong></div>
+              <div class="col-md-6">Utilizando o Lixo Eletrônico na Criação de Soluções de Baixo Custo, com a Plataforma Arduino</div>
+              <div class="col-md-5">SILVA, Allyson; TAVARES, Enok; FARIAS, Ramon</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>13:45</strong></div>
+              <div class="col-md-6">Benefícios do Ensino da Programação</div>
+              <div class="col-md-5">SOTERO MATIAS, Nelkisa Gabriela; DIAS DE ALMEIDA,  João Carlos </div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>14:00</strong></div>
+              <div class="col-md-6">Protótipo de um Sistema de Auxílio à Localização Setores no IFPE Campus Recife Utilizando Imagem Scalabe Vector Graphics (Svg)</div>
+              <div class="col-md-5">DANTAS, Ramide A. S.; ANDRADE, Richardson B. S. da</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>14:15</strong></div>
+              <div class="col-md-6">Explorando o Conceito de Similaridade em Redes Sociais para Estimativa de Relevância de Opiniões</div>
+              <div class="col-md-5">BARROS, Ellaine; TAVARES, Enok; SILVA, Allyson; LIMA, Allan</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>14:30</strong></div>
+              <div class="col-md-6">Jogos Educativos Eletrônicos para Tablets como Ferramenta Pedagógica no Ensino Médio.</div>
+              <div class="col-md-5">XAVIER, Daiane; ROCHA, Aline; FERREIRA,Everaldo; SILVA, Itamar; ROCHA, Luís; VITORINO,Miguel; SOARES,Leonardo;</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>14:45</strong></div>
+              <div class="col-md-6">Curso de Extensão - Java</div>
+              <div class="col-md-5">SILVA, Kaio; MELO, Ewerton; CAVALCANTI, Izabela OLIVEIRA, Delano; ASCHOFF, Rafael </div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>15:00</strong></div>
+              <div class="col-md-6">Utilização de ferramentas tecnológicas para elaboração e aplicação de provas objetivas através de computadores: uma experiência de auxílio à gestão pública </div>
+              <div class="col-md-5">LEITÃO, André Alexandre Padilha; DANTAS, Lucas Gueiros; LIMA, Mariana Bulhões; ROCHA, Gabriel Alves</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>15:15</strong></div>
+              <div class="col-md-6">Difusão do Patrimônio de Igarassu Através da Internet </div>
+              <div class="col-md-5">ARAUJO, Bruna; SILVA, Vanessa; CARVALHO, Jefferson; LIMA, Allan</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>15:30</strong></div>
+              <div class="col-md-6">Desenvolvimento de um Portal Web Colaborativo para Elaboração e Divulgação de Cordéis, Repentes e Poesias</div>
+              <div class="col-md-5">VALADARES, Dalton Cézane Gomes; SILVA, Lucas Cavalcante da; SANTOS, Magda Fernanda de Moura dos</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="text-warning text-uppercase">Quinta-feira, 07 de Abril</h4>
+            <div class="row">
+              <div class="col-md-1"><strong>13:30</strong></div>
+              <div class="col-md-6">Aplicando a Distância Euclidiana na Estimativa da Relevância de Opiniões</div>
+              <div class="col-md-5">SILVA, Allyson; BARROS, Ellaine; TAVARES, Enok; LIMA, Allan</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>13:45</strong></div>
+              <div class="col-md-6">Desenvolvimento de um Serviço de Firewall para Redes Definidas por Software</div>
+              <div class="col-md-5">BISPO, Anderson; ASCHOFF, Rafael</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>14:00</strong></div>
+              <div class="col-md-6">Opiniões Positivas ou Negativas, quais são mais relevantes?</div>
+              <div class="col-md-5">TAVARES, Enok; BARROS, Ellaine; SILVA, Allyson; LIMA, Allan</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>14:15</strong></div>
+              <div class="col-md-6">Testes e Implantação de Sistema para Automatização do Processo de Submissões de Projetos de Pesquisa e Planos de Atividades de Iniciação Científica da Propesq </div>
+              <div class="col-md-5">FRANÇA, Eric Luiz Rodrigues de; FERREIRA, Aida Araujo</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>14:30</strong></div>
+              <div class="col-md-6">Avaliação de Desempenho no Sistema BRT</div>
+              <div class="col-md-5">PINHEIRO, Aline; DANTAS, Renata; DANTAS, Jamilson; ALVES, Gabriel ; MACIEL, Paulo</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>14:45</strong></div>
+              <div class="col-md-6">Algoritmo Estrategista Aplicado em Simulador de Futebol de Robôs</div>
+              <div class="col-md-5">ANDRADE, Marlo S.; ASCHOFF, Rafael R.; OLIVEIRA, Delano H.; RODRIGUES, Diego;</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>15:00</strong></div>
+              <div class="col-md-6">Sistema de Informações Geográficas em ambiente WEB para compartilhamento de dados do Projeto Águas de Areias</div>
+              <div class="col-md-5">Rameh, Ioná; Ferreira, Aida; Bitencourt, Wagner; Cordeiro, Raphael, Martins, Bruno</div>
+              <div class="col-md-12"><hr></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"><strong>15:15</strong></div>
+              <div class="col-md-6">Mapa interativo: olinda sob os pés e na palma das mãos</div>
+              <div class="col-md-5">DINIZ, Paulo; SANTOS, Nelcy M. M.; VIEIRA, Elton</div>
+            </div>
           </div>
         </div>
       </div>
