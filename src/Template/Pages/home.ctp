@@ -360,14 +360,14 @@
               </div>
             </div>
           </div>
-          <!-- <div class="col-md-3">
+          <div class="col-md-3">
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="thumbnail attraction">
-                  <img src="http://placehold.it/210/210" alt="" class="img-rounded img-responsive">
+                  <img src="img/diogenes.jpg" alt="" class="img-rounded img-responsive">
                   <div class="caption">
                     <h4>
-                      Diógenes ?<br>
+                      Diógenes de Souza Leão Filho<br>
                       <small>Fuctura Tecnologia</small>
                     </h4>
                     <h5 class="text-center">
@@ -378,10 +378,11 @@
                         <div class="modal-content">
                           <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="ricardo_title">Diógenes ?</h4>
+                            <h4 class="modal-title" id="ricardo_title">Diógenes de Souza Leão Filho</h4>
                           </div>
                           <div class="modal-body">
                             <p>
+                              Diógenes de Souza Leão Filho é entusiasta e divulgador comprometido com o desenvolvimento do software livre. Analista de Sistemas pela NIC (Núcleo de Informática da Católica), graduado em Tecnologia da Informação, é atualmente diretor de negócios da Fuctura Tecnologia, empresa  de consultoria e treinamento em Software Livre, Partner Ubuntu e Partner LPI. Atua desde 2008 como Proctor LPI, divulgando a importância da certificação LPI, sendo responsável pela aplicação de provas LPI no NE. Sua maior contribuição com o movimento SL é através da coordenação do CONSOLINE, Congresso de Software Livre do NE, <a href="www.softwarelivrene.org">www.softwarelivrene.org</a>.
                             </p>
                           </div>
                         </div>
@@ -391,7 +392,7 @@
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
           <div class="col-md-3">
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
