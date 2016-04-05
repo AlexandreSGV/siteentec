@@ -899,14 +899,21 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3 col-md-offset-1">
-            <div class="">
-              <img src="img/campo-fertile.png" alt="" class="img-rounded img-responsive">
-            </div>
-          </div>
-          <div class="col-md-3 col-md-offset-4">
-            <div class="">
-              <img src="img/facig.jpg" alt="" class="img-rounded img-responsive">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="img/campo-fertile.png" alt="" class="img-rounded img-responsive">
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-6 col-md-offset-3">
+                    <img src="img/facig.jpg" alt="" class="img-rounded img-responsive">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <img src="img/fuctura.png" alt="" class="img-rounded img-responsive">
+              </div>
             </div>
           </div>
         </div>
