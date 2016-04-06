@@ -104,7 +104,7 @@ class UserminicursosController extends AppController
         $primaryKeyArray = array('user_id'=>$userid,'minicurso_id'=>$minicurso);
         $userminicurso = $this->Userminicursos->get($primaryKeyArray);
         if ($this->Userminicursos->delete($userminicurso)) {
-            $this->Flash->success(__('Participanten desmatriculado'));
+            $this->Flash->success(__('Participante desmatriculado!'));
         } else {
             $this->Flash->error(__('Ocorreu algum erro, atualize a tela e tente novamente!'));
         }

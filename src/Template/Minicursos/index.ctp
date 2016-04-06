@@ -23,14 +23,14 @@
         </thead>
         <tbody>
             <?php foreach ($minicursos as $minicurso): ?>
-            <tr>
-                <td><?= $this->Number->format($minicurso->id) ?></td>
-                <td>
-                	<?= $this->Html->link($minicurso->titulo, ['action' => 'view', $minicurso->id])?>
+            <tr >
+                <td style="font-size: 120%;"><?= $this->Number->format($minicurso->id) ?></td>
+                <td style="font-size: 120%;">
+                	<?= $this->Html->link(mb_strtoupper($minicurso->titulo, 'UTF-8'), ['action' => 'view', $minicurso->id])?>
                 </td>
              	
-                <td><?= h($minicurso->nome_palestrante) ?></td>
-                <td><?= $this->Number->format($minicurso->numero_vagas) ?></td>
+                <td style="font-size: 120%;"><?= h($minicurso->nome_palestrante) ?></td>
+                <td style="font-size: 120%;"><?= $this->Number->format($minicurso->numero_vagas) ?></td>
                 <td class="actions">
                 
          <?php 

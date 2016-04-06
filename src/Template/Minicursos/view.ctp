@@ -58,7 +58,7 @@ function myFunction(ele) {
     <div id="matriculados">
     <div class="related">
         <h3><?= __('Inscritos') ?><small> <?php echo count($minicurso->userminicursos).' / '.$minicurso->numero_vagas ?></small></h3> 
-        <button id="<?= $minicurso->id ?>" onclick="myFunction(this)" class="btn btn-success col-xs-4 "><i class="fa fa-2x fa-fw fa-plus pull-left"> MATRICULAR</i> </button>
+        <button id="<?= $minicurso->id ?>" onclick="myFunction(this)" class="col-xs-4 btn  <?php echo count($minicurso->userminicursos) >= $minicurso->numero_vagas ? 'btn-danger': 'btn-success '  ?>" ><i class="fa fa-2x fa-fw fa-plus pull-left"> MATRICULAR</i> </button>
         <?php if (!empty($minicurso->userminicursos)): ?>
         <?= $this->Flash->render()?>
         <table cellpadding="0" cellspacing="0">
