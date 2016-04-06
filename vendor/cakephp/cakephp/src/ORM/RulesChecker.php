@@ -46,9 +46,9 @@ class RulesChecker extends BaseRulesChecker
     {
         if (!$message) {
             if ($this->_useI18n) {
-                $message = __d('cake', 'This value is already in use');
+                $message = __d('cake', 'Este campo deve ser único, outro usuário já cadastrou');
             } else {
-                $message = 'This value is already in use';
+                $message = 'Este campo deve ser único, outro usuário já cadastrou';
             }
         }
 
