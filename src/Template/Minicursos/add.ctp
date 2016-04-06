@@ -13,7 +13,7 @@
 	            echo $this->Form->input('titulo');
 	            echo $this->Form->input('nome_palestrante');
 	            echo $this->Form->input('numero_vagas');
-	            echo $this->Form->input('descricao',['type' => 'textarea', 'label' => 'Descricação: ']);
+	            echo $this->Form->input('descricao',['label' => 'Descricação: ']);
 	        ?>
 	    </fieldset>
 	    <?= $this->Form->button(__('<i class="fa fa-paper-plane-o"></i> ENVIAR'), ['class'=>'form-control', 'escape' => false]); ?>

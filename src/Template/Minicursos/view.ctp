@@ -46,10 +46,11 @@ function myFunction(ele) {
 						<kbd class="col-xs-4 text-center nopadding">
 							<i class="fa fa-users "> Total Vagas: <?= $minicurso->numero_vagas ?></i>
 						</kbd>
-						
+					<kbd class="col-xs-12 text-left nopadding">
+						<i class="fa fa-info " > </i> <?= $minicurso->descricao ?>
+					</kbd>	
 				</div>
-				<div class="panel-body"><?= $minicurso->descricao ?></div>
-			</div>
+				
 		</div>
 
     
@@ -83,3 +84,4 @@ function myFunction(ele) {
     </div>
     </div>
 </div>
+</div>	4
