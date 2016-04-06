@@ -8,16 +8,7 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
+    
     <div id="attractions" class="section">
       <h1 class="text-center">Participações</h1>
       <div class="container">
@@ -121,6 +112,9 @@
                               Helder da Rocha é mestre em informática pela UFCG e especialista em tecnologias Web. Desde 1995 pesquisa, escreve, ministra cursos e palestras sobre Java, tecnologias Web e XML, a maioria disponível online no seu site argonavis.com.br. É também autor de livros, tutoriais e apostilas sobre tecnologias Java, HTML, CSS, JavaScript, tecnologias XML, metodologias ágeis e arquitetura de sistemas. Ministrou treinamentos em quase todos os estados do país em mais de 8000 horas de aula. Algumas das empresas treinadas por Helder incluem: Banco do Brasil, Petrobras, Rede Nacional de Pesquisa, Marinha do Brasil, PNUD, Grupo Vicunha, Michelin, CPqD e Editora Abril. Além de trabalhar com TI, é também ator de teatro, ilustrador e paleoartista.
                               <br>
                               <a target="blank" href="http://helderdarocha.com.br">http://helderdarocha.com.br</a>
+                            </p>
+                            <p>
+                              Palestra: <strong> O programador Pragmático</strong> 
                             </p>
                             <p>
                               Minicurso: <strong> SVG - Gráficos Vetoriais na Web:</strong>Este mini-curso explora a linguagem SVG, formato gráfico que pode ser gerado por ferramentas como Illustrator e Corel Draw, e transformado com CSS, manipulado com JavaScript, usado em animações e embutido em HTML5. Tem recursos similares a Flash e pode ser usado em aplicações Web no desktop ou em tablets. SVG é uma alternativa a HTML5 Canvas, mas pode também ser usado junto com Canvas. Tópicos opcionais incluem animação e programação (usando JavaScript, frameworks e componentes).
@@ -539,15 +533,15 @@
                 </h5>
               </div>
               <div class="col-md-4">
-                <h5>
-                  Oficina: <strong>Introdução ao Bootstrap</strong> - <a href="#" data-toggle="modal" data-target="#modal_ranieri">Ranieri Valença</a>
-                  <span class="where"> (Lab FACIG)</span>
+                 <h5>
+                  Oficina: <strong>SVG - Gráficos Vetoriais na Web</strong> - <a href="#" data-toggle="modal" data-target="#modal_helder">Helder da Rocha</a>
+                  <span class="where"> (Lab IFPE)</span>
                 </h5>
               </div>
               <div class="col-md-4">
                 <h5>
-                  Oficina: <strong>Robótica com Arduino</strong> - <a href="#" data-toggle="modal" data-target="#modal_gustavo">Gustavo Ribeiro</a>
-                  <span class="where"> (Lab IFPE)</span>
+                  Oficina: <strong>Introdução ao Bootstrap</strong> - <a href="#" data-toggle="modal" data-target="#modal_ranieri">Ranieri Valença</a>
+                  <span class="where"> (Lab FACIG)</span>
                 </h5>
               </div>
             </div>
@@ -659,13 +653,14 @@
               </div>
               <div class="col-md-4">
                 <h5>
-                  Oficina: <strong>SVG - Gráficos Vetoriais na Web</strong> - <a href="#" data-toggle="modal" data-target="#modal_helder">Helder da Rocha</a>
+                  Oficina: <strong>CuPYdo</strong> - <a href="#" data-toggle="modal" data-target="#modal_ricardo">Ricardo Dantas</a>
                   <span class="where"> (Lab FACIG)</span>
                 </h5>
+               
               </div>
               <div class="col-md-4">
                 <h5>
-                  Oficina: <strong>CuPYdo</strong> - <a href="#" data-toggle="modal" data-target="#modal_ricardo">Ricardo Dantas</a>
+                  Oficina: <strong>Robótica com Arduino</strong> - <a href="#" data-toggle="modal" data-target="#modal_gustavo">Gustavo Ribeiro</a>
                   <span class="where"> (Lab IFPE)</span>
                 </h5>
               </div>

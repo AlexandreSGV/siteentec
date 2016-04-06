@@ -118,7 +118,7 @@ class UsersController extends AppController
 			$user->email = strtolower($user->email);
 			$user->username = $user->email;
 			$user->role = "participante";
-			$user->nome = strtoupper($user->nome);
+			$user->nome = mb_strtoupper($user->nome, 'UTF-8');
 			$user->activation_code = md5(time());
 			$user->ativo = 0;
 			$user->created = Time::now()->format('Y-m-d H:i:s');
@@ -152,7 +152,7 @@ class UsersController extends AppController
 			$this->Users->validator()->remove('password');
 			$this->Users->validator()->remove('confirm_password');
 			$user->modified = Time::now()->format('Y-m-d H:i:s');
-			$user->nome = strtoupper($user->nome);
+			$user->nome = mb_strtoupper($user->nome, 'UTF-8');
 			$user->email = strtolower($user->email);
 			$user->username = $user->email;
 			if ($this->Users->save ( $user )) {
