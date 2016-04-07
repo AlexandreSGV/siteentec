@@ -44,7 +44,7 @@ class UsersController extends AppController
 									   ;
 
 		$this->paginate = array(
-				'limit' => 600,
+				'limit' => 900,
 				'order' => array(
 						'nome' => 'asc'
 				)

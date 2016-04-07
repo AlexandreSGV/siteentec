@@ -22,8 +22,6 @@
 			<div style="width: 31%;float: left;"><i class="fa fa-fw fa-flag-checkered"> </i><br>Credenciado</div>
 			<div style="width: 31%;float: left;"><i class="fa fa-fw fa-print"> </i><br>Imprimir certificado</div>
 		</div>
-
-	
 	<table id='userstable' style="width: 100%;"> 
 			<col style="width: 7% ;"/>
 			<col style="width: 46% ;"/>
