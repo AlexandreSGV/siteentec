@@ -116,13 +116,13 @@ class UserminicursosController extends AppController
     {
     	
     	$connection = ConnectionManager::get('default');
-    	$userminicursos = $connection->execute('SELECT userminicursos.user_id, users.nome, minicursos.titulo FROM userminicursos INNER JOIN users on userminicursos.user_id = users.id INNER JOIN minicursos on userminicursos.minicurso_id = minicursos.id')->fetchAll('assoc');
+    	$userminicursos = $connection->execute('SELECT userminicursos.user_id, users.nome, minicursos.titulo, users.email FROM userminicursos INNER JOIN users on userminicursos.user_id = users.id INNER JOIN minicursos on userminicursos.minicurso_id = minicursos.id')->fetchAll('assoc');
 
     
     	$_serialize = 'userminicursos';
     	$_csvEncoding = 'Windows-1252';
     	$_delimiter = ';';
-    	$_header = ['Nº Inscrição', 'NOME','TÍTULO MINICURSO	'];
+    	$_header = ['INSCRICAO', 'NOME','TÍTULO','EMAIL'];
     	$this->response->download('participantes_minicursos_'.Time::now()->format('Y-m-d H:i:s').'.csv'); // <= setting the file name
     	$this->viewBuilder()->className('CsvView.Csv');
     	$this->set(compact('userminicursos', '_serialize','_header','_csvEncoding','_delimiter'));

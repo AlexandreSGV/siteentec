@@ -42,7 +42,7 @@ class UsersController extends AppController
 		$results = $this->Users->find()->select(['id', 'nome', 'ativo','credenciado', 'imp_certificado'])
 									   
 									   ;
-// 		$this->set('users', $results);
+
 		$this->paginate = array(
 				'limit' => 600,
 				'order' => array(
@@ -58,8 +58,8 @@ class UsersController extends AppController
 		{
 			if($user->ativo && $user->role !== 'admin' && $user->role !== 'supervisor'){
 				$counter++;
-				if($user->credenciado) $count_cred++;
 			}
+			if($user->credenciado && $user->role !== 'admin' && $user->role !== 'supervisor') $count_cred++;
 		}
 		$this->set('count', $counter);
 		$this->set('count_cred', $count_cred);
@@ -84,12 +84,12 @@ class UsersController extends AppController
 	
 	public function exportImpCertificados()
 	{
-		$users = $this->Users->find()->select(['id', 'nome'])->where(['credenciado' => 1,'imp_certificado' => 1]);
+		$users = $this->Users->find()->select(['id', 'nome', 'email'])->where(['credenciado' => 1,'imp_certificado' => 1]);
 	
 		$_serialize = 'users';
 		$_csvEncoding = 'Windows-1252';
 		$_delimiter = ';';
-		$_header = ['Nº Inscrição', 'NOME'];
+		$_header = ['INSCRICAO', 'NOME','EMAIL'];
 		$this->response->download('imprimir_certificados_'.Time::now()->format('Y-m-d H:i:s').'.csv'); // <= setting the file name
 		$this->viewBuilder()->className('CsvView.Csv');
 		$this->set(compact('users', '_serialize','_header','_csvEncoding','_delimiter'));

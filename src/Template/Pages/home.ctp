@@ -114,7 +114,7 @@
                               <a target="blank" href="http://helderdarocha.com.br">http://helderdarocha.com.br</a>
                             </p>
                             <p>
-                              Palestra: <strong> Manual de sobrevivência do programador no sécuo XXI</strong> 
+                              Palestra: <strong> Manual de Sobrevivência do Programador no Século XXI</strong> 
                             </p>
                             <p>
                               Minicurso: <strong> SVG - Gráficos Vetoriais na Web:</strong>Este mini-curso explora a linguagem SVG, formato gráfico que pode ser gerado por ferramentas como Illustrator e Corel Draw, e transformado com CSS, manipulado com JavaScript, usado em animações e embutido em HTML5. Tem recursos similares a Flash e pode ser usado em aplicações Web no desktop ou em tablets. SVG é uma alternativa a HTML5 Canvas, mas pode também ser usado junto com Canvas. Tópicos opcionais incluem animação e programação (usando JavaScript, frameworks e componentes).
@@ -596,7 +596,7 @@
           </div>
           <div class="col-md-10">
             <h5>
-              Palestra: <strong>Manual de sobrevivência do programador no sécuo XXI</strong> - <a href="#" data-toggle="modal" data-target="#modal_helder">Helder da Rocha</a> <span class="where"> (Auditório) </span>
+              Palestra: <strong>Manual de Sobrevivência do Programador no Século XXI</strong> - <a href="#" data-toggle="modal" data-target="#modal_helder">Helder da Rocha</a> <span class="where"> (Auditório) </span>
             </h5>
           </div>
           <div class="col-md-12"><hr></div>
@@ -679,10 +679,26 @@
             <p>
               Espaço Nerd, com consoles rodando emuladores e jogos modernos (Pro Evolution Soccer 2016, Guitar Hero, Just Dance) e campeonato de <strong>League of Legends</strong> (15:00h às 17:00h)
             </p>
+            </div>
+            </div>
+            <div class="row">
+          <div class="col-md-2">
+            <h5><strong>13:30h às 14:00h</strong></h5>
+          </div>
+          <div class="col-md-10">
+            <h5>
+              ASTRONOMIA <span class="where"> (Espaço Nerd) </span>
+            </h5>
+            <p>
+            O Helder da Rocha vai falar um pouco sobre astronomia e apresentará o aplicativo que desenvolveu para simular a órbita dos planetas! <a target="blank" href="http://argonavis.com.br/astronomia/orbitas">http://argonavis.com.br/astronomia/orbitas</a>
+            </p>
+            <div class="col-md-8 col-md-offset-2">
+                <img src="img/simulador.jpg" alt="" class="img-rounded img-responsive">
+            </div>            
           </div>
         </div>
       </div>
-    </div>
+   
 
 
 
