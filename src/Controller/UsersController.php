@@ -1,16 +1,17 @@
 <?php
 // src/Controller/UsersController.php
-
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Datasource\ConnectionManager;
 use Cake\Event\Event;
 use Cake\Mailer\Email;
 use Cake\I18n\Time;
+use CakePdf\Pdf\CakePdf;
 
 class UsersController extends AppController
 {
-
+	public $components = array('RequestHandler');
 	
 	public function beforeFilter(Event $event)
 	{
@@ -34,6 +35,22 @@ class UsersController extends AppController
 		}
 		$this->set('count', $counter);
 		
+	}
+	
+	public function certificados()
+	{
+		$results = $this->Users->find()->select(['id', 'nome', 'created', 'ativo','role','credenciado', 'rec_certificado'])
+								->where(['credenciado' => 1]);
+		$this->set('users', $results);
+		$counter = 0;
+		foreach($results as $user)
+		{
+			if($user->rec_certificado){
+				$counter++;
+			}
+		}
+		$this->set('count', $counter);
+	
 	}
 	
 	
@@ -357,6 +374,102 @@ class UsersController extends AppController
 			}
 		}
 		
+// 		public function enviarCertificados(){
+// 			$id=42;
+// 			$user = $this->Users->get($id);
+			
+// 			$this->pdfConfig = array(
+// 					'download' => true,
+// 					'filename' => 'user_' . $id .'.pdf'
+// 			);
+// 			$this->set(compact('user'));
+			
+// 		}
+		public function certificadoParticipante(){
+			
+			$id=43;
+			$user = $this->Users->get($id);
+			$this->set(compact('user'));
+			
+			//gerar pdf
+			$CakePdf = new \CakePdf\Pdf\CakePdf();
+			$CakePdf->orientation('landscape');
+			$CakePdf->template('certificado', 'certificado_participante');
+			$CakePdf->viewVars($this->viewVars);
+
+			$pdf = $CakePdf->output();
+			
+			
+			//enviar e-mail
+			$email = new Email('default');
+			$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
+			->emailFormat('html')
+			->to(strtolower($user->email))
+			->template('default','certificado_participante')
+			->subject('[EnTec 2016] Certificado de Participante')
+			->viewVars(['nome' => $user->nome])
+			->attachments(array('ENTEC_certificado_participante.pdf' => array('data' => $pdf, 'mimetype' => 'application/pdf')))
+			->send();
+			return $this->redirect($this->referer());
+			
+		}
 		
+		public function certificadoOuvinteMinicurso(){
+			$connection = ConnectionManager::get('default');
+			$participantes = $connection->execute('SELECT userminicursos.user_id, users.nome, minicursos.titulo, users.email FROM userminicursos INNER JOIN users on userminicursos.user_id = users.id INNER JOIN minicursos on userminicursos.minicurso_id = minicursos.id WHERE userminicursos.rec_certificado=0')->fetchAll('assoc');
+			
+			foreach ($participantes as $part){
+				$user = $part;
+				$this->set(compact('user'));
+				
+				$CakePdf = new \CakePdf\Pdf\CakePdf();
+				$CakePdf->orientation('landscape');
+				$CakePdf->template('certificado', 'certificado_ouvinte_minicurso');
+				$CakePdf->viewVars($this->viewVars);
+				$pdf = $CakePdf->output();
+				
+				// 			enviar e-mail
+				$email = new Email('default');
+				$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
+				->emailFormat('html')
+				->to(strtolower(user['email']))
+				->template('default','certificado_ouvinte_minicurso')
+				->subject('[EnTec 2016] Certificado de Ouvinte de Minicurso')
+				->viewVars(['nome' => $user['nome']])
+				->attachments(array('ENTEC_certificado_participante.pdf' => array('data' => $pdf, 'mimetype' => 'application/pdf')))
+				->send();
+				$this->Users->updateAll(['rec_minicurso' => 1], ['id' => $id]);
+// 				$pdf = $CakePdf->write(APP . 'files' . DS . 'minicurso'.$part['user_id'].'_'.rand(1,5000).'.pdf');
+			}
+			
+
+			
+			return $this->redirect($this->referer());
+				
+		}
+		
+		
+		
+		
+		
+		public function action1() { 
+			$this->layout = $this->autoRender = false; 
+			$this->response->header(array('Content-type' => 'application/pdf')); 
+			//Code for generating pdf data similar to above 
+			echo $dompdf->render(); 
+		}
+		
+		public function action2() { 
+			$view = new View(null, false); 
+			$view->set(compact('variable1', 'variable2')); 
+			$view->viewPath = 'Folder'; 
+			$output = $view->render('income_statement', 'layout'); 
+			spl_autoload_register('DOMPDF_autoload'); 
+			$dompdf = new DOMPDF(); 
+			$dompdf->set_paper = 'A4'; 
+			$dompdf->load_html(utf8_decode($output), Configure::read('App.encoding')); 
+			$dompdf->render();
+			file_put_contents(APP . 'webroot' . DS . 'pdf' . DS .'filename.pdf');
+		}
 		
 }

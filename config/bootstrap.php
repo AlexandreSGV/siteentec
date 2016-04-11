@@ -183,6 +183,36 @@ Request::addDetector('tablet', function ($request) {
 Plugin::load('Migrations');
 Plugin::load('CsvView');
 Plugin::load('WyriHaximus/MinifyHtml', ['bootstrap' => true]);
+Plugin::load('CakePdf', array('bootstrap' => true, 'routes' => true));
+
+define('DOMPDF_ENABLE_REMOTE', true);
+
+Configure::write('CakePdf', [
+// 		'engine' => [
+//             'className' => 'CakePdf.WkHtmlToPdf',
+//             // Mac OS X / Linux is usually like:
+// //             'binary' => '/usr/local/bin/wkhtmltopdf',
+//             // On Windows environmnent you NEED to use the path like
+//             // old fashioned MS-DOS Paths, otherwise you will keep getting:
+//             // WKHTMLTOPDF didn't return any data
+//             // 'binary' => 'C:\\Progra~1\\wkhtmltopdf\\bin\\wkhtmltopdf.exe',
+// 				'binary'=> 'C:\\Progra~1\\wkhtmltopdf\\wkhtmltopdf.exe',
+//             'options' => [
+//                 'print-media-type' => false,
+//                 'outline' => true,
+//                 'dpi' => 96
+//             ],
+//         ],
+		'engine' => 'CakePdf.DomPdf',
+		
+		'margin' => [
+				'bottom' => 0,
+				'left' => 0,
+				'right' => 0,
+				'top' => 0
+		],
+		'download' => true
+]);
 
 // Only try to load DebugKit in development mode
 // Debug Kit should not be installed on a production system

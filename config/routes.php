@@ -40,6 +40,14 @@ use Cake\Routing\Router;
  *
  */
 Router::defaultRouteClass('DashedRoute');
+Router::extensions(['pdf']);
+
+
+Router::scope('/users', function ($routes) {
+	$routes->extensions('pdf');
+	$routes->connect('/enviarpdf/*', ['controller' => 'Users', 'action' => 'enviarpdf']);
+	$routes->fallbacks('InflectedRoute');
+});
 
 Router::scope('/', function ($routes) {
     /**
@@ -54,6 +62,9 @@ Router::scope('/', function ($routes) {
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
+    
+    
+    
     /**
      * Connect catchall routes for all controllers.
      *

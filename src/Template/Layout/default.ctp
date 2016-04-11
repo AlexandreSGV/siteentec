@@ -165,6 +165,15 @@ $cakeDescription = 'ENTEC - Encontro de Tecnologia da Informação do IFPE';
 					?></li>
 					
 					<li><?php
+					if (strpos('admin', $loguser ['role']) !== false) {
+						echo $this->Html->link ( '<i class="fa fa-lg fa-fw fa-certificate"></i> '.' Certificados', array (
+								'controller' => 'users',
+								'action' => 'certificados'
+						), array('escape' => false) );
+					}
+					?></li>
+					
+					<li><?php
 					if (strpos('admin supervisor', $loguser ['role']) !== false) {
 						echo $this->Html->link ( '<i class="fa fa-lg fa-fw fa-tags"></i> '.' Credenciamento', array (
 								'controller' => 'users',
