@@ -10,7 +10,7 @@
 
 <div  style="width:100%;  text-align: center; background-color: #ddd;">
 		<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-2x"> Certificados Participante</i>',array('controller'=>'users','action'=>'certificadoParticipante'), array('class'=>'btn btn-default btn-sm col-xs-4', 'escape' => false));?>
-		<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-2x"> Certificados Minicursos</i>',array('controller'=>'users','action'=>'certificadoOuvinteMinicurso'), array('class'=>'btn btn-default btn-sm col-xs-4', 'escape' => false));?> 	
+		<?php echo $this->Html->link('<i class="fa fa-file-excel-o fa-2x"> Certificados Minicursos</i>',array('controller'=>'userminicursos','action'=>'certificadoOuvinteMinicurso'), array('class'=>'btn btn-default btn-sm col-xs-4', 'escape' => false));?> 	
 	</div>	
 
 		

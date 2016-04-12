@@ -142,7 +142,7 @@ class ShellDispatcher
         if (function_exists('ini_set')) {
             ini_set('html_errors', false);
             ini_set('implicit_flush', true);
-            ini_set('max_execution_time', 0);
+            ini_set('max_execution_time', 10800);
         }
 
         $this->shiftArgs();

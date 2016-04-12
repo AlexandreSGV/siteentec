@@ -4,6 +4,8 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\Datasource\ConnectionManager;
 use Cake\I18n\Time;
+use Cake\Mailer\Email;
+use CakePdf\Pdf\CakePdf;
 /**
  * Userminicursos Controller
  *
@@ -141,6 +143,40 @@ class UserminicursosController extends AppController
     				}
     			}
     			return parent::isAuthorized($user);
+    }
+    
+    public function certificadoOuvinteMinicurso(){
+    	$connection = ConnectionManager::get('default');
+    	$participantes = $connection->execute('SELECT userminicursos.minicurso_id, userminicursos.user_id, users.nome, minicursos.titulo, users.email FROM userminicursos INNER JOIN users on userminicursos.user_id = users.id INNER JOIN minicursos on userminicursos.minicurso_id = minicursos.id WHERE userminicursos.rec_certificado=0 LIMIT 8')->fetchAll('assoc');
+    		
+    	foreach ($participantes as $user){
+    		$this->set(compact('user'));
+    
+    		$CakePdf = new \CakePdf\Pdf\CakePdf();
+    		$CakePdf->orientation('landscape');
+    		$CakePdf->template('certificado', 'certificado_ouvinte_minicurso');
+    		$CakePdf->viewVars($this->viewVars);
+    		$pdf = $CakePdf->output();
+    
+    		// 			enviar e-mail
+    		$email = new Email('default');
+    		$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
+    		->emailFormat('html')
+    		// 				->to(strtolower($user['email']))
+    		->to(strtolower('strapacao@gmail.com'))
+    		->template('default','certificado_ouvinte_minicurso')
+    		->subject('[EnTec 2016] Certificado de Ouvinte de Minicurso')
+    		->viewVars(['nome' => $user['nome']])
+    		->attachments(array('ENTEC_certificado_minicurso.pdf' => array('data' => $pdf, 'mimetype' => 'application/pdf')))
+    		->send();
+    		$this->Userminicursos->updateAll(['rec_certificado' => 1], ['user_id' => $user['user_id'],'minicurso_id' => $user['minicurso_id']]);
+    		// 				$pdf = $CakePdf->write(APP . 'files' . DS . 'minicurso'.$part['user_id'].'_'.rand(1,5000).'.pdf');
+    	}
+    		
+    
+    		
+    	return $this->redirect($this->referer());
+    
     }
     
 }
