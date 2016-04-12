@@ -175,8 +175,7 @@ class UserminicursosController extends AppController
     		
     	$this->Flash->default(__('Foram enviados '.count($participantes).' certificados'));
     		
-    	return $this->redirect($this->referer());
-    
+    	return $this->redirect($this->referer());    
     }
     
 }

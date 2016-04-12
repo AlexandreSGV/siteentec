@@ -41,11 +41,11 @@ body{
 <body>
 
 <div id="incricao">
-Inscrição Nº <b><?= $user->id ?></b>
+Inscrição Nº <b><?= $user['id'] ?></b>
 </div>
 
 <div id="texto">
-Certificamos que <b><?= $user->nome ?></b> participou como ouvinte do I Encontro de Tecnologia da Informação do IFPE, com carga horária de 16 horas, realizado nos dias 6 e 7 de abril de 2016, promovido pelo Instituto Federal de Pernambuco - Campus Igarassu.
+Certificamos que <b><?= $user['nome'] ?></b> participou como ouvinte do I Encontro de Tecnologia da Informação do IFPE, com carga horária de 16 horas, realizado nos dias 6 e 7 de abril de 2016, promovido pelo Instituto Federal de Pernambuco - Campus Igarassu.
 
 </div>
 </body>

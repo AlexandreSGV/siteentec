@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Datasource\ConnectionManager;
 use Cake\Event\Event;
 use Cake\Mailer\Email;
 use Cake\I18n\Time;
@@ -384,34 +385,41 @@ class UsersController extends AppController
 // 			$this->set(compact('user'));
 			
 // 		}
-		public function certificadoParticipante(){
-			
-			$id=43;
-			$user = $this->Users->get($id);
-			$this->set(compact('user'));
-			
-			//gerar pdf
-			$CakePdf = new \CakePdf\Pdf\CakePdf();
-			$CakePdf->orientation('landscape');
-			$CakePdf->template('certificado', 'certificado_participante');
-			$CakePdf->viewVars($this->viewVars);
 
-			$pdf = $CakePdf->output();
-			
-			
-			//enviar e-mail
-			$email = new Email('default');
-			$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
-			->emailFormat('html')
-			->to(strtolower($user->email))
-			->template('default','certificado_participante')
-			->subject('[EnTec 2016] Certificado de Participante')
-			->viewVars(['nome' => $user->nome])
-			->attachments(array('ENTEC_certificado_participante.pdf' => array('data' => $pdf, 'mimetype' => 'application/pdf')))
-			->send();
+		public function certificadoParticipante(){
+			$connection = ConnectionManager::get('default');
+			$participantes = $connection->execute('SELECT users.id, users.nome FROM users WHERE users.rec_certificado=0 LIMIT 100')->fetchAll('assoc');
+		
+			foreach ($participantes as $user){
+				$this->set(compact('user'));
+		
+				$CakePdf = new \CakePdf\Pdf\CakePdf();
+				$CakePdf->orientation('landscape');
+				$CakePdf->template('certificado', 'certificado_participante');
+				$CakePdf->viewVars($this->viewVars);
+				$pdf = $CakePdf->output();
+		
+				// 			enviar e-mail
+				$email = new Email('default');
+				$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
+				->emailFormat('html')
+				->to(strtolower($user['email']))
+// 				->to(strtolower('strapacao@gmail.com'))
+				->template('default','certificado_participante')
+				->subject('[EnTec 2016] Certificado de Participante')
+				->viewVars(['nome' => $user['nome']])
+				->attachments(array('ENTEC16_certificado_participante.pdf' => array('data' => $pdf, 'mimetype' => 'application/pdf')))
+				->send();
+				$this->Users->updateAll(['rec_certificado' => 1], ['id' => $user['id']]);
+				// 				$pdf = $CakePdf->write(APP . 'files' . DS . 'minicurso'.$part['user_id'].'_'.rand(1,5000).'.pdf');
+			}
+		
+			$this->Flash->default(__('Foram enviados '.count($participantes).' certificados'));
+		
 			return $this->redirect($this->referer());
-			
 		}
+		
+		
 		
 		
 		
