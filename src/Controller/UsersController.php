@@ -40,7 +40,9 @@ class UsersController extends AppController
 	public function certificados()
 	{
 		$results = $this->Users->find()->select(['id', 'nome', 'created', 'ativo','role','credenciado', 'rec_certificado'])
-								->where(['credenciado' => 1]);
+								->where(['credenciado' => 1])
+								->order(['id' => 'ASC']);		
+		;
 		$this->set('users', $results);
 		$counter = 0;
 		foreach($results as $user)
@@ -388,7 +390,7 @@ class UsersController extends AppController
 
 		public function certificadoParticipante(){
 			$connection = ConnectionManager::get('default');
-			$participantes = $connection->execute('SELECT users.id, users.nome FROM users WHERE users.rec_certificado=0 LIMIT 5')->fetchAll('assoc');
+			$participantes = $connection->execute('SELECT users.id, users.nome FROM users WHERE users.credenciado=1 AND users.rec_certificado=0 ORDER BY users.id ASC LIMIT 100')->fetchAll('assoc');
 		
 			foreach ($participantes as $user){
 				$this->set(compact('user'));
@@ -403,8 +405,8 @@ class UsersController extends AppController
 				$email = new Email('default');
 				$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
 				->emailFormat('html')
-// 				->to(strtolower($user['email']))
-				->to(strtolower('strapacao@gmail.com'))
+				->to(strtolower($user['email']))
+// 				->to(strtolower('strapacao@gmail.com'))
 				->template('default','certificado_participante')
 				->subject('[EnTec 2016] Certificado de Participante')
 				->viewVars(['nome' => $user['nome']])
