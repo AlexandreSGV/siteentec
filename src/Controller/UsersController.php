@@ -390,7 +390,7 @@ class UsersController extends AppController
 
 		public function certificadoParticipante(){
 			$connection = ConnectionManager::get('default');
-			$participantes = $connection->execute('SELECT users.id, users.nome FROM users WHERE users.credenciado=1 AND users.rec_certificado=0 ORDER BY users.id ASC LIMIT 100')->fetchAll('assoc');
+			$participantes = $connection->execute('SELECT users.id, users.nome, users.email FROM users WHERE users.credenciado=1 AND users.rec_certificado=0 ORDER BY users.id ASC LIMIT 100')->fetchAll('assoc');
 		
 			foreach ($participantes as $user){
 				$this->set(compact('user'));
