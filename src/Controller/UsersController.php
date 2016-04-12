@@ -418,8 +418,7 @@ class UsersController extends AppController
 			$connection = ConnectionManager::get('default');
 			$participantes = $connection->execute('SELECT userminicursos.user_id, users.nome, minicursos.titulo, users.email FROM userminicursos INNER JOIN users on userminicursos.user_id = users.id INNER JOIN minicursos on userminicursos.minicurso_id = minicursos.id WHERE userminicursos.rec_certificado=0')->fetchAll('assoc');
 			
-			foreach ($participantes as $part){
-				$user = $part;
+			foreach ($participantes as $user){
 				$this->set(compact('user'));
 				
 				$CakePdf = new \CakePdf\Pdf\CakePdf();
@@ -432,13 +431,13 @@ class UsersController extends AppController
 				$email = new Email('default');
 				$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
 				->emailFormat('html')
-				->to(strtolower(user['email']))
+				->to(strtolower($user['email']))
 				->template('default','certificado_ouvinte_minicurso')
 				->subject('[EnTec 2016] Certificado de Ouvinte de Minicurso')
 				->viewVars(['nome' => $user['nome']])
 				->attachments(array('ENTEC_certificado_participante.pdf' => array('data' => $pdf, 'mimetype' => 'application/pdf')))
 				->send();
-				$this->Users->updateAll(['rec_minicurso' => 1], ['id' => $id]);
+				$this->Users->updateAll(['rec_minicurso' => 1], ['id' => $user['user_id']]);
 // 				$pdf = $CakePdf->write(APP . 'files' . DS . 'minicurso'.$part['user_id'].'_'.rand(1,5000).'.pdf');
 			}
 			
