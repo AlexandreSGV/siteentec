@@ -147,7 +147,7 @@ class UserminicursosController extends AppController
     
     public function certificadoOuvinteMinicurso(){
     	$connection = ConnectionManager::get('default');
-    	$participantes = $connection->execute('SELECT userminicursos.minicurso_id, userminicursos.user_id, users.nome, minicursos.titulo, users.email FROM userminicursos INNER JOIN users on userminicursos.user_id = users.id INNER JOIN minicursos on userminicursos.minicurso_id = minicursos.id WHERE userminicursos.rec_certificado=0 LIMIT 8')->fetchAll('assoc');
+    	$participantes = $connection->execute('SELECT userminicursos.minicurso_id, userminicursos.user_id, users.nome, minicursos.titulo, users.email FROM userminicursos INNER JOIN users on userminicursos.user_id = users.id INNER JOIN minicursos on userminicursos.minicurso_id = minicursos.id WHERE userminicursos.rec_certificado=0')->fetchAll('assoc');
     		
     	foreach ($participantes as $user){
     		$this->set(compact('user'));
@@ -173,7 +173,7 @@ class UserminicursosController extends AppController
     		// 				$pdf = $CakePdf->write(APP . 'files' . DS . 'minicurso'.$part['user_id'].'_'.rand(1,5000).'.pdf');
     	}
     		
-    
+    	$this->Flash->default(__('Foram enviados '.count($participantes).' certificados'));
     		
     	return $this->redirect($this->referer());
     
