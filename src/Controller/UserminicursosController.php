@@ -162,8 +162,8 @@ class UserminicursosController extends AppController
     		$email = new Email('default');
     		$email->from(['entec.ifpe.igarassu@gmail.com' => 'EnTec 2016'])
     		->emailFormat('html')
-    		// 				->to(strtolower($user['email']))
-    		->to(strtolower('strapacao@gmail.com'))
+    		->to(strtolower($user['email']))
+//     		->to(strtolower('strapacao@gmail.com'))
     		->template('default','certificado_ouvinte_minicurso')
     		->subject('[EnTec 2016] Certificado de Ouvinte de Minicurso')
     		->viewVars(['nome' => $user['nome']])
