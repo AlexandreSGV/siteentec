@@ -44,8 +44,8 @@
                 Datas Importantes
 
                 <ul>
-                  <li><strong>9 de Junho</strong> - Fim do prazo para entrega dos resumos</li>
-                  <li><strong>14 de Junho</strong> - Divulgação dos trabalhos aceitos</li>
+                  <li><strong>14 de Junho</strong> - Fim do prazo para entrega dos resumos</li>
+                  <li><strong>16 de Junho</strong> - Divulgação dos trabalhos aceitos</li>
                   <li><strong>21 e 22 de Junho</strong> - Apresentação oral dos artigos</li>
                   <li><strong>30 de junho</strong> - Fim do prazo para entrega da versão final dos resumos (a ser publicada nos anais do evento).</li>
                   <li><strong>31 de Julho</strong> - Lançamento dos Anais no site do ENTEC.</li>
